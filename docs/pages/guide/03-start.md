@@ -273,7 +273,6 @@ Here is the complete steps for installing and setting up **Yavin** with **your d
 
 |      Path                      |  Purpose                       |
 |---------------------------------|---------------------------------------|
-| ```navi/docs``` | The markdown of Yavin product overview and user documentation.          |
 | ```navi/scripts```  | The published script of Yavin        |
 | ```navi/Packages/webservice/app/src/main/resources/ ```  | Your sample data can reside here       |
 | ```navi/Packages/webservice/app/src/main/resources/ ``` | Your SQL queries can reside here          |
