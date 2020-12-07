@@ -31,7 +31,7 @@ $ ./gradlew bootRun
 ```
 
 <center>
-  <figure style="font-size:1vw; color:DodgerBlue;">
+  <figure style="font-size:0.6vw; color:DodgerBlue;">
     <video width="800" controls> <source src="assets/images/QS_installation_and_run.mp4" type="video/mp4"></video>
     <figcaption>📹A quick video that shows how each step is being executed.</figcaption>
   </figure>
