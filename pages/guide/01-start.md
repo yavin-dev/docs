@@ -10,14 +10,16 @@ title: Product Overview
 ## Yavin overview
 <img src="assets/images/Yavin_logo.png" width="200"/>
 
-Yavin is a framework for rapidly **building custom data applications** that offers both a UI and an API. In addition, Yavin can be deployed as a **standalone Business Intelligence tool**. It is **scalable** and **secure** and its intuitive visualization interface allows for fast drill-downs of very large data sets through simple interface and visualization blocks. With Yavin, you can easily **create reports**, which focus on arbitrary drill downs for a single visualization, or **dashboards**, which are collections of visualizations, for rapidly distilling information.
+Yavin is a framework for rapidly **building custom data applications** that offers both a UI and an API. In addition, Yavin can be deployed as a **standalone Business Intelligence tool** allowing users to explore and drill into data through an intuitive interface.  Yavin provides a set of modular **user experience blocks** that can be customized and assembled into a complete data application.  The most common blocks are **reports** and **dashboards**.  Reports allow users to craft, execute, and visualize adhoc queries.  Reports can be assembled into dashboards that collate related visualizations together.  Yavin includes a powerful **semantic layer** that let's you model and deploy the tables, measures, and dimensions users will see and select throughout the user experience.
 
-***Disclaimer*** : For the sample demos that come with Yavin, we are using the "<a href="https://www.kaggle.com/shivamb/netflix-shows">Netflix Movie and TV Shows</a>" data set that is sourced from <a href="https://www.kaggle.com" >Kaggle</a> (Timestamped 11/2020). The use of this data-set is only in demonstrating the ease of onboarding any dataset to Yavin. It has no correlation with Yavin as a product or an Open Source Software.
+***Disclaimer*** : For the sample demos that come with Yavin, we are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) data set that is sourced from [Kaggle](https://www.kaggle.com) (Timestamped 11/2020). The use of this data-set is only in demonstrating the ease of onboarding any dataset to Yavin. It has no correlation with the Yavin project.
 
-Yavin is a combination of three major modules.  They are:
-- **Denali** (The User Interface design language)
-- **Elide** (The Web Service layer)
-- **Navi** (The User Interface layer)
+## Components
+
+Yavin is a composed of three open source modules.  They are:
+- [Denali](https://denali.design/) - A themeable user interface design language.
+- [Elide](https://elide.io) - A model driven API framework and Yavin's semantic layer.
+- [Yavin](https://github.io/yahoo/navi) - The user interface building blocks.
 
 Here is a short video of Yavin “in action” :
 
