@@ -14,9 +14,9 @@ Yavin UI is an HTML-based browser application that is supported on the 3 recent 
 -   ***Firefox***
 -   ***Safari***
 
-About data ingestion and data sources
+Overview
 --------------------------------------------------------------
-Before you can use Yavin to **visualize and analyze data**, you need to define your **semantic model** and database configuration in Elide. You do so by defining a data source and including the database connection configuration itself and its schema.
+Before you can use Yavin to **visualize and analyze data**, you need to define your **semantic model** and database configuration in Elide. 
 
 ### Data source dialects
 Elide analytic APIs **generate SQL queries** against your target database(s). Elide must be **configured with a Dialect** to correctly generate native SQL that matches the database grammar. Elide supports the following dialects by default:
@@ -28,18 +28,16 @@ Elide analytic APIs **generate SQL queries** against your target database(s). El
 
 More information on dialects and how to use them can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#dialects). 
 
-About semantic models
+Semantic Models
 ------------------------------------------
-- ***A semantic model*** is an abstraction which describes how you can use the data once it has been loaded (how data is presented to the user). It is flat (no relationships), and simple (no formulas - just names).
-- ***A schema*** describes the data, how it is organized and managed in the physical data source.
-- ***A physical model*** is how data is arranged in your database. It could be relational or involve complex SQL expressions.
-- Note: A model need not be a one to one match to the schema in the Data source. While models can correspond to your underlying data store schema as a one-to-one representation, Yavin does not require this and the operating model of Yavin encourages you to think of semantic models as being isolated on a per service basis.
-- ***Building a semantic model*** in yavin involves three things:
-    - Defining the tables, measures, and dimensions you want to expose to the end user (the semantic model).
-    - Adding metadata like descriptions, categories, and tags to the semantic model to help users understand it.
-    - Mapping the simple semantic model to the potentially more complex physical model. Every concept (table, measure, dimension) in the semantic model can be assigned a native SQL fragment that is used to generate queries against the physical model.
+A ***semantic model*** is the view of the data you want your users to understand.   It is typically non-relational (for simplicity) and consists of concepts like tables, measures, and dimensions.  End users refer to these concepts by name only (they are not expected to derive formulas or know about the physical storage or serialization of data).
 
-More information on the Elide Analytics query support and data-modeling can be found at this URL: <a href="https://elide.io/pages/guide/v5/04-analytics.html#overview" >https://elide.io/pages/guide/v5/04-analytics.html#overview</a> 
+A ***virtual semantic layer*** maps a semantic model to columns and tables in a physical database.  Yavin leverages Elide's virtual semantic layer which accomplishes this mapping through a HJSON configuration language.  [HJSON](https://hjson.github.io/) is a human friendly adaptation of JSON that allows comments and a relaxed syntax among other features.  Elide's virtual semantic layer includes the following information:
+    - The defintions of tables, measures, and dimensions you want to expose to the end user.
+    - Metadata like descriptions, categories, and tags that better describe and label the semantic model.
+    - For every table, measure, and dimension, a SQL fragment that maps it to the physical data.  These fragements are used by elide to generate native SQL queries against the target database.
+
+More information on Elide's analytic query support and virtual semantic layer can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#overview).
 
 ### Writing your first semantic model
 The “<a href="https://elide.io/" >Getting Started with Elide semantic model docs</a>” on models takes you, in depth, through the step to step instruction on writing your Elide semantic model and testing it appropriately. Yavin leverages the Elide HJSON configuration language to define the semantic model.  For complete documentation on the language, visit <a href="https://elide.io/pages/guide/v5/04-analytics.html#model-configuration" >https://elide.io/pages/guide/v5/04-analytics.html#model-configuration</a>.
