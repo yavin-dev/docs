@@ -7,18 +7,17 @@ title: Setup and Installation Guide
 * TOC
 {:toc}
 
-Yavin UI browser support
--------------------------------------------------
-Yavin UI is an HTML-based browser application that is supported on the 3 recent versions of the following browsers:
+System Requirements
+---------------------
+
+### Browser Support
+Yavin UI is an HTML-based browser application that is supported on recent versions of the following browsers:
 -   ***Chrome***
 -   ***Firefox***
 -   ***Safari***
 
-Overview
---------------------------------------------------------------
-Before you can use Yavin to **visualize and analyze data**, you need to define your **semantic model** and database configuration in Elide. 
+### Database Support
 
-### Data source dialects
 Elide analytic APIs **generate SQL queries** against your target database(s). Elide must be **configured with a Dialect** to correctly generate native SQL that matches the database grammar. Elide supports the following dialects by default:
 
 * H2
@@ -33,9 +32,10 @@ Semantic Models
 A ***semantic model*** is the view of the data you want your users to understand.   It is typically non-relational (for simplicity) and consists of concepts like tables, measures, and dimensions.  End users refer to these concepts by name only (they are not expected to derive formulas or know about the physical storage or serialization of data).
 
 A ***virtual semantic layer*** maps a semantic model to columns and tables in a physical database.  Yavin leverages Elide's virtual semantic layer which accomplishes this mapping through a HJSON configuration language.  [HJSON](https://hjson.github.io/) is a human friendly adaptation of JSON that allows comments and a relaxed syntax among other features.  Elide's virtual semantic layer includes the following information:
-    - The defintions of tables, measures, and dimensions you want to expose to the end user.
-    - Metadata like descriptions, categories, and tags that better describe and label the semantic model.
-    - For every table, measure, and dimension, a SQL fragment that maps it to the physical data.  These fragements are used by elide to generate native SQL queries against the target database.
+
+ - The defintions of tables, measures, and dimensions you want to expose to the end user.
+ - Metadata like descriptions, categories, and tags that better describe and label the semantic model.
+ - For every table, measure, and dimension, a SQL fragment that maps it to the physical data.  These fragements are used by elide to generate native SQL queries against the target database.
 
 More information on Elide's analytic query support and virtual semantic layer can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#overview).
 
@@ -43,7 +43,7 @@ More information on Elide's analytic query support and virtual semantic layer ca
 
 Elide provides its own [guide](https://elide.io/pages/guide/v5/01-start.html) for getting started that includes setting up a simle semantic model.  The following sections will illustrate how Yavin is configured to explore [Netflix movie and TV show titles](https://www.kaggle.com/shivamb/netflix-shows).
 
-#### Connections, Tables, Dimensions, Measures and Joins
+### Connections, Tables, Dimensions, Measures and Joins
 When running locally, Yavin will leverage the H2 in-memory database.  The [connection configuration][demo-connection] looks like:
 
 ```
@@ -212,6 +212,8 @@ Yavin's demo data includes a single table in its [semantic model][demo-table] Ne
 
 Note: The Netflix demo data only sourced from a single physical table.  More complex data models may source from multiple physical tables and require joins at query time.  More information about joins can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#joins).
 
+The Yavin UI is metadata driven and will present your semantic model:
+
 <figure><img src="assets/images/SAI_Model_in_UI.png"/>
     <figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> 
 </figure>
@@ -222,39 +224,74 @@ The Yavin example project consists of the following key elements :
 
 1. [HJSON configuration][demo-connection] for a H2 in-memory database.
 1. [HJSON configuration][demo-table] for a table (and its respective measures and dimensions).
-1. HJSON configuration for any security roles you want defined.
 1. [A liquibase script][liquibase-script] that sets up your database with relevant tables needed for Yavin.
 1. [Test data][test-data] that is initialized in the database.
-1. [Example integration tests][integration-tests] that verify the Yavin APIs are working correctly.
-1. [A Spring boot application configuration file][spring-boot-config] that configures web service routes, security, and other service level controls.
+1. [Example integration tests][integration-test] that verify the Yavin APIs are working correctly.
+1. [A Spring boot application configuration file][spring-boot-config] that configures web service routes and other service level controls.
 
 Yavin Detailed Installation Guide
 -----------------------------------------------
 Here are the complete steps for installing and setting up **Yavin** with **your data-source** and your **semantic models**:
--  ***Installation***: The “<a href="">Quick Start Guide</a>” walks you through the **steps to setup Yavin** on your system with a built in "*Netflix and TV Shows*" data.
--  Upon installation (Step 1) you will have the **Yavin** repo on your local machine: <a href="https://github.com/yahoo/navi" >https://github.com/yahoo/navi/</a>.
--  Your repo will include the following key subdirectories:
+
+### Step 1.  Install Yavin Source.
+
+This step was covered in [quick start guide](/pages/guide/03-start.html).  Upon installation, you will have the **Yavin** repo on your local machine.  Your repo will include the following key subdirectories:
 
 |      Path                      |  Purpose                       |
 |---------------------------------|---------------------------------------|
-| ```navi/scripts```  | The published script of Yavin        |
-| ```navi/Packages/webservice/app/src/main/resources/ ```  | Your sample data can reside here       |
-| ```navi/Packages/webservice/app/src/main/resources/ ``` | Your SQL queries can reside here          |
-| ```navi/Packages/webservice/app/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
-| ```navi/Packages/webservice/app/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
+| ```navi/packages/webservice/app/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
+| ```navi/packages/webservice/app/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
+| ```navi/packages/webservice/app/src/main/resources/application.yaml``` | The spring boot configuration file for your application |
+| ```navi/packages/webservice/app/src/main/kotlin/com/yahoo/navi/ws/filters``` | Directory for web request filters like authentication |
 {:.table}
-1.  🛑  STOP, **If your purpose is check how Yavin works using the demo app provided (Without adding any new data sources or semantic models). Then, you should be all set to Jump to step 10.**
-2.  Select the correct “Data Dialect”. More information on data dialects can be found here: <a href="https://elide.io/pages/guide/v5/04-analytics.html#dialects" >https://elide.io/pages/guide/v5/04-analytics.html#dialects</a>.
-3.  You must set both the “enable analytic queries” and the “Hjson configuration” feature flags. Reference: <a href="https://elide.io/pages/guide/v5/04-analytics.html#feature-flags" >https://elide.io/pages/guide/v5/04-analytics.html#feature-flags</a>.  
-4.  Configure the files layout: Analytic model configuration can either be specified through JVM classes decorated with Elide annotations or Hjson configuration files. <a href="https://elide.io/pages/guide/v5/04-analytics.html#file-layout" >https://elide.io/pages/guide/v5/04-analytics.html#file-layout</a>.Path:  ../navi/Packages/
-5.  Set the data source configuration for the Data Source(s) you will be using: <a href="https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration" >https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration</a>. Path on where your data source connection can reside: ../navi/Packages/webservice/app/src/main/resources/demo-configs/db/sql/
-6.  Model your data. Your model may be mapped to one or more physical databases, tables, and columns and need not be a “one to one” mirror of the source semantic models. More details on this step can be found at: <a href="https://elide.io/pages/guide/v5/04-analytics.html#model-configuration" >https://elide.io/pages/guide/v5/04-analytics.html#model-configuration</a>. Path on where your semantic models can reside: ../navi/Packages/webservice/app/src/main/resources/demo-configs/models/tables
-7.  Decide what roles users will need and then configure your security model as per these instructions: <a href="https://elide.io/pages/guide/v5/04-analytics.html#security-configuration" >https://elide.io/pages/guide/v5/04-analytics.html#security-configuration</a>.  
-8.  To avoid having to repeat the same configuration block information multiple times, all Hjson files (table, security, and data source) support a variable substitution feature that allows a JSON structure to be associated to a variable name, and then that variable to be used in configuration files. Details can be found at:<a href="https://elide.io/pages/guide/v5/04-analytics.html#variable-substitution" >https://elide.io/pages/guide/v5/04-analytics.html#variable-substitution</a> 
-9.  Before proceeding further, you should validate all of your configuration files. All of the Hjson configuration files are validated by a JSON schema. To validate you configuration, run the following command line:
-10. To run Yavin, execute the following command: ```cd packages/webservice && ./gradlew```
 
-⏱Within minutes, you will be able to launch Yavin on your local browser connection to the “Netflix movies and TV shows data source”, by launching the  following URL: <a href="http://localhost:8080">http://localhost:8080</a>
+### Step 2.  Configure the Database Connection.
+
+Add a database configuration file to connect to your database.  More information about database configuration files can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration).
+
+### Step 3.  Define your Semantic Model.
+
+Add one or more semantic model definition files.  More information about adding tables can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#model-configuration).
+
+### Step 4.  Define Security Roles
+
+Yavin allows you to limit access to tables, measures, and dimensions by user role.  There are three steps involved:
+
+1.  Create a security roles file which enumerates the roles your application will have.  More information can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#security-configuration)
+2.  Update your semantic model, by adding `readAccess` rules for tables, measures, and dimensions you want to restrict.
+3.  Yavin stores users and roles in two separate database tables (`user` and `roles`).  The roles table must be updated to include all the roles defined in step 1.  When a user is added to the database, it must be assigned 1 or more roles.
+
+### Step 4.  Define an authentication filter for the application.
+
+Yavin comes bundled with an [example filter][auth-filter] that authenticates every user as admin.  You will want to replace this example with a servlet filter that authenticates your users.
+
+### Step 5.  Configure Your Application
+
+Yavin is a spring boot application.  The default configuration can be found [here][spring-boot-config].  This configuration allows you to change a number of settings including:
+ - The application port.
+ - The routes for the APIs.
+ - Location of liquibase migration scripts (if you run them as part of application boot).
+
+The configuration file has sections including:
+ 1. [Spring Boot configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html)
+ 2. [Elide configuration](https://elide.io)
+
+The application configuration supports profiles for enabling different settings for different environments.
+
+### Step 6.  Build Your Application
+
+To build, run the following command: ```cd packages/webservice && ./gradlew bootJar```
+
+### Step 7.  Validate Semantic Model
+
+The build creates a fat jar with all dependencies including a tool that can be leveraged to validate your semantic model before deploying or running your service.
+More details about validating the semantic model can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#configuration-validation).
+
+### Step 8.  Run your Application
+
+To run Yavin locally, simple execute: ```cd packages/webservice && ./gradlew```
+
+⏱Within minutes, you will be able to launch Yavin on your browser by loading [localhost:8080](http://localhost:8080).
 
 [demo-connection]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson
 [demo-table]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson
@@ -262,3 +299,4 @@ Here are the complete steps for installing and setting up **Yavin** with **your 
 [test-data]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/netflix_titles.csv
 [integration-test]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/test/kotlin/com/yahoo/navi/ws/test/integration/DemoDataSourceTest.kt
 [spring-boot-config]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/application.yaml
+[auth-filter]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/kotlin/com/yahoo/navi/ws/filters/AuthFilter.kt
