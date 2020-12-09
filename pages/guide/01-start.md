@@ -8,7 +8,7 @@ title: Product Overview
 {:toc}
 
 ## Yavin overview
-<img src="assets/images/Yavin_logo.png" width="200"/>
+![Yavin Logo](/assets/images/Yavin_logo.png){:class="img-responsive"}
 
 Yavin is a framework for rapidly **building custom data applications** that offers both a UI and an API. In addition, Yavin can be deployed as a **standalone Business Intelligence tool** allowing users to explore and drill into data through an intuitive interface.  Yavin provides a set of modular **user experience blocks** that can be customized and assembled into a complete data application.  The most common blocks are **reports** and **dashboards**.  Reports allow users to craft, execute, and visualize adhoc queries.  Reports can be assembled into dashboards that collate related visualizations together.  Yavin includes a powerful **semantic layer** that let's you model and deploy the tables, measures, and dimensions users will see and select throughout the user experience.
 
@@ -23,30 +23,30 @@ Yavin is a composed of three open source modules.  They are:
 
 Here is a short video of Yavin “in action” :
 
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="assets/images/Get_to_know_yavin.gif" width="800" /><figcaption>Gif animation - Yavin simplicity “in action”</figcaption></figure>
+![Yavin simplicity "in action"](/assets/images/Get_to_know_yavin.gif){:class="img-responsive"}
 
-## Building with Legos ® & Duplos ®
-In the software industry, when discovering patterns, we often build abstractions and libraries to provide reusable software. The D3.JS charting library, Spring Security, and the Flask web framework are all great examples. We often use the metaphor building with Legos ® to illustrate the process of building software with many libraries and frameworks. While this provides a significant productivity gain, especially when compared to writing everything from scratch, it still is costly to build applications. When building applications, it takes time to design a system, wire together libraries, test your logic, build a web service, develop a great user interface and battle test your system. A Duplo is a reusable block of functionality that is conceptually larger than a library that enables larger patterns of software reuse. There is a tradeoff here though. Duplos ® are not as flexible as writing code from scratch. So you gain in functionality but you lose some ability to customize. With Yavin, we aim to package fully featured and reusable block of functionality called Duplos ®, or large Legos®, that can be installed in your application with a few commands. The following diagram illustrates the Duplos® available in Yavin today:
+## Customizable Building Blocks
+In the software industry, when discovering patterns, we often build abstractions and libraries to provide reusable software. The D3.JS charting library, Spring Security, and the Flask web framework are all great examples. While these provide a significant productivity gain, especially when compared to writing everything from scratch, it still is costly to build applications. When building applications, it takes time to design a system, wire together libraries, test your logic, build a web service, develop a great user interface and battle test your system.  Yavin build blocks are conceptually larger than a library - enabling larger patterns of software reuse. There is a tradeoff here though.  These building blocks are not as flexible as writing code from scratch. So you gain in functionality but you lose some ability to customize. The following diagram illustrates the building blocks available in Yavin today:
 
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img src="assets/images/Duplos_img.png" width="800" border=5px/><figcaption>Figure - Yavin Duplos</figcaption></figure>
+![Yavin Building Blocks](/assets/images/Duplos_img.png){:class="img-responsive"}
 
 ## An Overview of Yavin’s Main Components
 
 ### Denali Overview
-<img src="assets/images/Denali_logo.png" width="200"/>
+![Denali Logo](/assets/images/Denali_logo.png){:class="img-responsive"}
 
-**Yavin uses Denali's theme-able design system**. Denali was developed as a way to quickly create unified product families with intuitive user experiences. Denali components are built to be theme-able by nature, which means we aren’t tied to their components visual design. For more information on denali, visit <a href="http://denali.design" >denali.design</a>.
+**Yavin uses Denali's theme-able design system**. Denali was developed as a way to quickly create unified product families with intuitive user experiences. Denali components are built to be theme-able by nature, which means we aren’t tied to their components visual design. For more information on denali, visit [denali.design](https://denali.design).
 
 ### Elide Overview
-<img src="assets/images/Elide_logo.png" width="200"/>
+![Elide Logo](/assets/images/Elide_logo.png){:class="img-responsive"}
 
-**Yavin uses Elide as its web service and data model building language**. Elide is a Java library that lets you setup model driven GraphQL or JSON-API web services with minimal effort. Elide supports two variants of APIs:
+**Yavin uses Elide as its web service and semantic layer**. Elide is a Java library that lets you setup model driven GraphQL or JSON-API web services with minimal effort. Elide supports two variants of APIs:
 1.  A CRUD (Create, Read, Update, Delete) API for reading and manipulating models.
 1.  An analytic API for aggregating measures over zero or more model dimensions.
 
-For more information on Elide, visit <a href="http://elide.io">elide.io</a>
+For more information on Elide, visit [elide.io](https://elide.io).
 
 ### Navi Overview
-<img src="assets/images/Navi_logo.png" width="200"/>
+![Navi logo](/assets/images/Navi_logo.png){:class="img-responsive"}
 
-**Navi represents the User Interface layer of Yavin**. Navi is an open source analytics reporting UI. Navi uses Ember, which is a JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device. (<a href="https://guides.emberjs.com">Ember Guide</a>)
+**Yavin contains the User Interface layer**.  Yavin uses Ember - a JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device. [Ember Guide](https://guides.emberjs.com).
