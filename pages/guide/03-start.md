@@ -258,13 +258,15 @@ Add a database configuration file to connect to your database.  More information
 
 Add one or more semantic model definition files.  More information about adding tables can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#model-configuration).
 
-### Step 5.  Define Security Roles
+### Step 5.  Secure your Semantic Model.
 
 Yavin allows you to limit access to tables, measures, and dimensions by user role.  There are three steps involved:
 
 1.  Create a security roles file which enumerates the roles your application will have.  More information can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#security-configuration)
-2.  Update your semantic model, by adding `readAccess` rules for tables, measures, and dimensions you want to restrict.
+2.  Update your semantic model, by adding `readAccess` rules for tables, measures, and dimensions you want to restrict.  These rules can include a single role or a complex security expression with multiple roles joined by logical AND (conjunction), OR (disjunction), and parenthetic groupings.
 3.  Yavin stores users and roles in two separate database tables (`user` and `roles`).  The roles table must be updated to include all the roles defined in step 1.  When a user is added to the database, it must be assigned 1 or more roles.
+
+Yavin also supports row level security.  Row level security requires building your application with custom `FilterExpressionCheck` classes.  These classes have names that can be leveraged in `readAccess` rules similar to roles.  More information on custom security checks can be found [here](https://elide.io/pages/guide/v5/03-security.html#filter-expression-checks).
 
 ### Step 6.  Define an authentication filter for the application.
 
