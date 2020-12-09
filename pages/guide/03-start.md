@@ -242,18 +242,23 @@ This step was covered in [quick start guide](/pages/guide/03-start.html).  Upon 
 | ```navi/packages/webservice/app/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
 | ```navi/packages/webservice/app/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
 | ```navi/packages/webservice/app/src/main/resources/application.yaml``` | The spring boot configuration file for your application |
-| ```navi/packages/webservice/app/src/main/kotlin/com/yahoo/navi/ws/filters``` | Directory for web request filters like authentication |
+| ```navi/packages/webservice/app/src/main/kotlin/com/yahoo/navi/ws/filters``` | Directory for web request filters including authentication |
+| ```navi/packages/webservice/app/src/main/resources/db/changelog/changelog.xml``` | Database changelog for setting up the database |
 {:.table}
 
-### Step 2.  Configure the Database Connection.
+### Step 2.  Setup Your Database.
+
+Yavin requires a database to store user information, reports, dashboards, and other application objects.  The **Yavin** repo includes a [liquibase-script][liquibase-script] for creating these tables.  The script may require modifications to work with your target database.
+
+### Step 3.  Configure the Database Connection.
 
 Add a database configuration file to connect to your database.  More information about database configuration files can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration).
 
-### Step 3.  Define your Semantic Model.
+### Step 4.  Define your Semantic Model.
 
 Add one or more semantic model definition files.  More information about adding tables can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#model-configuration).
 
-### Step 4.  Define Security Roles
+### Step 5.  Define Security Roles
 
 Yavin allows you to limit access to tables, measures, and dimensions by user role.  There are three steps involved:
 
@@ -261,11 +266,11 @@ Yavin allows you to limit access to tables, measures, and dimensions by user rol
 2.  Update your semantic model, by adding `readAccess` rules for tables, measures, and dimensions you want to restrict.
 3.  Yavin stores users and roles in two separate database tables (`user` and `roles`).  The roles table must be updated to include all the roles defined in step 1.  When a user is added to the database, it must be assigned 1 or more roles.
 
-### Step 4.  Define an authentication filter for the application.
+### Step 6.  Define an authentication filter for the application.
 
 Yavin comes bundled with an [example filter][auth-filter] that authenticates every user as admin.  You will want to replace this example with a servlet filter that authenticates your users.
 
-### Step 5.  Configure Your Application
+### Step 7.  Configure Your Application
 
 Yavin is a spring boot application.  The default configuration can be found [here][spring-boot-config].  This configuration allows you to change a number of settings including:
  - The application port.
@@ -278,16 +283,16 @@ The configuration file has sections including:
 
 The application configuration supports profiles for enabling different settings for different environments.
 
-### Step 6.  Build Your Application
+### Step 8.  Build Your Application
 
 To build, run the following command: ```cd packages/webservice && ./gradlew bootJar```
 
-### Step 7.  Validate Semantic Model
+### Step 9.  Validate Semantic Model
 
 The build creates a fat jar with all dependencies including a tool that can be leveraged to validate your semantic model before deploying or running your service.
 More details about validating the semantic model can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#configuration-validation).
 
-### Step 8.  Run your Application
+### Step 10.  Run your Application
 
 To run Yavin locally, simple execute: ```cd packages/webservice && ./gradlew```
 
