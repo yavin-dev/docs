@@ -40,17 +40,11 @@ A ***virtual semantic layer*** maps a semantic model to columns and tables in a 
 More information on Elide's analytic query support and virtual semantic layer can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#overview).
 
 ### Writing your first semantic model
-The “<a href="https://elide.io/" >Getting Started with Elide semantic model docs</a>” on models takes you, in depth, through the step to step instruction on writing your Elide semantic model and testing it appropriately. Yavin leverages the Elide HJSON configuration language to define the semantic model.  For complete documentation on the language, visit <a href="https://elide.io/pages/guide/v5/04-analytics.html#model-configuration" >https://elide.io/pages/guide/v5/04-analytics.html#model-configuration</a>.
 
-For a getting started tutorial, visit <a href="https://elide.io/pages/guide/v5/04-analytics.html#example-configuration" >https://elide.io/pages/guide/v5/04-analytics.html#example-configuration</a>.
-
-Yavin comes bundled with a “<a href="https://www.kaggle.com/shivamb/netflix-shows" >Netflix Movie and TV Shows</a>” data example. The following sections will illustrate how Yavin is configured to explore this data.
-
-#### Our example use case
-Analytics on Netflix movie and TV shows titles
+Elide provides its own [guide](https://elide.io/pages/guide/v5/01-start.html) for getting started that includes setting up a simle semantic model.  The following sections will illustrate how Yavin is configured to explore [Netflix movie and TV show titles](https://www.kaggle.com/shivamb/netflix-shows).
 
 #### Connections, Tables, Dimensions, Measures and Joins
-Your connection can be set up as: dialect: H2
+When running locally, Yavin will leverage the H2 in-memory database.  The [connection configuration](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson) looks like:
 
 ```
 {
@@ -68,200 +62,175 @@ Your connection can be set up as: dialect: H2
 
 ```
 
+Yavin's demo data includes a single table in its [semantic model](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson), NetflixTitles:   
 
-Defining your Table/s: netflix_titles
-
-```
-name:  NetflixTitles
-table: netflix_titles
-```
-
-Defining your Dimensions title_id, show_type, title  (What are Dimensions?)
 
 ```
-  dimensions: [
-        {
-          __comment1: "Dimension (title_id) mapped from (title_id) from the source data."
-          category: Attributes
-          name: title_id
-          type: TEXT
-          definition: '{ {title_id} }'
-        }
-        {
-          __comment1: "Dimension (show_type) mapped from (type) from the source data."
-          category: Attributes
-          name: show_type
-          type: TEXT
-          definition: '{ {type} }'
-        }
-        {
-          __comment1: "Dimension (release_year) mapped from (release_year) from the source data, with the year grain."
-          category: Date
-          name: release_year
-          type: TIME
-          definition: '{ {release_year} }'
-          grain: {
-            type: YEAR
-          }
-        }
-......
-```
-
-Defining your Measures/Metrics count, total_seasons, movie_duration  (What are Measures/Metrics?)
-
-```
-measures: [
-        {
-          __comment1: "Measure (count) that is calculated by counting all the (title_id)."
-          category: Stats
-          name: count
-          type: INTEGER
-          definition: 'count({ {title_id} })'
-        }
-        {
-          __comment1: "Measure (total_seasons) that is calculated by summing the (duration)."
-          category: Stats
-          name: total_seasons
-          type: INTEGER
-          definition: "sum(cast (case when { {duration} } like '% Seasons' then REPLACE({ {duration} }, ' Seasons', '') else '0' end AS INT))"
-        }
-......
-```
-
-Putting it all together, the H2 semantic model will be written as:     
-
-```
+{
+  tables: [
+    {
+      # The API name
       name:  NetflixTitles
+
+      # The name presented in the UI
+      friendlyName: Netflix Titles
+
+      # The physical table where the data lives.
       table: netflix_titles
+
+      # The database to run queries against
       dbConnectionName: DemoConnection
+
+      # The list of dimensions
       dimensions: [
         {
-          category: Attributes
+          # The API name of the dimension.
           name: title_id
+
+          # The name of the dimension presented in the UI
+          friendlyName: Title Id
+          category: Attributes
+
+          # The data type
           type: TEXT
-          definition: '{ {title_id} }'
+
+          # A templated SQL fragment that fetches this dimension.  'title_id' here is the physical database column name.
+          definition: '{{title_id}}'
         }
         {
-          category: Attributes
           name: show_type
+          friendlyName: Show Type
+          category: Attributes
           type: TEXT
-          definition: '{ {type} }'
+          definition: '{{type}}'
         }
         {
-          category: Attributes
           name: title
+          friendlyName: Title
+          category: Attributes
           type: TEXT
-          definition: '{ {title} }'
+          definition: '{{title}}'
         }
         {
-          category: Attributes
           name: director
+          friendlyName: Director
+          category: Attributes
           type: TEXT
-          definition: '{ {director} }'
+          definition: '{{director}}'
         }
         {
-          category: Attributes
           name: cast
-          type: TEXT
-          definition: '{ {cast_list} }'
-        }
-        {
+          friendlyName: Cast List
           category: Attributes
-          name: country
           type: TEXT
-          definition: '{ {country} }'
+          definition: '{{cast_list}}'
         }
         {
-          category: Date
+          name: country
+          friendlyName: Countries
+          category: Attributes
+          type: TEXT
+          definition: '{{country}}'
+        }
+        {
           name: date_available
+          category: Date
           type: TIME
-          definition: '{ {date_added} }'
+          definition: '{{date_added}}'
           grain: {
             type: DAY
           }
         }
         {
-          category: Date
           name: release_year
+          category: Date
           type: TIME
-          definition: '{ {release_year} }'
+          definition: '{{release_year}}'
           grain: {
             type: YEAR
           }
         }
         {
-          category: Attributes
           name: film_rating
+          friendlyName: Film Rating
+          category: Attributes
           type: TEXT
-          definition: '{ {rating} }'
+          definition: '{{rating}}'
         }
         {
-          category: Attributes
           name: genres
+          friendlyName: Genre
+          category: Attributes
           type: TEXT
-          definition: '{ {listed_in} }'
+          definition: '{{listed_in}}'
         }
         {
-          category: Attributes
           name: description
+          friendlyName: Description
+          category: Attributes
           type: TEXT
-          definition: '{ {description} }'
+          definition: '{{description}}'
         }
       ]
+
+      # The list of measures
       measures: [
         {
-          category: Stats
+
+          # The API name of the measure.
           name: count
+
+          # The name of measure dimension presented in the UI
+          friendlyName: Title Count
+          category: Stats
+
+          # The data type
           type: INTEGER
-          definition: 'count({ {title_id} })'
+
+          # A templated SQL fragment that fetches this measure.  'title_id' here is the physical database column name.
+          definition: 'count({{title_id}})'
         }
         {
-          category: Stats
           name: total_seasons
+          friendlyName: Total Seasons
+          category: Stats
           type: INTEGER
-          definition: "sum(cast (case when { {duration} } like '% Seasons' then REPLACE({ {duration} }, ' Seasons', '') else '0' end AS INT))"
+          definition: "sum(cast (case when {{duration}} like '% Seasons' then REPLACE({{duration}}, ' Seasons', '') else '0' end AS INT))"
         }
         {
-          category: Stats
           name: movie_duration
+          friendlyName: Duration (in mins)
+          category: Stats
           type: INTEGER
-          definition: "sum(cast (case when { {duration} } like '% min' then REPLACE({ {duration} }, ' min', '') else '0' end AS INT))"
+          definition: "sum(cast (case when {{duration}} like '% min' then REPLACE({{duration}}, ' min', '') else '0' end AS INT))"
         }
       ]
     }
+  ]
+}
 ```
 
-Note: Joins was not applicable for the demo app. But, Elide supports Join with the following attributes:
-<pre>      
-   joins: [
-        {
-          name:
-          to:
-          type:
-          definition: ' { { X_id } } = { { Y.p_id } }'
-        }
-      ]
-</pre>
+Note: The Netflix demo data only sourced from a single physical table.  More complex data models may source from multiple physical tables and require joins at query time.  More information about joins can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#joins).
 
-Yavin pulls and presents all of the semantic model metadata from Elide.
-
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="assets/images/SAI_Model_in_UI.png" width="200" /><figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> </figure>
+<figure><img src="assets/images/SAI_Model_in_UI.png"/>
+    <figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> 
+</figure>
 
 Yavin Example Key Elements
 -----------------------------------------------
 The Yavin example project consists of the following key elements :
 
-1. HJSON configuration for 1 or more database.
-1. HJSON configuration for 1 or more tables (and their respective measures and dimensions).
+1. [HJSON configuration](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson) for a H2 in-memory database.
+1. [HJSON configuration](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson) for a table (and its respective measures and dimensions).
 1. HJSON configuration for any security roles you want defined.
-1. A liquibase script that sets up your database with relevant tables needed for Yavin.
-1. Test data that is initialized in the database.
-1. Example integration tests that verify the Yavin APIs are working correctly.
-1. An application configuration file that configures web service routes, security, and other service level controls.
+1. [A liquibase script](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/db/changelog/changelog.xml) that sets up your database with relevant tables needed for Yavin.
+1. [Test data](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/netflix_titles.csv) that is initialized in the database.
+1. [Example integration tests](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/test/kotlin/com/yahoo/navi/ws/test/integration/DemoDataSourceTest.kt) that verify the Yavin APIs are working correctly.
+1. [A Spring boot application configuration file](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/application.yaml) that configures web service routes, security, and other service level controls.
 
 Yavin Detailed Installation Guide
 -----------------------------------------------
-Here is the complete steps for installing and setting up **Yavin** with **your data-source** and your **semantic models**:
+Here are the complete steps for installing and setting up **Yavin** with **your data-source** and your **semantic models**:
 -  ***Installation***: The “<a href="">Quick Start Guide</a>” walks you through the **steps to setup Yavin** on your system with a built in "*Netflix and TV Shows*" data.
 -  Upon installation (Step 1) you will have the **Yavin** repo on your local machine: <a href="https://github.com/yahoo/navi" >https://github.com/yahoo/navi/</a>.
 -  Your repo will include the following key subdirectories:
