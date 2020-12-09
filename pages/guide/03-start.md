@@ -44,7 +44,7 @@ More information on Elide's analytic query support and virtual semantic layer ca
 Elide provides its own [guide](https://elide.io/pages/guide/v5/01-start.html) for getting started that includes setting up a simle semantic model.  The following sections will illustrate how Yavin is configured to explore [Netflix movie and TV show titles](https://www.kaggle.com/shivamb/netflix-shows).
 
 #### Connections, Tables, Dimensions, Measures and Joins
-When running locally, Yavin will leverage the H2 in-memory database.  The [connection configuration](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson) looks like:
+When running locally, Yavin will leverage the H2 in-memory database.  The [connection configuration][demo-connection] looks like:
 
 ```
 {
@@ -62,7 +62,7 @@ When running locally, Yavin will leverage the H2 in-memory database.  The [conne
 
 ```
 
-Yavin's demo data includes a single table in its [semantic model](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson), NetflixTitles:   
+Yavin's demo data includes a single table in its [semantic model][demo-table] NetflixTitles:   
 
 
 ```
@@ -220,13 +220,13 @@ Yavin Example Key Elements
 -----------------------------------------------
 The Yavin example project consists of the following key elements :
 
-1. [HJSON configuration](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson) for a H2 in-memory database.
-1. [HJSON configuration](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson) for a table (and its respective measures and dimensions).
+1. [HJSON configuration][demo-connection] for a H2 in-memory database.
+1. [HJSON configuration][demo-table] for a table (and its respective measures and dimensions).
 1. HJSON configuration for any security roles you want defined.
-1. [A liquibase script](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/db/changelog/changelog.xml) that sets up your database with relevant tables needed for Yavin.
-1. [Test data](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/netflix_titles.csv) that is initialized in the database.
-1. [Example integration tests](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/test/kotlin/com/yahoo/navi/ws/test/integration/DemoDataSourceTest.kt) that verify the Yavin APIs are working correctly.
-1. [A Spring boot application configuration file](https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/application.yaml) that configures web service routes, security, and other service level controls.
+1. [A liquibase script][liquibase-script] that sets up your database with relevant tables needed for Yavin.
+1. [Test data][test-data] that is initialized in the database.
+1. [Example integration tests][integration-tests] that verify the Yavin APIs are working correctly.
+1. [A Spring boot application configuration file][spring-boot-config] that configures web service routes, security, and other service level controls.
 
 Yavin Detailed Installation Guide
 -----------------------------------------------
@@ -255,3 +255,10 @@ Here are the complete steps for installing and setting up **Yavin** with **your 
 10. To run Yavin, execute the following command: ```cd packages/webservice && ./gradlew```
 
 ⏱Within minutes, you will be able to launch Yavin on your local browser connection to the “Netflix movies and TV shows data source”, by launching the  following URL: <a href="http://localhost:8080">http://localhost:8080</a>
+
+[demo-connection]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson
+[demo-table]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson
+[liquibase-script]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/db/changelog/changelog.xml
+[test-data]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/netflix_titles.csv
+[integration-test]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/test/kotlin/com/yahoo/navi/ws/test/integration/DemoDataSourceTest.kt
+[spring-boot-config]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/application.yaml
