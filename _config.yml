@@ -42,5 +42,5 @@ exclude:
 #   - vendor/ruby/
 
 # site-specific configuration
-BASE_PATH: https://navi.io
+BASE_PATH: https://yavin.dev
 ASSET_PATH: assets
