@@ -21,15 +21,12 @@ Before you can use Yavin to **visualize and analyze data**, you need to define y
 ### Data source dialects
 Elide analytic APIs **generate SQL queries** against your target database(s). Elide must be **configured with a Dialect** to correctly generate native SQL that matches the database grammar. Elide supports the following dialects by default:
 
-|      Name     |  Availability         |
-|---------------|-----------------------|
-| H2     | Now          |
-| Hive   | Now          |
-| Presto | Now          |
-| MySQL  | Now          |
-{:.table}
+* H2
+* Hive
+* Presto
+* MySQL
 
-More information on dialects and how to use them can be found at: <a href="https://elide.io/pages/guide/v5/04-analytics.html#dialects" >https://elide.io/pages/guide/v5/04-analytics.html#dialects</a>
+More information on dialects and how to use them can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#dialects). 
 
 About semantic models
 ------------------------------------------
