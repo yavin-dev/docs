@@ -1,0 +1,25 @@
+<!-- Navbar -->
+<nav class="nav sticky-top">
+  <div class="nav-left">
+    <span class="nav-item hide-small-desktop-up" onclick="toggleMenu()"><i class="d-icon d-menu-hamburger"></i></span>
+    <a href="{{ site.baseurl }}/"><img class="nav-brand" src="{{ include.navbar.logourl }}" alt="logo"/></a>
+    <div class="float-right hide-small-desktop-up">
+      <a class="nav-item" href="{{ include.navbar.githuburl }}"><i class="d-icon d-github"></i></a>
+    </div>
+  </div>
+  <div id="navMenu" class="nav-responsive">
+    <div class="nav-center">
+      {% for navitem in include.navbar.navitems %}
+        <a class="nav-item" href="{{ navitem.url }}">{{ navitem.title }}</a>
+      {% endfor %}
+    </div>
+    <div class="nav-right">
+      <a class="nav-item" href="{{ include.navbar.githuburl }}">
+        <i class="d-icon d-github"></i><span class="icon-name">Github</span>
+      </a>
+      <a class="nav-item" href="{{ include.navbar.helpurl }}">
+        <i class="d-icon d-help-circle"></i><span class="icon-name">Help</span>
+      </a>
+    </div>
+  </div>
+</nav>

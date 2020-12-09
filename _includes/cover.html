@@ -1,0 +1,22 @@
+<!-- Cover -->
+<div class="container-full is-marginless">
+  <div class="container">
+    <div class="row section-cover">
+      <div class="xs-col-1-1 sm-col-1-1 md-col-5-12 lg-col-5-12 xl-col-5-12 flex-column align-self-center m-y-40">
+        <h1 class="is-grey-100">
+          {{ include.cover.title }}
+        </h1>
+        <div class="flex tablet-down-flex-column m-t-35">
+          <a
+            class="button is-solid is-inverse is-large m-y-5"
+            href="{{ include.cover.gettingstartedurl }}"
+            >Get Started</a
+          >
+        </div>
+      </div>
+      <iframe class="m-auto" width="560" height="315" src="{{ include.cover.embeddedvideourl }}?rel=0;modestbranding=1" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
