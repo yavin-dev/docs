@@ -23,12 +23,16 @@ Yavin is a composed of three open source modules.  They are:
 
 Here is a short video of Yavin “in action” :
 
-![Yavin simplicity "in action"](/assets/images/Get_to_know_yavin.gif){:class="img-responsive"}
+<figure><img src="assets/images/Get_to_know_yavin.gif"/>
+    <figcaption>Gif animation - Yavin simplicity “in action”</figcaption>
+</figure>
 
 ## Customizable Building Blocks
 In the software industry, when discovering patterns, we often build abstractions and libraries to provide reusable software. The D3.JS charting library, Spring Security, and the Flask web framework are all great examples. While these provide a significant productivity gain, especially when compared to writing everything from scratch, it still is costly to build applications. When building applications, it takes time to design a system, wire together libraries, test your logic, build a web service, develop a great user interface and battle test your system.  Yavin build blocks are conceptually larger than a library - enabling larger patterns of software reuse. There is a tradeoff here though.  These building blocks are not as flexible as writing code from scratch. So you gain in functionality but you lose some ability to customize. The following diagram illustrates the building blocks available in Yavin today:
 
-![Yavin Building Blocks](/assets/images/Duplos_img.png){:class="img-responsive"}
+<figure><img src="assets/images/Duplos_img.png"/>
+    <figcaption>Figure - Yavin Building Blocks</figcaption>
+</figure>
 
 ## An Overview of Yavin’s Main Components
 
