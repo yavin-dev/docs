@@ -9,26 +9,25 @@ title: User Guide
 
 Supported Visualizations
 ------------------------------------------------
-Yavin provides much more than static charts. Yavin provides a wide array of expressive visualizations that enable fast, interactive exploration of your data.
+Yavin provides much more than static charts. Yavin provides a wide array of interactive visualizations that help you explore your data.
 
 <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_viz_sample.png" width="800"/><figcaption>Figure - A sample of visualizations supported by Yavin </figcaption> </figure>
 
-You can interact directly with your charts  by clicking on various graphical elements to select data components for drill-down and deeper analysis. When you change the dimensions, the possible visualization for the selected dimensions will appear. You can choose the visualization you prefer by clicking the different visualization icons  ![](assets/images/UG_all_viz.png)  , which are located at the top of visualization
-results.
+When you change the dimensions for a report, Yavin displays the available visualizations for the combination of selected dimensions. You can select the visualization you prefer by clicking among the different visualization icons  ![](assets/images/UG_all_viz.png), which are located at the top of the report.
 
 <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_general_viz.gif" width="800"/><figcaption>Gif animation - Yavin reports are interactive visualizations  </figcaption> </figure>
 
-###  Metric label
- This is the overview visualization that’s shown when there are no dimensions selected to be shown. It presents a numeric summary of the currently selected measures, applying any selected filter criteria.
+###  Measure label
+ This is an overview visualization that’s shown when there are no dimensions selected for the report. It presents a numeric summary of the currently selected measures, applying any selected filter criteria.
 
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_metric_sample.png" width="800"/><figcaption>Figure - Sample Yavin metric label visualization </figcaption> </figure>
+<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_metric_sample.png" width="800"/><figcaption>Figure - Sample Yavin measure label visualization </figcaption> </figure>
 
- The metric label can be edited to change any of these items: Label, Format Type and Format
+ The measure label can be edited to change any of these items: Label, Format Type and Format
 
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_metric_viz.png" width="800"/><figcaption>Figure - Editing Yavin metric label  </figcaption> </figure>
+ <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_metric_viz.png" width="800"/><figcaption>Figure - Editing Yavin measure label  </figcaption> </figure>
 
 ###  Gauge Chart
-The <span class="c7 c31">Gauge visualization is a chart that displays the major contributors or key influencers for a selected result or value. The Gauge chart then displays progress toward a measurable goal.
+The Gauge visualization is a chart that displays the major contributors or key influencers for a selected result or value. The Gauge chart displays progress toward a measurable goal.
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz.png" width="800"/><figcaption>Figure - Sample Yavin gauge chart visualization </figcaption> </figure>
 
@@ -37,15 +36,15 @@ The <span class="c7 c31">Gauge visualization is a chart that displays the major 
   <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz2.png" width="250"/><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz3.png" width="250"/><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz4.png" width="250"/><figcaption> Figure - Editing Yavin gauge chart visualization and changing the baseline </figcaption> </figure>
 
 ###  Table
- **The table visualization is the default view for a dimension**. It presents a table view of the data with ordering capabilities that aids in visualization of measure magnitude. The Table is available for all Dimension/Metric combinations.
+ **The table visualization is the default view when a dimension is selected**. It presents a tabular view of the data with column ordering and sorting functions. 
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_table_viz.png" width="800"/><figcaption>Figure - Sample Yavin table visualization </figcaption> </figure>
 
-The table visualization can show multiple dimensions, as well as multiple measures, as columns. Here is an example:
+The table visualization can show multiple dimensions measures and dimensions together:
 
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_table_viz3.png" width="800"/><figcaption>Figure - Multiple metrics in a table visualization </figcaption> </figure>
+ <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_table_viz3.png" width="800"/><figcaption>Figure - Multiple measures in a table visualization </figcaption> </figure>
 
- The table properties can be edited, including changing the column name, the format type, the  format, the layout and the sort order of the columns.
+ The table properties can be edited, including changing the column name, the format type, the format, the layout and the sort order of the columns.
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_customize_table.png" width="800"/><figcaption>Figure - Editing Yavin table visualization </figcaption> </figure>
 
@@ -56,7 +55,7 @@ The table visualization can show multiple dimensions, as well as multiple measur
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_add_total2.png" width="800"/><figcaption>Figure - Table Visualization with “Grand Total” and “Subtotal” applied </figcaption> </figure>
 
 ###  Line chart
- The line chart is the most common and natural visualization to show temporal (trend over time) dimensions. The chart lets you see what all the component values add up to when charted together. This lets you see the overall trend, while also showing the individual contributions of different dimensions.
+ The line chart can visualize temporal (trend over time) dimensions. The chart lets you see what all the component values add up to when charted together. This lets you see the overall trend, while also showing the individual contributions of different dimensions.
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_line_chart_sample2.png" width="800"/><figcaption>Figure - Sample Yavin line chart visualization </figcaption> </figure>
 
@@ -77,7 +76,7 @@ The line chart line style can be changed to an area spline. The stacked area cha
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_bar_chart1.png" width="800"/><figcaption>Figure X - Sample Yavin bar chart visualization </figcaption> </figure>
 
- The bar chart can be edited, allowing you to change the metrics and having them stacked:
+ The bar chart can be edited, allowing you to change the measures and having them stacked:
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_bar_viz.png" width="800"/><figcaption>Figure - Editing a Yavin bar chart visualization </figcaption> </figure>
 
@@ -86,7 +85,7 @@ The line chart line style can be changed to an area spline. The stacked area cha
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_pie_viz2.png" width="800"/><figcaption>Figure - Sample Yavin pie chart visualization </figcaption> </figure>
 
- The pie chart can be edited, allowing you to change the metrics:
+ The pie chart can be edited, allowing you to change the measures:
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_piechart_change.png" width="800"/><figcaption>Figure -Yavin pie chart are interactive visualizations </figcaption> </figure>
 
@@ -116,17 +115,17 @@ The line chart line style can be changed to an area spline. The stacked area cha
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_line_chart_sample.png" width="800"/><figcaption> Figure - Yavin time series chart filtered Filters </figcaption> </figure>
 
- Filters limit the data returned in a report. It could be a period or time, a certain country or a number of countries, or any other value of a dimension in your data. The filters live in the filter bar. We can filter by either dimensions, metrics, or both at the same time. It is often useful to filter out outlying data and edge cases, especially when evaluating any kind of rate data such as click rates. With Yavin, you can filter results against a metric threshold or against a dimension value.
+ Filters limit the data returned in a report. It could be a period or time, a certain country or a number of countries, or any other value of a dimension in your data. The filters live in the filter bar. We can filter by either dimensions, measures, or both at the same time. It is often useful to filter out outlying data and edge cases, especially when evaluating any kind of rate data such as click rates. With Yavin, you can filter results against a measure threshold or against a dimension value.
 
- To add a dimension or metric to a filter criteria, select the filter icon (  ![](assets/images/UG_filter_icon.png)  ) next to the metric
+ To add a dimension or measure to a filter criteria, select the filter icon (  ![](assets/images/UG_filter_icon.png)  ) next to the measure
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_add_filter_tooltip.png" width="300"/><figcaption> Figure - Adding a filter </figcaption> </figure>
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_add_dim.gif" width="800"/><figcaption> Gif animation - Filter flow in Yavin </figcaption> </figure>
 
-To remove a dimension or metric from the filter, click the filter icon for the corresponding Dimension or Metric. Or select the (x) ![](assets/images/UG_filters_how.png) icon on the filter section.
+To remove a dimension or measure from the filter, click the filter icon for the corresponding Dimension or Measure. Or select the (x) ![](assets/images/UG_filters_how.png) icon on the filter section.
 
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_remove_filter.png" width="300"/><figcaption> Figure - Removing a filter from the dimension/metrics selector list </figcaption> </figure>
+ <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_remove_filter.png" width="300"/><figcaption> Figure - Removing a filter from the dimension/measures selector list </figcaption> </figure>
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_remove_filters.gif" width="800"/><figcaption> Gif animation - Removing a filter from the filter box </figcaption> </figure>
 
@@ -148,7 +147,7 @@ In the example below, gender, which is a dimension, has a limited number of valu
 |  Contains     |  Now           |
 {:.table}
 
-###  Supported filter operation for Metrics (Number or range filters)
+###  Supported filter operation for Measures (Number or range filters)
 
 |  Operation                     |  Availability  |
 |--------------------------------|----------------|
@@ -162,7 +161,7 @@ In the example below, gender, which is a dimension, has a limited number of valu
 |  &lt;=                         |  Now           |
 {:.table}
 
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_filters.gif" width="800"/><figcaption>Gif animation - Filter operation for metrics </figcaption> </figure>
+ <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_filters.gif" width="800"/><figcaption>Gif animation - Filter operation for measures </figcaption> </figure>
 
 ###  Supported filter operation for Dates (Time filters)
  Time filters are used for timestamp and date dimensions. You can filter on time and select a filter that is relative to the most recent time of the data.
@@ -188,7 +187,7 @@ In the example below, gender, which is a dimension, has a limited number of valu
  Operations on Reports
 ---------------------------------------------
 ### Change column name
- As dimensions ![](assets/images/GS_dim_symbol.png) and metics ![](assets/images/GS_metric_symbol.png) get added to the report, there column-name can be updated in the column tab section ![](assets/images/GS_column_expand.png). The column tab section can retracted and expanded.
+ As dimensions ![](assets/images/GS_dim_symbol.png) and measures ![](assets/images/GS_metric_symbol.png) get added to the report, there column-name can be updated in the column tab section ![](assets/images/GS_column_expand.png). The column tab section can retracted and expanded.
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/GS_report_change_column_name.gif" width="800"/><figcaption> Gif animation -  Changing column name of a report </figcaption> </figure>
 
