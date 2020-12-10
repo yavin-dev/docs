@@ -23,7 +23,7 @@
   description: "Yavin is a composite of 3 previously released open source modules and makes it seamless for users to bootstrap end to end data analytics solutions. The three OSS projects are :"
   descriptionlist:
     - <b>Denali</b> (<a href="http://denali.deign">http://denali.deign</a>) - A themeable user interface design system.
-    - <b>Elide</b> (<a href="http://elide.io">http://elide.io/a>) - A model driven API framework and Yavin's semantic layer.
+    - <b>Elide</b> (<a href="http://elide.io">http://elide.io</a>) - A model driven API framework and Yavin's semantic layer.
     - <b>Navi</b> (<a href="https://github.io/yahoo/navi">https://github.io/yahoo/navi</a>)- The user interface building blocks.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
