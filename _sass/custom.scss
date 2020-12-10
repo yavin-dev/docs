@@ -1,6 +1,3 @@
----
----
-
 /* Helpers that need to be added */
 .has-bg-brand-300 {
   background-color: #1A7DB6 !important;
@@ -73,12 +70,11 @@
 
 /* Cover */
 .section-cover {
-  height: 530px;
-}
-.section-cover--image {
-  background-image: url("{{ site.baseurl }}/assets/cover-image.png");
-  background-size: cover;
-  background-position: center;
+  background-color: black;
+
+  .row {
+    height: 530px;
+  }
 }
 
 /* Guides */
@@ -118,4 +114,19 @@
 
 .section-blog--box {
   height: calc(100% - 40px);
+}
+
+#markdown-toc {
+  @extend .list;
+  > li {
+    margin-left: 1em;
+  }
+
+  ul {
+    @extend #markdown-toc;
+  }
+}
+
+.markdown-docs p {
+  margin: 1em 0;
 }

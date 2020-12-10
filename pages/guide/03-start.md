@@ -133,7 +133,7 @@ measures: [
 ......
 ```
 
-Putting it all together, the H2 semantic model will be written as:     
+Putting it all together, the H2 semantic model will be written as:
 
 ```
       name:  NetflixTitles
@@ -237,7 +237,7 @@ Putting it all together, the H2 semantic model will be written as:
 ```
 
 Note: Joins was not applicable for the demo app. But, Elide supports Join with the following attributes:
-<pre>      
+<pre>
    joins: [
         {
           name:
@@ -250,7 +250,7 @@ Note: Joins was not applicable for the demo app. But, Elide supports Join with t
 
 Yavin pulls and presents all of the semantic model metadata from Elide.
 
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="assets/images/SAI_Model_in_UI.png" width="200" /><figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> </figure>
+<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/SAI_Model_in_UI.png" width="200" /><figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> </figure>
 
 Yavin Example Key Elements
 -----------------------------------------------

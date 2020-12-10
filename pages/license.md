@@ -1,7 +1,7 @@
 ---
 layout: guide
 group: guide
-title:
+title: License
 ---
 
 MIT License

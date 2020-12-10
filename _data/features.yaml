@@ -1,15 +1,12 @@
 - title:
   description: See how you can connect to your data source
   link: https://github.com/yahoo/yavin-docs
-
 - title:
   description: Write your first model and test it
   link: https://github.com/yahoo/yavin-docs
-
 - title:
-  description: Get to know how you can build reports and Dashboards in your analytical tool
+  description: Get to know how you can build reports and dashboards in your analytical tool
   link: https://github.com/yahoo/yavin-docs
-
 - title:
   description: How can you contribute to Yavin and/or Elide Open Source Community
   link: https://github.com/yahoo/yavin-docs

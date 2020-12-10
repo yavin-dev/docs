@@ -1,10 +1,10 @@
-logourl: assets/images/Yavin_logo.png
+logourl: /assets/images/Yavin_logo.png
 githuburl: https://github.com/yahoo/yavin-docs
 helpurl: https://github.com/yahoo/yavin-docs
 navitems:
   - title: Getting Started
     url: ./
   - title: Documentation
-    url: ./
+    url: /pages/guide/01-start.html
   - title: Blog
     url: ./

@@ -9,7 +9,7 @@ title: Customization
 
 Customization is about the extension points of Yavin - how to build a custom application?
 
-Key topics of customization <img src="assets/images/UG_coming_soon.png" width="100"/>
+Key topics of customization <img src="/assets/images/UG_coming_soon.png" width="100"/>
 ------------------------------------------------
 
 #### Plugins, Providers and Configuration

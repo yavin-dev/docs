@@ -42,4 +42,4 @@ exclude:
 
 # site-specific configuration
 BASE_PATH: https://yavin.dev
-ASSET_PATH: assets
+ASSET_PATH: /assets
