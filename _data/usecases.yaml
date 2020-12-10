@@ -1,17 +1,16 @@
 - title: What is Yavin?
-  description: Yavin is a framework for rapidly building custom data applications that offers both a UI and an API. In addition, Yavin can be deployed as a standalone Business Intelligence tool allowing users to explore and drill into data through an intuitive interface.  It provides a set of modular user experience blocks that can be customized to build a tailored experience.  The most common blocks are reports and dashboards.  Reports allow users to craft, execute, and visualize ad hoc queries.  Reports can be assembled into dashboards that collate related visualizations together.  It also includes a powerful semantic layer that lets you model and deploy tables, measures, and dimensions users will see and select throughout the user experience.
+  description: Yavin is a framework for <b>rapidly building custom data applications</b> that offers both a UI and an API. In addition, Yavin can be deployed as a <b>standalone Business Intelligence tool</b> allowing users to explore and drill into data through an intuitive interface. It provides a set of modular user experience blocks that can be customized to build a tailored experience. The most common blocks are </b>reports</b> and <b>dashboards</b>. Reports allow users to craft, execute, and visualize ad hoc queries. Reports can be assembled into dashboards that collate related visualizations together. It also <b>includes a powerful semantic</b> layer that lets you model and deploy tables, measures, and dimensions users will see and select throughout the user experience.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
   icon: d-computer-code
 - title: Why Yavin?
   description: "Reason one how Yavin can work for you :"
   descriptionlist:
-    - Highly Customizable - Yavin is designed to build custom applications around common patterns that every data application needs.
-    - Provide your own visualizations, extend the service layer, theme the application with Denali, or replace individual components in any of the Yavin building blocks.
-    - Model Driven - Yavin’s semantic layer and APIs are model driven allowing non-developers and developers to define the view of data you want users to understand.
-    - Standards - Yavin exposes GraphQL and JSON-API endpoints that are secured with an expressive authorization DSL.
-    - Intuitive UI Design - Yavin’s intuitive, non-cluttered design makes exploring data accessible to all data stakeholders.
-    - Open Source - Yavin is a collaborative project to redefine how data applications are built.  Help us build the Yavin community.
+    - <b>Highly Customizable</b> - Yavin is designed to build custom applications around common patterns that every data application needs. Provide your own visualizations, extend the service layer, theme the application with Denali, or replace individual components in any of the Yavin building blocks.
+    - <b>Model Driven</b> - Yavin’s semantic layer and APIs are model driven allowing non-developers and developers to define the view of data you want users to understand.
+    - <b>Standards</b> - Yavin exposes GraphQL and JSON-API endpoints that are secured with an expressive authorization DSL.
+    - <b>Intuitive UI Design</b> - Yavin’s intuitive, non-cluttered design makes exploring data accessible to all data stakeholders.
+    - <b>Open Source</b> - Yavin is a collaborative project to redefine how data applications are built.  Help us build the Yavin community.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
   icon: d-timer
@@ -23,9 +22,9 @@
 - title: How does it work?
   description: "Yavin is a composite of 3 previously released open source modules and makes it seamless for users to bootstrap end to end data analytics solutions. The three OSS projects are :"
   descriptionlist:
-    - Denali (http://denali.deign) - A themeable user interface design system.
-    - Elide (http://elide.io) - A model driven API framework and Yavin's semantic layer.
-    - Navi (https://github.io/yahoo/navi)- The user interface building blocks.
+    - <b>Denali</b> (<a href="http://denali.deign">http://denali.deign</a>) - A themeable user interface design system.
+    - <b>Elide</b> (<a href="http://elide.io">http://elide.io/a>) - A model driven API framework and Yavin's semantic layer.
+    - <b>Navi</b> (<a href="https://github.io/yahoo/navi">https://github.io/yahoo/navi</a>)- The user interface building blocks.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
   icon: d-processing
