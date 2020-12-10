@@ -1,12 +1,12 @@
 - title:
-  description: See how you can connect to your data source
-  link: https://github.com/yahoo/yavin-docs
+  description: <b>Setup your Data Base :</b> Yavin requires a database to store user information, reports, dashboards, and other application objects. The Yavin repo includes a liquibase-script for creating these tables. The script may require modifications to work with your target database.
+  link: https://yavin.dev/pages/guide/03-start.html#step-2--setup-your-database
 - title:
-  description: Write your first model and test it
-  link: https://github.com/yahoo/yavin-docs
+  description: Write your first <b>semantic model</b> and test it. A semantic model is the view of the data you want your users to understand. It is typically non-relational (for simplicity) and consists of concepts like tables, measures, and dimensions. End users refer to these concepts by name only (they are not expected to derive formulas or know about the physical storage or serialization of data).
+  link: https://yavin.dev/pages/guide/03-start.html#semantic-models
 - title:
-  description: Get to know how you can build reports and dashboards in your analytical tool
-  link: https://github.com/yahoo/yavin-docs
+  description: The most common building blocks in Yavin are <b>reports</b> and <b>dashboards</b>. Reports allow users to <i>craft</i>, <i>execute</i>, and <i>visualize</i> ad hoc queries. Reports can be assembled into dashboards that <i>collate related visualizations</i> together.
+  link: https://yavin.dev/pages/guide/04-start.html
 - title:
   description: How can you contribute to Yavin and/or Elide Open Source Community
   link: https://github.com/yahoo/yavin-docs

@@ -15,6 +15,6 @@
 - header: Resources
   links:
     - title: Getting Started
-      link: https://github.com/yahoo/yavin-docs
+      link: https://yavin.dev/pages/guide/02-start.html
     - title: Documentation
-      link: https://github.com/yahoo/yavin-docs
+      link: https://yavin.dev/pages/guide/01-start.html
