@@ -1,0 +1,132 @@
+/* Helpers that need to be added */
+.has-bg-brand-300 {
+  background-color: #1A7DB6 !important;
+}
+.has-bg-brand-400 {
+  background-color: #005A8E !important;
+}
+.is-brand-500 {
+  color: #FF9750 !important;
+}
+
+/* TODO: Border radiius circle and pill */
+.br-circle {
+  border-radius: 100%;
+}
+
+/* Gutters should be applied to rows */
+/* Add a gutter size override too. */
+.is-gutterless > .col {
+  margin: 0px !important;
+}
+
+/* TODO: Add additional flexbox helpers */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.align-items-flex-end {
+  align-items: flex-end;
+}
+
+/* NOTE: Add font weight override to nav items */
+/* Add loop for height helpers */
+.h-50 {
+  height: 50px;
+}
+.h-40 {
+  height: 40px;
+}
+.h-35 {
+  height: 35px;
+}
+
+/* TODO: Lineheight Helpers */
+.line-height-compact {
+  line-height: 1 !important;
+}
+
+/* TODO: Add overflow helpers */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* TODO: Add body font-size override */
+/* TODO: Background image helpers */
+/* TODO: Button full size at breakpoints */
+/* TODO: Navbar overflow */
+
+/* Add sticky */
+.sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+/* Styles for the site */
+
+/* Navbar */
+.nav {
+  font-weight: 700;
+}
+
+/* Cover */
+.section-cover {
+  background-color: black;
+
+  .row {
+    height: 530px;
+  }
+}
+
+/* Guides */
+.section-guide--item {
+  min-height: 320px;
+  transition: 300ms;
+
+  div:last-child {
+    transition: 300ms;
+  }
+
+  .section-guide--item--button > p {
+    color: #004CB3;
+    transition: 300ms;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 3px 2px rgba(0,0,0,0.10);
+
+    div:last-child {
+      background-color: #016EFF;
+    }
+
+    .section-guide--item--button > p {
+      color: #fff;
+    }
+  }
+}
+
+/* Blog */
+.section-blog--image {
+  height: 150px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-blog--box {
+  height: calc(100% - 40px);
+}
+
+#markdown-toc {
+  @extend .list;
+  > li {
+    margin-left: 1em;
+  }
+
+  ul {
+    @extend #markdown-toc;
+  }
+}
+
+.markdown-docs p {
+  margin: 1em 0;
+}

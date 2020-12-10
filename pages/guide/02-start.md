@@ -29,7 +29,7 @@ title: Quick Start Guide
 ** Ctrl-C to Exit **
 
 <figure>
-    <video controls> <source src="assets/images/QS_installation_and_run.mp4" type="video/mp4"></video>
+    <video controls> <source src="/assets/images/QS_installation_and_run.mp4" type="video/mp4"></video>
     <figcaption>A quick video that shows each step.</figcaption>
 </figure>
 

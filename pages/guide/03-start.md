@@ -214,9 +214,7 @@ Note: The Netflix demo data only sourced from a single physical table.  More com
 
 The Yavin UI is metadata driven and will present your semantic model:
 
-<figure><img src="assets/images/SAI_Model_in_UI.png"/>
-    <figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> 
-</figure>
+<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/SAI_Model_in_UI.png" width="200" /><figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> </figure>
 
 Yavin Example Key Elements
 -----------------------------------------------

@@ -27,14 +27,13 @@ plugins:
 sass:
   load_paths:
     - _sass
-    - node_modules
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
   - README.md
-#   - Gemfile.lock
+  - Gemfile.lock
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
@@ -43,4 +42,4 @@ exclude:
 
 # site-specific configuration
 BASE_PATH: https://yavin.dev
-ASSET_PATH: assets
+ASSET_PATH: /assets

@@ -1,0 +1,10 @@
+{% assign filtered_pages = site.pages | where: "group", "guide" %}
+<ul>
+  {% for filtered_page in filtered_pages %}
+    {% assign class = '' %}
+    {% if page.url == filtered_page.url %}
+      {% assign class='is-active' %}
+    {% endif %}
+    <li class="{{ class }}"><a href="{{ filtered_page.url }}">{{ filtered_page.title }}</a></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,20 @@
+- header: Community
+  links:
+    - title: Blog
+      link: https://github.com/yahoo/yavin-docs
+    - title: Slack
+      link: https://github.com/yahoo/yavin-docs
+    - title: Contact Us
+      link: https://github.com/yahoo/yavin-docs
+- header: Contribute
+  links:
+    - title: GitHub
+      link: https://github.com/yahoo/yavin-docs
+    - title: Suggest
+      link: https://github.com/yahoo/yavin-docs
+- header: Resources
+  links:
+    - title: Getting Started
+      link: https://github.com/yahoo/yavin-docs
+    - title: Documentation
+      link: https://github.com/yahoo/yavin-docs
