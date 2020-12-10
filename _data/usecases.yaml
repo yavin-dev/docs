@@ -2,16 +2,19 @@
   description: Yavin is a framework for rapidly building custom data applications that offers both a UI and an API. In addition, Yavin can be deployed as a standalone Business Intelligence tool. It is scalable and secure and it’s intuitive visualization interface allows for fast drill-downs of very large data sets through simple interface and visualization blocks.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
+  icon: d-computer-code
 
 - title: Why Yavin?
   description: The easy setup and installation guide will allow you to setup your analytical tool instance within minutes. The intuitive nature of Yavin will get you going in no time and show what insightful data can do for you and your work.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
+  icon: d-timer
 
 - title: Who We Are?
   description: Over the course of the last 5 years, the Data organization at Verizon Media Group has built several data applications to provide insights into various data sets. While each of these applications are unique, several patterns across these systems have been identified. Typically, these systems contain a query engine, a set of web services, and a set of UI flows to manage and explore data sets. This led to the birth of Yavin, a data application platform.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
+  icon: d-network-workload
 
 - title: How does it work?
   description: "Yavin is a combination of three major modules. They are:"
@@ -21,3 +24,4 @@
     - Navi (The UI Layer)
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
+  icon: d-processing
