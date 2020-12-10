@@ -1,10 +1,17 @@
 - title: What is Yavin?
-  description: Yavin is a framework for rapidly building custom data applications that offers both a UI and an API. In addition, Yavin can be deployed as a standalone Business Intelligence tool. It is scalable and secure and it’s intuitive visualization interface allows for fast drill-downs of very large data sets through simple interface and visualization blocks.
+  description: Yavin is a framework for rapidly building custom data applications that offers both a UI and an API. In addition, Yavin can be deployed as a standalone Business Intelligence tool allowing users to explore and drill into data through an intuitive interface.  It provides a set of modular user experience blocks that can be customized to build a tailored experience.  The most common blocks are reports and dashboards.  Reports allow users to craft, execute, and visualize ad hoc queries.  Reports can be assembled into dashboards that collate related visualizations together.  It also includes a powerful semantic layer that lets you model and deploy tables, measures, and dimensions users will see and select throughout the user experience.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
   icon: d-computer-code
 - title: Why Yavin?
-  description: The easy setup and installation guide will allow you to setup your analytical tool instance within minutes. The intuitive nature of Yavin will get you going in no time and show what insightful data can do for you and your work.
+  description: "Reason one how Yavin can work for you :"
+  descriptionlist:
+    - Highly Customizable - Yavin is designed to build custom applications around common patterns that every data application needs.
+    - Provide your own visualizations, extend the service layer, theme the application with Denali, or replace individual components in any of the Yavin building blocks.
+    - Model Driven - Yavin’s semantic layer and APIs are model driven allowing non-developers and developers to define the view of data you want users to understand.
+    - Standards - Yavin exposes GraphQL and JSON-API endpoints that are secured with an expressive authorization DSL.
+    - Intuitive UI Design - Yavin’s intuitive, non-cluttered design makes exploring data accessible to all data stakeholders.
+    - Open Source - Yavin is a collaborative project to redefine how data applications are built.  Help us build the Yavin community.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
   icon: d-timer
@@ -14,11 +21,11 @@
   link: https://github.com/yahoo/yavin-docs
   icon: d-network-workload
 - title: How does it work?
-  description: "Yavin is a combination of three major modules. They are:"
+  description: "Yavin is a composite of 3 previously released open source modules and makes it seamless for users to bootstrap end to end data analytics solutions. The three OSS projects are :"
   descriptionlist:
-    - Denali (The Design Layer)
-    - Elide (The Web Service Layer)
-    - Navi (The UI Layer)
+    - Denali (http://denali.deign) - A themeable user interface design system.
+    - Elide (http://elide.io) - A model driven API framework and Yavin's semantic layer.
+    - Navi (https://github.io/yahoo/navi)- The user interface building blocks.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
   icon: d-processing
