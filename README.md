@@ -1,6 +1,6 @@
-# navi.io
+# yavin.dev
 
-Doc site for Navi built with Jekyll
+Doc site for Yavin built with Jekyll
 
 ## Getting started
 

@@ -26,7 +26,7 @@ Pull requests correcting spelling or grammar mistakes are always welcome.
 
 ### Issues Labeling
 
-Navi uses [Standard Issue Labels](https://github.com/wagenet/StandardIssueLabels)
+Yavin uses [Standard Issue Labels](https://github.com/wagenet/StandardIssueLabels)
 for Github Issues.
 
 ### Reporting a Bug
@@ -47,10 +47,10 @@ for Github Issues.
      we cannot reproduce it, we will close the ticket.
 
 1. Your issue will be verified. The provided example will be tested for
-   correctness. The Navi team will work with you until your issue can be
+   correctness. The Yavin team will work with you until your issue can be
    verified.
 
-1. Keep up to date with feedback from the Navi team on your ticket. Your ticket
+1. Keep up to date with feedback from the Yavin team on your ticket. Your ticket
    may be closed if it becomes stale.
 
 1. If possible, submit a Pull Request with a failing test. Better yet, take a

@@ -1,6 +1,6 @@
 {
-  "name": "navi-doc",
-  "description": "Doc site for the navi.io project",
+  "name": "yavin-doc",
+  "description": "Doc site for the yavin.dev project",
   "scripts": {
     "setup": "gem install bundler; bundle install",
     "start": "bundle exec jekyll serve"
