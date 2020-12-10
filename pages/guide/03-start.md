@@ -24,6 +24,7 @@ Elide analytic APIs **generate SQL queries** against your target database(s). El
 * Hive
 * Presto
 * MySQL
+* Postgres
 
 More information on dialects and how to use them can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#dialects). 
 
