@@ -4,7 +4,7 @@
   link: https://github.com/yahoo/yavin-docs
   icon: d-computer-code
 - title: Why Yavin?
-  description: "Reason one how Yavin can work for you :"
+  description: "Reasons on how Yavin can work for you :"
   descriptionlist:
     - <b>Highly Customizable</b> - Yavin is designed to build custom applications around common patterns that every data application needs. Provide your own visualizations, extend the service layer, theme the application with Denali, or replace individual components in any of the Yavin building blocks.
     - <b>Model Driven</b> - Yavin’s semantic layer and APIs are model driven allowing non-developers and developers to define the view of data you want users to understand.
@@ -15,7 +15,7 @@
   link: https://github.com/yahoo/yavin-docs
   icon: d-timer
 - title: Who We Are?
-  description: Over the course of the last 5 years, the Data organization at Verizon Media Group has built several data applications to provide insights into various data sets. While each of these applications are unique, several patterns across these systems have been identified. Typically, these systems contain a query engine, a set of web services, and a set of UI flows to manage and explore data sets. This led to the birth of Yavin, a data application platform.
+  description: Over the course of the last 5 years, the Data organization at Verizon Media Group has built several data applications to provide insights into various data sets. While each of these applications are unique, several patterns across these systems have been identified. Typically, these systems contain a query engine, a set of web services, and a set of UI flows to manage and explore data sets. This led to the birth of <b>Yavin, a data application platform</b>.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
   icon: d-network-workload
