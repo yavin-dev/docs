@@ -1,15 +1,15 @@
 - title: Deploy In Minutes
   description: Yavin can be deployed as a standalone business intelligence tool in a few simple steps.  Build reports, assemble dashboards, and explore data with ad-hoc queries.
-  image: http://via.placeholder.com/300x200
+  image: /assets/images/funnel.png
   link: https://yavin.dev/pages/guide/02-start.html
   icon: d-timer
 - title: Tailor the Experience
   description: Yavin is designed to build custom applications around common patterns that every data application needs. These patterns are codified as a set of modular user experiences that can be fully customized.
   descriptionlist:
     - provide your own visualizations
-    - extend the service layer 
+    - extend the service layer
     - theme the application
     - replace individual components in any of the yavin building blocks
-  image: http://via.placeholder.com/300x200
+  image: /assets/images/levels.png
   link: https://yavin.dev/pages/guide/06-start.html
   icon: d-computer-code
