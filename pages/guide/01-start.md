@@ -45,8 +45,9 @@ In the software industry, when discovering patterns, we often build abstractions
 ![Elide Logo](/assets/images/Elide_logo.png){:class="img-responsive"}
 
 **Yavin uses Elide as its web service and semantic layer**. Elide is a Java library that lets you setup model driven GraphQL or JSON-API web services with minimal effort. Elide supports two variants of APIs:
-1.  A CRUD (Create, Read, Update, Delete) API for reading and manipulating models.
-1.  An analytic API for aggregating measures over zero or more model dimensions.
+
+1. A CRUD (Create, Read, Update, Delete) API for reading and manipulating models.
+1. An analytic API for aggregating measures over zero or more model dimensions.
 
 For more information on Elide, visit [elide.io](https://elide.io).
 
