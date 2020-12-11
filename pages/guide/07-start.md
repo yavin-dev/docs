@@ -29,7 +29,7 @@ API Documentation is broken out by topic:
 
 ## Schema Introspection
 
-The Yavin service includes a [landing page](http://localhost:8080/api/index.html) where you can browse the API documentation and run queries using either Swagger (JSON-API) or Graphiql (GraphQL). 
+The Yavin service includes a landing page (found at /api/index.html) where you can browse the API documentation and run queries using either Swagger (JSON-API) or Graphiql (GraphQL). 
 
 ### Swagger 
 ![](/assets/images/API_Swagger.png)
