@@ -89,9 +89,9 @@ Reports are designed to be explored intuitively, easily and quickly.
 1.  Select a table
 ![](/assets/images/GS_table_selector.png)
 1.  Select a dimension
-<img src="/assets/images/GS_dimension_selector.png" height"100"/>
+<img src="/assets/images/GS_dimension_selector.png" width"200"/>
 1.  Select a measure
-<img src="/assets/images/GS_metric_selector.png" height"100"/>
+<img src="/assets/images/GS_metric_selector.png" width"200"/>
 1.  Update your filters
 ![](/assets/images/GS_report_filter_sample.png)
 1.  Select run report button
@@ -117,7 +117,7 @@ From within a Dashboard, you can do all of the following. The on-screen icon is 
 | ![](/assets/images/GS_clone_with_text.png) | Now         |
 | ![](/assets/images/GS_share_withText.png)     |  Now    |
 | ![](/assets/images/GS_delete.png)     |  Now    |
-| <img src="/assets/images/assets/images/GS_add_widget.png" width="100"/>   |  Now    |
+| <img src="/assets/images/GS_add_widget.png" width="100"/>   |  Now    |
 | ![](/assets/images/GS_settings_add_filter.png)     |  Now    |
 {:.table}
 
@@ -138,8 +138,7 @@ From the dashboard itself, use the “+ Add Widget” button :
 
 1.  Select <img src="/assets/images/GS_add_widget.png" width="150"/> to add an already existing report to the Dashboard
 1.  Select the report like this: ![](/assets/images/GS_add_widget_dialog.png)
-1.  You can choose between creating a new report or using an existing one : ![](/assets/images/GS_add_widget2.png)
-![](/assets/images/GS_add_search_widget.png)
+1.  You can choose between creating a new report or using an existing one : <img src="/assets/images/GS_add_widget2.png" width="350"/> <img src="/assets/images/GS_add_search_widget.png" width="350"/>
 1.  The Report will be added to the dashboard as a widget: ![](/assets/images/GS_table_row.png)
 1.  The Report/Widget can be resized, edited and deleted: ![](/assets/images/GS_table_sample.png)
 
