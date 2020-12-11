@@ -213,9 +213,40 @@ Yavin's demo data includes a single table in its [semantic model][demo-table] Ne
 
 Note: The Netflix demo data only sourced from a single physical table.  More complex data models may source from multiple physical tables and require joins at query time.  More information about joins can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#joins).
 
+### User Interface Metadata 
+
 The Yavin UI is metadata driven and will present your semantic model:
 
 <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/SAI_Model_in_UI.png" width="200" /><figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> </figure>
+
+#### Type Ahead Search
+
+When constructing filters in the Yavin UI, the search bar can perform "Type Ahead" search.  Type ahead search is a feature where user search terms are matched to suggestions as the user types.   Type ahead search can be enabled for any dimension of type `TEXT` in one of two ways.   The first is to add a `values` attribute to the dimension with a list of all possible values.  This works well for small dimensions:
+
+```
+{
+  name : countryCode
+  friendlyName : Country ISO Code
+  type : TEXT
+  definition : '{{playerCountry.isoCode}}'
+  values : ['US', 'HK']
+}
+```
+
+For larger dimensions, you can specify an alternate semantic table (typically a dimension table) that can be searched for values by adding the `tableSource` attribute:
+
+```
+{ 
+  name: countryName
+  type: TEXT
+  definition: '{{playerCountry.name}}'
+  tableSource: country.name
+}
+```
+
+The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
+
+When neither `values` or `tableSource` is specified, Yavin disables type ahead search.
 
 Yavin Example Key Elements
 -----------------------------------------------

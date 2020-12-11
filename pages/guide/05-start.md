@@ -128,7 +128,7 @@ To remove a dimension or measure from the filter, click the filter icon for the 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_remove_filters.gif" width="800"/><figcaption> Gif animation - Removing a filter from the filter box </figcaption> </figure>
 
 ###  Editing filters
-Users can edit filters in the filter section of the report. Some dimension filters support “Type Ahead” search.  Type ahead search is a feature of the search bar where user search terms are matched to suggestions as the user types.  Type ahead search is only supported for dimensions with text values and must be [specifically enabled in the semantic layer]().  
+Users can edit filters in the filter section of the report. Some dimension filters support “Type Ahead” search.  Type ahead search is a feature of the search bar where user search terms are matched to suggestions as the user types.  Type ahead search is only supported for dimensions with text values and must be [specifically enabled in the semantic layer](/pages/guide/03-start.html#type-ahead-search).  
 
 The example below demonstrates editing different types of dimension filters:
 
