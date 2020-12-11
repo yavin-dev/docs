@@ -28,11 +28,9 @@ What can you do in the directory view of Yavin? Let’s explore these options on
 ##### Perform actions on a report:
 ![](/assets/images/GS_report_options.png)
 
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/GS_navigating_my_data.gif" width="800"/><figcaption>Gif animation - From the list of reports in the  directory, you can clone, export, share and delete </figcaption> </figure>
-
 |      Operation                      |  Availability                       |
 |---------------------------------|---------------------------------------|
-| ![](/assets/images/GS_my_data_new.png)  | Now         |
+| ![](/assets/images/GS_my_data_new_report.png)  | Now         |
 | Clone ![Clone](/assets/images/GS_clone.png) | Now |
 | Export ![Export](/assets/images/GS_download.png) | Q1  2021 |
 | Share ![Share](/assets/images/GS_share.png)  | Now |
@@ -42,11 +40,9 @@ What can you do in the directory view of Yavin? Let’s explore these options on
 ##### Perform actions on a Dashboard:
 ![](/assets/images/GS_dashboard_options.png)
 
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/GS_my_data_browse.gif" width="800"/><figcaption>Gif animation - From the list of dashboards in the  directory, you can clone, share and delete </figcaption> </figure>
-
 |      Operation                      |  Availability                       |
 |---------------------------------|---------------------------------------|
-| ![](/assets/images/GS_my_data_new.png)  | Now         |
+| ![](/assets/images/GS_my_data_new_dashboard.png)  | Now         |
 | ![](/assets/images/GS_new_dashboard.png)        |     Now          |
 | Clone ![](/assets/images/GS_clone.png) | Now          |
 | Share ![](/assets/images/GS_share.png)  | Now        |
