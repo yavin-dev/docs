@@ -104,18 +104,6 @@
   }
 }
 
-/* Blog */
-.section-blog--image {
-  height: 150px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.section-blog--box {
-  height: calc(100% - 40px);
-}
-
 #markdown-toc {
   @extend .list;
   > li {
