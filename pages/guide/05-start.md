@@ -36,7 +36,7 @@ The Gauge visualization is a chart that displays the major contributors or key i
   <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz2.png" width="250"/><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz3.png" width="250"/><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz4.png" width="250"/><figcaption> Figure - Editing Yavin gauge chart visualization and changing the baseline </figcaption> </figure>
 
 ###  Table
- **The table visualization is the default view when a dimension is selected**. It presents a tabular view of the data with column ordering and sorting functions. 
+ **The table visualization is the default view when a dimension is selected**. It presents a tabular view of the data with column ordering and sorting functions.
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_table_viz.png" width="800"/><figcaption>Figure - Sample Yavin table visualization </figcaption> </figure>
 
@@ -55,7 +55,7 @@ The table visualization can show multiple dimensions measures and dimensions tog
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_add_total2.png" width="800"/><figcaption>Figure - Table Visualization with “Grand Total” and “Subtotal” applied </figcaption> </figure>
 
 ###  Line chart
- The line chart can visualize temporal (trend over time) dimensions.  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_line_chart_sample2.png" width="800"/><figcaption>Figure - Sample Yavin line chart visualization </figcaption> </figure>
+ The line chart can visualize temporal (trend over time) dimensions. <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_line_chart_sample2.png" width="800"/><figcaption>Figure - Line charts are interactive visualizations </figcaption> </figure>
 
 The chart lets you visualize multiple trends together in a single graph. Note the different colored lines in the chart below. They each chart an individual dimension.
 
@@ -95,12 +95,12 @@ When there are multiple dimensions being rendered, the label below the chart sho
 
 |  Visualization                     |  When is it available for selection?  |
 |------------------------------------|---------------------------------------|
-|  ![]/assets/images/UG_table_icon2.png)  |  When no dimension is added.           |
-|  ![]/assets/images/UG_gauge_icon.png)  |  When no dimension is added.          |
-|  ![]/assets/images/UG_table_icon.png)  |  Table visualization is available in all cases. It is the default visualization.   |
-|  ![]/assets/images/UG_line_icon.png)  |  When at least one time dimension is added.           |
-|  ![]/assets/images/UG_bar_icon.png)   |  When at least one dimension is added.      |
-|  ![]/assets/images/UG_pie_icon.png)   |  When there is no time dimension added.       |
+|  <img src="/assets/images/UG_table_icon2.png" width="100"/> |  When no dimension is added.           |
+|  <img src="/assets/images/UG_gauge_icon.png" width="100"/> |  When no dimension is added.          |
+|  <img src="/assets/images/UG_table_icon.png" width="100"/> |  Table visualization is available in all cases. It is the default visualization.   |
+|  <img src="/assets/images/UG_line_icon.png" width="100"/> |  When at least one time dimension is added.           |
+|  <img src="/assets/images/UG_bar_icon.png" width="100"/> |  When at least one dimension is added.      |
+|  <img src="/assets/images/UG_pie_icon.png" width="100"/> |  When there is no time dimension added.       |
 {:.table}
 
  Time Series
@@ -128,7 +128,7 @@ To remove a dimension or measure from the filter, click the filter icon for the 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_remove_filters.gif" width="800"/><figcaption> Gif animation - Removing a filter from the filter box </figcaption> </figure>
 
 ###  Editing filters
-Users can edit filters in the filter section of the report. Some dimension filters support “Type Ahead” search.  Type ahead search is a feature of the search bar where user search terms are matched to suggestions as the user types.  Type ahead search is only supported for dimensions with text values and must be [specifically enabled in the semantic layer]().  
+Users can edit filters in the filter section of the report. Some dimension filters support “Type Ahead” search.  Type ahead search is a feature of the search bar where user search terms are matched to suggestions as the user types.  Type ahead search is only supported for dimensions with text values and must be [specifically enabled in the semantic layer](/pages/guide/03-start.html#type-ahead-search).  
 
 The example below demonstrates editing different types of dimension filters:
 
@@ -176,7 +176,7 @@ Time and date dimensions support their own filter operations.  Some operations a
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_line_filter_change.gif" width="800"/><figcaption>Gif animation - Filter operation for dates </figcaption> </figure>
 
 ###  Dashboard filter
-You can add a filter to a dashboard by clicking on the ![](/assets/images/UG_settings_icon.png) icon, followed by ![](/assets/images/UG_add_filter.png) to select the dimension, the operation and the value.
+You can add a filter to a dashboard by clicking on the <img src="/assets/images/UG_settings_icon.png" width="100"/> icon, followed by <img src="/assets/images/UG_add_filter.png" width="100"/> to select the dimension, the operation and the value.
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_dashboard_filter.gif" width="800"/><figcaption> Gif animation -  Dashboard filters </figcaption> </figure>
 
@@ -205,7 +205,7 @@ Allows you to copy the API query of your Report, or run it in a new Tab.
 ### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
 Allows you export your Report as CSV, PDF or PNG.
 
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_export_report.png" width="200"/><figcaption>Figure - Export options </figcaption> </figure>
+ <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_export_report.png" width="150"/><figcaption>Figure - Export options </figcaption> </figure>
 
 ###  Share
 Allows you to share the link of your Report.
@@ -236,7 +236,7 @@ Creates an exact copy of a dashboard with the name “Copy of ….”.
 ### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
 Allows you export your Dashboard as PDF or PNG.
 
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_export.png" width="200"/><figcaption>Figure - Dashboard export options </figcaption> </figure>
+ <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_export.png" width="150"/><figcaption>Figure - Dashboard export options </figcaption> </figure>
 
 ###  Share
 Allows you to share the link for your Dashboard.
