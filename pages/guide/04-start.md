@@ -85,13 +85,13 @@ Reports are designed to be explored intuitively, easily and quickly.
 
 
 1.  Create a new report from Yavin’s directory view
-<img src="/assets/images/GS_my_data_new_report.png width="100"/>
+<img src="/assets/images/GS_my_data_new_report.png" width="100"/>
 1.  Select a table
 ![](/assets/images/GS_table_selector.png)
 1.  Select a dimension
-![](/assets/images/GS_dimension_selector.png)
+<img src="/assets/images/GS_dimension_selector.png" height"100"/>
 1.  Select a measure
-![](/assets/images/GS_metric_selector.png)
+<img src="/assets/images/GS_metric_selector.png" height"100"/>
 1.  Update your filters
 ![](/assets/images/GS_report_filter_sample.png)
 1.  Select run report button
@@ -117,7 +117,7 @@ From within a Dashboard, you can do all of the following. The on-screen icon is 
 | ![](/assets/images/GS_clone_with_text.png) | Now         |
 | ![](/assets/images/GS_share_withText.png)     |  Now    |
 | ![](/assets/images/GS_delete.png)     |  Now    |
-| <img src="/assets/images/assets/images/GS_add_widget.png width="100"/>   |  Now    |
+| <img src="/assets/images/assets/images/GS_add_widget.png" width="100"/>   |  Now    |
 | ![](/assets/images/GS_settings_add_filter.png)     |  Now    |
 {:.table}
 
