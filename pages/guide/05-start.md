@@ -36,7 +36,7 @@ The Gauge visualization is a chart that displays the major contributors or key i
   <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz2.png" width="250"/><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz3.png" width="250"/><img style="border:2px solid black;" src="/assets/images/UG_gauge_viz4.png" width="250"/><figcaption> Figure - Editing Yavin gauge chart visualization and changing the baseline </figcaption> </figure>
 
 ###  Table
- **The table visualization is the default view when a dimension is selected**. It presents a tabular view of the data with column ordering and sorting functions. 
+ **The table visualization is the default view when a dimension is selected**. It presents a tabular view of the data with column ordering and sorting functions.
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_table_viz.png" width="800"/><figcaption>Figure - Sample Yavin table visualization </figcaption> </figure>
 
@@ -95,12 +95,12 @@ When there are multiple dimensions being rendered, the label below the chart sho
 
 |  Visualization                     |  When is it available for selection?  |
 |------------------------------------|---------------------------------------|
-|  ![]/assets/images/UG_table_icon2.png)  |  When no dimension is added.           |
-|  ![]/assets/images/UG_gauge_icon.png)  |  When no dimension is added.          |
-|  ![]/assets/images/UG_table_icon.png)  |  Table visualization is available in all cases. It is the default visualization.   |
-|  ![]/assets/images/UG_line_icon.png)  |  When at least one time dimension is added.           |
-|  ![]/assets/images/UG_bar_icon.png)   |  When at least one dimension is added.      |
-|  ![]/assets/images/UG_pie_icon.png)   |  When there is no time dimension added.       |
+|  ![](/assets/images/UG_table_icon2.png)  |  When no dimension is added.           |
+|  ![](/assets/images/UG_gauge_icon.png)  |  When no dimension is added.          |
+|  ![](/assets/images/UG_table_icon.png)  |  Table visualization is available in all cases. It is the default visualization.   |
+|  ![](/assets/images/UG_line_icon.png)  |  When at least one time dimension is added.           |
+|  ![](/assets/images/UG_bar_icon.png)   |  When at least one dimension is added.      |
+|  ![](/assets/images/UG_pie_icon.png)   |  When there is no time dimension added.       |
 {:.table}
 
  Time Series
