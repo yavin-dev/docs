@@ -7,21 +7,18 @@ title: Getting Started with the UI
 * TOC
 {:toc}
 
-Yavin landing Page
-------------------------------------------
-The default landing page of Yavin is the start of your data exploration. From here, you can go to the directory listing showing all reports (individual data visualizations) and dashboards (a group of related reports), or go to saved/shared reports lists, the dashboards list, or start building reports with the “Start Exploring” button.
 
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/GS_Yavin_landing_page.png" width="800"/><figcaption>Figure - Yavin landing page </figcaption> </figure>
-
-Directory / “My Data”
+Directory / “My Data” / landing Page
 ----------------------------------------------
-The Directory/“My Data” view carries all the active reports/Dashboards that you have previously created as well as any reports and dashboards that have been shared with you. Within the “My Data” page you can:
--   Create new Reports and/or Dashboards
--   Filter based on your “Favorites” Reports/Dashboards
--   Search for specific Reports/Dashboards
--   Filter by Reports/Dashboards
--   Perform actions on a report (Clone, Export, Share, Schedule, Delete)
--   Perform actions on a dashboard (Clone, Export, Share,Delete)
+The default landing page of Yavin is the start of your data exploration. The Directory/“My Data” view carries all the active reports (individual data visualizations) / Dashboards (a group of related reports) that you have previously created as well as any reports and dashboards that have been shared with you.
+
+Within the Directory view you can:
+- Create new Reports and/or Dashboards
+- Filter based on your “Favorites” Reports/Dashboards
+- Search for specific Reports/Dashboards
+- Filter by Reports/Dashboards
+- Perform actions on a report (Clone, Export, Share, Schedule, Delete)
+- Perform actions on a dashboard (Clone, Export, Share,Delete)
 
 <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/GS_my_data_list.gif" width="800"/><figcaption>Gif animation - Browsing the directory view </figcaption> </figure>
 
