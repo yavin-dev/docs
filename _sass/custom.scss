@@ -130,3 +130,7 @@
 .markdown-docs p {
   margin: 1em 0;
 }
+
+ol,ul {
+  @extend .list;
+}
