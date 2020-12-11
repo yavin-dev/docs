@@ -30,7 +30,7 @@ What can you do in the directory view of Yavin? Let’s explore these options on
 
 |      Operation                      |  Availability                       |
 |---------------------------------|---------------------------------------|
-| ![](/assets/images/GS_my_data_new_report.png)  | Now         |
+| <img src="/assets/images/GS_my_data_new_report.png" width="150"/> | Now         |
 | Clone ![Clone](/assets/images/GS_clone.png) | Now |
 | Export ![Export](/assets/images/GS_download.png) | Q1  2021 |
 | Share ![Share](/assets/images/GS_share.png)  | Now |
@@ -42,8 +42,7 @@ What can you do in the directory view of Yavin? Let’s explore these options on
 
 |      Operation                      |  Availability                       |
 |---------------------------------|---------------------------------------|
-| ![](/assets/images/GS_my_data_new_dashboard.png)  | Now         |
-| ![](/assets/images/GS_new_dashboard.png)        |     Now          |
+| <img src="/assets/images/GS_my_data_new_dashboard.png" width="150"/>  | Now         |
 | Clone ![](/assets/images/GS_clone.png) | Now          |
 | Share ![](/assets/images/GS_share.png)  | Now        |
 | Delete ![](/assets/images/GS_delete_icon.png) | Now         |
@@ -55,7 +54,7 @@ A report is a user defined query coupled with a visual representation (table, gr
 
 <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/GS_Yavin_report_in_action.gif" width="800"/><figcaption>Gif animation - Yavin report in action </figcaption> </figure>
 
-The high level operations on a report include:
+####The high level operations on a report include:
 
 ![](/assets/images/GS_report_action_long_list.png)
 
@@ -84,7 +83,7 @@ At any time in a report, you can perform one of the following operations : Run, 
 ### Exploring Reports
 Reports are designed to be explored intuitively, easily and quickly.
 1.  Create a new report from Yavin’s directory view
-![](/assets/images/GS_my_data_newreport.png)
+![](/assets/images/GS_my_data_new_report.png)
 1.  Select a table
 ![](/assets/images/GS_table_selector.png)
 1.  Select a dimension
@@ -133,9 +132,9 @@ Dashboards are built by adding reports to them one at a time. There are two ways
 - Through the report view.
 
 #### Adding Reports to a Dashboard from the Dashboard view
-From the dashboard itself, use the “+ Add Widget” feature as illustrated: ![](/assets/images/GS_add_widget.png)
+From the dashboard itself, use the “+ Add Widget” button :
 
-1.  Select ![](/assets/images/GS_add_widget.png) to add an already existing report to the Dashboard
+1.  Select <img src="/assets/images/GS_add_widget.png" width="150"/> to add an already existing report to the Dashboard
 1.  Select the report like this: ![](/assets/images/GS_add_widget_dialog.png)
 1.  You can choose between creating a new report or using an existing one : ![](/assets/images/GS_add_widget2.png)
 ![](/assets/images/GS_add_search_widget.png)
