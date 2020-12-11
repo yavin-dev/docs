@@ -1,30 +1,15 @@
-- title: What is Yavin?
-  description: Yavin is a framework for <b>rapidly building custom data applications</b> that offers both a <b>UI</b> and an <b>API</b>. In addition, Yavin can be deployed as a <b>standalone Business Intelligence tool</b> allowing users to explore and drill into data through an intuitive interface. It provides a set of modular user experience blocks that can be customized to build a tailored experience. The most common blocks are <b>reports</b> and <b>dashboards</b>. Reports allow users to <i>craft</i>, <i>execute</i>, and <i>visualize</i> ad hoc queries. Reports can be assembled into dashboards that <i>collate related visualizations</i> together. It also <b>includes a powerful semantic</b> layer that lets you <i>model</i> and <i>deploy</i> <b>tables</b>, <b>measures</b>, and <b>dimensions</b> users will see and select throughout the user experience.
-  image: http://via.placeholder.com/300x200
-  link: https://github.com/yahoo/yavin-docs
-  icon: d-computer-code
-- title: Why Yavin?
-  description: "Reasons on how Yavin can work for you :"
-  descriptionlist:
-    - <b>Highly Customizable</b> - Yavin is designed to build custom applications around common patterns that every data application needs. Provide your own visualizations, extend the service layer, theme the application with Denali, or replace individual components in any of the Yavin building blocks.
-    - <b>Model Driven</b> - Yavin’s semantic layer and APIs are model driven allowing non-developers and developers to define the view of data you want users to understand.
-    - <b>Standards</b> - Yavin exposes GraphQL and JSON-API endpoints that are secured with an expressive authorization DSL.
-    - <b>Intuitive UI Design</b> - Yavin’s intuitive, non-cluttered design makes exploring data accessible to all data stakeholders.
-    - <b>Open Source</b> - Yavin is a collaborative project to redefine how data applications are built.  Help us build the Yavin community.
+- title: Deploy In Minutes
+  description: Yavin can be deployed as a standalone business intelligence tool in a few simple steps.  Build reports, assemble dashboards, and explore data with ad-hoc queries.
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
   icon: d-timer
-- title: Who We Are?
-  description: Over the course of the last 5 years, the Data organization at Verizon Media Group has built several data applications to provide insights into various data sets. While each of these applications are unique, several patterns across these systems have been identified. Typically, these systems contain a query engine, a set of web services, and a set of UI flows to manage and explore data sets. This led to the birth of <b>Yavin, a data application platform</b>.
-  image: http://via.placeholder.com/300x200
-  link: https://github.com/yahoo/yavin-docs
-  icon: d-network-workload
-- title: How does it work?
-  description: "Yavin is a composite of 3 previously released open source modules and makes it seamless for users to bootstrap end to end data analytics solutions. The three OSS projects are :"
+- title: Tailor the Experience
+  description: Yavin is designed to build custom applications around common patterns that every data application needs. These patterns are codified as a set of modular user experiences that can be fully customized.
   descriptionlist:
-    - <b>Denali</b> (<a href="http://denali.deign">http://denali.deign</a>) - A themeable user interface design system.
-    - <b>Elide</b> (<a href="http://elide.io">http://elide.io</a>) - A model driven API framework and Yavin's semantic layer.
-    - <b>Navi</b> (<a href="https://github.io/yahoo/navi">https://github.io/yahoo/navi</a>)- The user interface building blocks.
+    - provide your own visualizations
+    - extend the service layer 
+    - theme the application
+    - replace individual components in any of the yavin building blocks
   image: http://via.placeholder.com/300x200
   link: https://github.com/yahoo/yavin-docs
-  icon: d-processing
+  icon: d-computer-code
