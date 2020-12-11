@@ -48,7 +48,7 @@ The table visualization can show multiple dimensions measures and dimensions tog
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_customize_table.png" width="800"/><figcaption>Figure - Editing Yavin table visualization </figcaption> </figure>
 
- “**Grand Total**” and “**Subtotals**” of measures by dimension, can be added to the table calculation if desired. The option to add them can be done from the (  ![](assets/images/UG_edit_table.png)  ) option.
+ “**Grand Total**” and “**Subtotals**” of measures by dimension, can be added to the table calculation if desired. The option to add them can be done from the (<img src="/assets/images/UG_edit_table.png" width="100"/>) option.
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_add_total.png" width="800"/><figcaption>Figure - Table Visualization with no “Grand Total” and “Subtotal” applied  </figcaption> </figure>
 
@@ -117,13 +117,13 @@ When there are multiple dimensions being rendered, the label below the chart sho
 
  To add a dimension or measure to a filter criteria, select the filter icon (  ![](assets/images/UG_filter_icon.png)  ) next to the measure or dimension.
 
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_add_filter_tooltip.png" width="300"/><figcaption> Figure - Adding a filter </figcaption> </figure>
+<img src="/assets/images/UG_add_filter_tooltip.png" width="300"/>
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/UG_add_dim.gif" width="800"/><figcaption> Gif animation - Filter flow in Yavin </figcaption> </figure>
 
 To remove a dimension or measure from the filter, click the filter icon for the corresponding Dimension or Measure. Or select the (x) ![](assets/images/UG_filters_how.png) icon on the filter section.
 
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_remove_filter.png" width="300"/><figcaption> Figure - Removing a filter from the dimension/measures selector list </figcaption> </figure>
+<img src="/assets/images/UG_remove_filter.png" width="300"/>
 
  <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_remove_filters.gif" width="800"/><figcaption> Gif animation - Removing a filter from the filter box </figcaption> </figure>
 
@@ -204,8 +204,7 @@ Allows you to copy the API query of your Report, or run it in a new Tab.
 
 ### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
 Allows you export your Report as CSV, PDF or PNG.
-
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_export_report.png" width="150"/><figcaption>Figure - Export options </figcaption> </figure>
+<img src="/assets/images/UG_export_report.png" width="150"/>
 
 ###  Share
 Allows you to share the link of your Report.
@@ -235,8 +234,7 @@ Creates an exact copy of a dashboard with the name “Copy of ….”.
 
 ### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
 Allows you export your Dashboard as PDF or PNG.
-
- <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/UG_export.png" width="150"/><figcaption>Figure - Dashboard export options </figcaption> </figure>
+<img src="/assets/images/UG_export.png" width="150"/>
 
 ###  Share
 Allows you to share the link for your Dashboard.
