@@ -78,7 +78,7 @@ All operations are associated with a tool tips guide:
 <figure style="font-size:0.6vw; color:DodgerBlue;"><img src="/assets/images/GS_report_action_anima.gif" width="800"/><figcaption>Gif animation - Tooltips will guide you to the actions in a report </figcaption> </figure>
 
 At any time in a report, you can perform one of the following operations : Run, Save, Save As, Revert
-![](/assets/images/GS_report_action.png)
+<img src="/assets/images/GS_report_action.png" width="400"/>
 
 ### Exploring Reports
 Reports are designed to be explored intuitively, easily and quickly.
@@ -89,9 +89,9 @@ Reports are designed to be explored intuitively, easily and quickly.
 1.  Select a table
 ![](/assets/images/GS_table_selector.png)
 1.  Select a dimension
-<img src="/assets/images/GS_dimension_selector.png" width"200"/>
+<img src="/assets/images/GS_dimension_selector.png" width="250"/>
 1.  Select a measure
-<img src="/assets/images/GS_metric_selector.png" width"200"/>
+<img src="/assets/images/GS_metric_selector.png" width="250"/>
 1.  Update your filters
 ![](/assets/images/GS_report_filter_sample.png)
 1.  Select run report button
@@ -121,8 +121,7 @@ From within a Dashboard, you can do all of the following. The on-screen icon is 
 | ![](/assets/images/GS_settings_add_filter.png)     |  Now    |
 {:.table}
 
-At any time in a dashboard, you can perform one of the following operations : Save Changes, Revert Changes
-![](/assets/images/GS_dashboard_action.png)
+At any time in a dashboard, you can perform one of the following operations : Save Changes, Revert Changes <img src="/assets/images/GS_dashboard_action.png" width="250"/>
 
 ### Exploring and Managing Dashboards:
 Dashboards are designed for intuitive data exploration.
@@ -137,14 +136,14 @@ Dashboards are built by adding reports to them one at a time. There are two ways
 From the dashboard itself, use the “+ Add Widget” button :
 
 1.  Select <img src="/assets/images/GS_add_widget.png" width="150"/> to add an already existing report to the Dashboard
-1.  Select the report like this: ![](/assets/images/GS_add_widget_dialog.png)
+1.  Select the report like this: <img src="/assets/images/GS_add_widget_dialog.png" width="400"/>
 1.  You can choose between creating a new report or using an existing one : <img src="/assets/images/GS_add_widget2.png" width="350"/> <img src="/assets/images/GS_add_search_widget.png" width="350"/>
 1.  The Report will be added to the dashboard as a widget: ![](/assets/images/GS_table_row.png)
 1.  The Report/Widget can be resized, edited and deleted: ![](/assets/images/GS_table_sample.png)
 
 #### Adding Reports to a Dashboard from the Report view
 1. A report can be added to the dashboard by selecting a previously saved report through the “Add to Dashboard” option as illustrated: <img src="/assets/images/GS_dashboard_tool_tip.png" width="300"/>
-1. You can choose to create a new Dashboard, or to add the report to an existing dashboard: ![](/assets/images/GS_add_to_dashboard.png)   ![](/assets/images/GS_add_to_dashboard_select_widget.png)
+1. You can choose to create a new Dashboard, or to add the report to an existing dashboard: <img src="/assets/images/GS_add_to_dashboard.png" width="350"/> <img src="/assets/images/GS_add_to_dashboard_select_widget.png" width="350"/>
 
 #### Modifying / Editing Dashboards:
 The reports/widgets in a dashboard can be organized, resized, explored, filtered and edited to align with how you want the Dashboard to look. Reports in a Dashboard can be edited by clicking on the pencil icon (![](/assets/images/GS_edit.png" width="50"/>) in the header of the widget/report. This will activate the edit mode for that report. Reports in a dashboard can also be resized, re-arranged and deleted.
