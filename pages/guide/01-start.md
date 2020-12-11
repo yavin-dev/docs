@@ -13,7 +13,7 @@ Yavin is a framework for rapidly **building custom data applications** that offe
 ***Disclaimer*** : For the sample demos that come with Yavin, we are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) data set that is sourced from [Kaggle](https://www.kaggle.com) (Timestamped 11/2020). The use of this data-set is only in demonstrating the ease of onboarding any dataset to Yavin. It has no correlation with the Yavin project.
 
 ## Customizable Building Blocks
-In the software industry, when discovering patterns, we often build abstractions and libraries to provide reusable software. The D3.JS charting library, Spring Security, and the Flask web framework are all great examples. While these provide a significant productivity gain, especially when compared to writing everything from scratch, it still is costly to build applications. When building applications, it takes time to design a system, wire together libraries, test your logic, build a web service, develop a great user interface and battle test your system.  Yavin build blocks are conceptually larger than a library - enabling larger patterns of software reuse. There is a tradeoff here though.  These building blocks are not as flexible as writing code from scratch. So you gain in functionality but you lose some ability to customize. The following diagram illustrates the building blocks available in Yavin today:
+In the software industry, when discovering patterns, we often build abstractions and libraries to provide reusable software. The D3.JS charting library, Spring Security, and the Flask web framework are all great examples. While these provide a significant productivity gain, especially when compared to writing everything from scratch, it still is costly to build applications. When building applications, it takes time to design a system, wire together libraries, test your logic, build a web service, develop a great user interface and battle test your system.  Yavin build blocks are conceptually larger than a library - enabling larger patterns of software reuse. There is a tradeoff here though.  These building blocks are not as flexible as writing code from scratch. So you gain in functionality but you lose some ability to customize.
 
 ## Yavin’s Main Components
 
@@ -36,6 +36,6 @@ For more information on Elide, visit [elide.io](https://elide.io).
 
 ### Navi: User Interface Building Blocks
 
-**Yavin contains the User Interface layer**.  Yavin uses Ember - a JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device. 
+**Yavin contains the User Interface layer**.  Yavin uses Ember - a JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.
 
 For more information on Ember.JS, visit [emberjs.org](https://emberjs.com/).
