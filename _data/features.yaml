@@ -1,12 +1,12 @@
 - title: Model Driven
   description: Yavin includes a powerful <b>semantic layer</b> that lets you model and deploy tables, measures, and dimensions users will see and select throughout the user experience.  
-  link: https://yavin.dev/pages/guide/03-start.html#step-2--setup-your-database
+  link: https://yavin.dev/pages/guide/03-start.html#semantic-models
 - title: Programmatic Access
   description: Yavin exposes GraphQL and JSON-API APIs (powered by Elide) that are secured with an expressive authorization DSL.   Run analytic queries, explore the semantic models, execute CRUD operations, and extend your application with custom domain models your clients can access.
-  link: https://yavin.dev/pages/guide/03-start.html#semantic-models
+  link: https://yavin.dev/pages/guide/07-start.html
 - title: Intuitive UI Design
   description: Yavin’s intuitive, non-cluttered design makes exploring data accessible to all data stakeholders.  Powered by the Denali design system, Yavin provides strong design fundamentals and UX best practices.
-  link: https://yavin.dev/pages/guide/04-start.html
+  link: https://denali.design/
 - title: Open Source
   description: How can you contribute to Yavin and/or Elide Open Source Community
-  link: https://github.com/yahoo/yavin-docs
+  link: https://github.com/yahoo/navi
