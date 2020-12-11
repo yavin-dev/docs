@@ -28,9 +28,11 @@ title: Quick Start Guide
 
 ** Ctrl-C to Exit **
 
-<figure>
+
+<figure style="font-size:0.6vw; color:DodgerBlue;">
     <video controls> <source src="/assets/images/QS_installation_and_run.mp4" type="video/mp4"></video>
-    <figcaption>A quick video that shows each step.</figcaption>
+    <figcaption>A quick video that shows Yavin quick setup steps.</figcaption>
 </figure>
+
 
 ***Congratulations!  You can now open [http://localhost:8080](http://localhost:8080).*** This will launch the **Yavin** application into your browser with the built in data set for [Netflix and TV shows](https://www.kaggle.com/shivamb/netflix-shows) that is sourced from [Kaggle](https://www.kaggle.com/) data.
