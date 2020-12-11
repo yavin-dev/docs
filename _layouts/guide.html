@@ -8,6 +8,10 @@ layout: default
   <div id="container" style="overflow-x:hidden; -webkit-overflow-scrolling: touch;" class="overflow-y-auto flex-auto">
     <div style="max-width: 1140px;">
       <div class="markdown-docs container-full p-t-30" style="max-width: 860px; margin: 0px auto 400px auto;">
+        {% if pages.title != blank %}
+        <h1>{{ page.title }}</h1>
+        {% endif %}
+
         {{ content }}
       </div>
     </div>
