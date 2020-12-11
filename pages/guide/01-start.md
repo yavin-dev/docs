@@ -23,7 +23,7 @@ Yavin is a composed of three open source modules.  They are:
 Here is a short video of Yavin “in action” :
 
 <figure>
-    <video controls> <source src="/assets/images/Yavin_in_action.mov" type="video/mov"></video>
+    <video controls> <source src="/assets/images/Yavin_in_action.mov"></video>
     <figcaption>Yavin simplicity “in action”.</figcaption>
 </figure>
 
