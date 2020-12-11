@@ -26,7 +26,7 @@ Within the Directory view you can:
 What can you do in the directory view of Yavin? Let’s explore these options one at a time.
 
 ##### Perform actions on a report:
-![](/assets/images/GS_report_options.png)
+<img src="/assets/images/GS_report_options.png" width="400"/>
 
 |      Operation                      |  Availability                       |
 |---------------------------------|---------------------------------------|
@@ -38,7 +38,7 @@ What can you do in the directory view of Yavin? Let’s explore these options on
 {:.table}
 
 ##### Perform actions on a Dashboard:
-![](/assets/images/GS_dashboard_options.png)
+<img src="/assets/images/GS_dashboard_options.png" width="400"/>
 
 |      Operation                      |  Availability                       |
 |---------------------------------|---------------------------------------|
@@ -54,7 +54,7 @@ A report is a user defined query coupled with a visual representation (table, gr
 
 <figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/GS_Yavin_report_in_action.gif" width="800"/><figcaption>Gif animation - Yavin report in action </figcaption> </figure>
 
-####The high level operations on a report include:
+#### The high level operations on a report include:
 
 ![](/assets/images/GS_report_action_long_list.png)
 
@@ -62,8 +62,8 @@ From within the report you have multiple options. Each option is shown with its 
 You can rename, add to favorite, add to dashboard, copy API query, clone, export, share and delete.
 
 
-|      Operation                      |  Availability                       |
-|---------------------------------|---------------------------------------|
+|      Operation                  |  Availability                       |
+|---------------------------------|-------------------------------------|
 | Rename   ![](/assets/images/GS_edit.png)  | Now         |
 | Add too Favorite     ![](/assets/images/GS_star.png)       |     Now          |
 | ![](/assets/images/GS_add_to_dashboard_withText.png) | Now          |
@@ -82,8 +82,10 @@ At any time in a report, you can perform one of the following operations : Run, 
 
 ### Exploring Reports
 Reports are designed to be explored intuitively, easily and quickly.
+
+
 1.  Create a new report from Yavin’s directory view
-![](/assets/images/GS_my_data_new_report.png)
+<img src="/assets/images/GS_my_data_new_report.png width="100"/>
 1.  Select a table
 ![](/assets/images/GS_table_selector.png)
 1.  Select a dimension
@@ -115,7 +117,7 @@ From within a Dashboard, you can do all of the following. The on-screen icon is 
 | ![](/assets/images/GS_clone_with_text.png) | Now         |
 | ![](/assets/images/GS_share_withText.png)     |  Now    |
 | ![](/assets/images/GS_delete.png)     |  Now    |
-| ![](/assets/images/GS_add_widget.png)    |  Now    |
+| <img src="/assets/images/assets/images/GS_add_widget.png width="100"/>   |  Now    |
 | ![](/assets/images/GS_settings_add_filter.png)     |  Now    |
 {:.table}
 
@@ -142,7 +144,7 @@ From the dashboard itself, use the “+ Add Widget” button :
 1.  The Report/Widget can be resized, edited and deleted: ![](/assets/images/GS_table_sample.png)
 
 #### Adding Reports to a Dashboard from the Report view
-1. A report can be added to the dashboard by selecting a previously saved report through the “Add to Dashboard” option as illustrated: ![](/assets/images/GS_dashboard_tool_tip.png)
+1. A report can be added to the dashboard by selecting a previously saved report through the “Add to Dashboard” option as illustrated: <img src="/assets/images/GS_dashboard_tool_tip.png" width="300"/>
 1. You can choose to create a new Dashboard, or to add the report to an existing dashboard: ![](/assets/images/GS_add_to_dashboard.png)   ![](/assets/images/GS_add_to_dashboard_select_widget.png)
 
 #### Modifying / Editing Dashboards:
