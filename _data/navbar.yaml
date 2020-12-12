@@ -1,8 +1,8 @@
 logourl: /assets/images/Yavin_logo.png
-githuburl: https://github.com/yahoo/yavin-docs
-helpurl: https://github.com/yahoo/yavin-docs
+githuburl: https://github.com/yahoo/navi
+helpurl: https://spectrum.chat/yavin
 navitems:
   - title: Getting Started
-    url: ./
+    url: /pages/guide/02-start.html
   - title: Documentation
     url: /pages/guide/01-start.html
