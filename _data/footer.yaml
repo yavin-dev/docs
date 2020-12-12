@@ -1,15 +1,13 @@
 - header: Community
   links:
-    - title: Slack
-      link: https://github.com/yahoo/yavin-docs
     - title: Contact Us
-      link: https://github.com/yahoo/yavin-docs
+      link: https://spectrum.chat/yavin
 - header: Contribute
   links:
     - title: GitHub
-      link: https://github.com/yahoo/yavin-docs
+      link: https://github.com/yahoo/navi
     - title: Suggest
-      link: https://github.com/yahoo/yavin-docs
+      link: https://github.com/yahoo/navi/issues/new/choose
 - header: Resources
   links:
     - title: Getting Started
