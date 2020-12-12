@@ -64,14 +64,14 @@ You can rename, add to favorite, add to dashboard, copy API query, clone, export
 
 |      Operation                  |  Availability                       |
 |---------------------------------|-------------------------------------|
-| Rename   ![](/assets/images/GS_edit.png)  | Now         |
-| Add too Favorite     ![](/assets/images/GS_star.png)       |     Now          |
-| ![](/assets/images/GS_add_to_dashboard_withText.png) | Now          |
-| ![](/assets/images/GS_copy_api_query_withText.png)  | Now        |
-| ![](/assets/images/GS_clone_with_text.png) | Now         |
-| ![](/assets/images/GS_export_with_text.png)     |   Q1 2021   |
-| ![](/assets/images/GS_share_withText.png)     |  Now    |
-| ![](/assets/images/GS_delete.png)     |  Now    |
+| Rename <img src="/assets/images/GS_edit.png" width="150"/> | Now         |
+| Add too Favorite <img src="/assets/images/GS_star.png" width="150"/>      |     Now          |
+| <img src="/assets/images/GS_add_to_dashboard_withText.png" width="250"/>| Now          |
+| <img src="/assets/images/GS_copy_api_query_withText.png" width="250"/>| Now        |
+| <img src="/assets/images/GS_clone_with_text.png" width="250"/>| Now         |
+| <img src="/assets/images/GS_export_with_text.png" width="250"/>   |   Q1 2021   |
+| <img src="/assets/images/GS_share_withText.png" width="250"/>   |  Now    |
+| <img src="/assets/images/GS_delete.png" width="250"/>   |  Now    |
 {:.table}
 
 All operations are associated with a tool tips guide:
@@ -82,7 +82,6 @@ At any time in a report, you can perform one of the following operations : Run, 
 
 ### Exploring Reports
 Reports are designed to be explored intuitively, easily and quickly.
-
 
 1.  Create a new report from Yavin’s directory view
 <img src="/assets/images/GS_my_data_new_report.png" width="100"/>
@@ -112,13 +111,13 @@ From within a Dashboard, you can do all of the following. The on-screen icon is 
 
 |      Operation                      |  Availability                       |
 |---------------------------------|---------------------------------------|
-| Rename ![](/assets/images/GS_edit.png)   | Now         |
-| Add too Favorite ![](/assets/images/GS_star.png) |     Now          |
-| ![](/assets/images/GS_clone_with_text.png) | Now         |
-| ![](/assets/images/GS_share_withText.png)     |  Now    |
-| ![](/assets/images/GS_delete.png)     |  Now    |
-| <img src="/assets/images/GS_add_widget.png" width="100"/>   |  Now    |
-| ![](/assets/images/GS_settings_add_filter.png)     |  Now    |
+| Rename <img src="/assets/images/GS_edit.png" width="150"/> | Now         |
+| Add too Favorite <img src="/assets/images/GS_star.png" width="150"/>|     Now          |
+| <img src="/assets/images/GS_clone_with_text.png" width="250"/> | Now         |
+| <img src="/assets/images/GS_share_withText.png" width="250"/>   |  Now    |
+| <img src="/assets/images/GS_delete.png" width="250"/>   |  Now    |
+| <img src="/assets/images/GS_add_widget.png" width="250"/> |  Now    |
+| <img src="/assets/images/GS_settings_add_filter.png" width="250"/>    |  Now    |
 {:.table}
 
 At any time in a dashboard, you can perform one of the following operations : Save Changes, Revert Changes <img src="/assets/images/GS_dashboard_action.png" width="250"/>
