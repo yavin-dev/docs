@@ -1,5 +1,9 @@
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 1em;
+}
+
+h2 h3, h4, table, ol, ul {
+  margin: 1em 0;
 }
 
 /* Helpers that need to be added */
