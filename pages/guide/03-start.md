@@ -44,7 +44,7 @@ Elide provides its own [guide](https://elide.io/pages/guide/v5/01-start.html) fo
 ### Connections, Tables, Dimensions, Measures and Joins
 When running locally, Yavin will leverage the H2 in-memory database.  The [connection configuration][demo-connection] looks like:
 
-```hjson
+```
 {
   dbconfigs: [
     {
