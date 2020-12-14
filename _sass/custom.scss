@@ -80,6 +80,10 @@ h2 h3, h4, table, ol, ul {
 .section-cover {
   background-color: black;
   padding: 1em 0 2em;
+
+  a + a {
+    margin-left: 1em;
+  }
 }
 
 /* Guides */
