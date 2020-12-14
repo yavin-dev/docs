@@ -12,6 +12,7 @@
       {% for navitem in include.navbar.navitems %}
         <a class="nav-item" href="{{ navitem.url }}">{{ navitem.title }}</a>
       {% endfor %}
+      {% include pagelist-navbar.html %}
     </div>
     <div class="nav-right">
       <a class="nav-item" href="{{ include.navbar.githuburl }}">
