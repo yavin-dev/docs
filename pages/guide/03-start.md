@@ -4,19 +4,16 @@ group: guide
 title: Setup and Installation Guide
 ---
 
-* TOC
-{:toc}
+## Browser Support
+By default, the Yavin UI supports the most recent versions of the following browsers:
+- Chrome
+- Firefox
+- Safari
+- IE 11  
 
-System Requirements
----------------------
+This may be customized via the app's `config/targets.js` file. More information on this file can be found [here](https://guides.emberjs.com/release/configuring-ember/build-targets/)
 
-### Browser Support
-Yavin UI is an HTML-based browser application that is supported on recent versions of the following browsers:
--   ***Chrome***
--   ***Firefox***
--   ***Safari***
-
-### Database Support
+## Database Support
 
 Elide analytic APIs **generate SQL queries** against your target database(s). Elide must be **configured with a Dialect** to correctly generate native SQL that matches the database grammar. Elide supports the following dialects by default:
 
@@ -30,7 +27,7 @@ More information on dialects and how to use them can be found [here](https://eli
 
 Semantic Models
 ------------------------------------------
-A ***semantic model*** is the view of the data you want your users to understand.   It is typically non-relational (for simplicity) and consists of concepts like tables, measures, and dimensions.  End users refer to these concepts by name only (they are not expected to derive formulas or know about the physical storage or serialization of data).
+A ***semantic model*** is the view of the data you want your users to understand.  It is typically non-relational (for simplicity) and consists of concepts like tables, measures, and dimensions.  End users refer to these concepts by name only (they are not expected to derive formulas or know about the physical storage or serialization of data).
 
 A ***virtual semantic layer*** maps a semantic model to columns and tables in a physical database.  Yavin leverages Elide's virtual semantic layer which accomplishes this mapping through a HJSON configuration language.  [HJSON](https://hjson.github.io/) is a human friendly adaptation of JSON that allows comments and a relaxed syntax among other features.  Elide's virtual semantic layer includes the following information:
 
@@ -47,11 +44,11 @@ Elide provides its own [guide](https://elide.io/pages/guide/v5/01-start.html) fo
 ### Connections, Tables, Dimensions, Measures and Joins
 When running locally, Yavin will leverage the H2 in-memory database.  The [connection configuration][demo-connection] looks like:
 
-```
+```hjson
 {
   dbconfigs: [
     {
-      __comment1: "We created the connection for the demo using H2 connection."
+      # We created the connection for the demo using H2 connection
       name: DemoConnection
       url: jdbc:h2:mem:DemoDB;  DB_CLOSE_DELAY=-1;  INIT=RUNSCRIPT FROM 'classpath:create-demo-data.sql'
       driver: org.h2.Driver
@@ -217,11 +214,11 @@ Note: The Netflix demo data only sourced from a single physical table.  More com
 
 The Yavin UI is metadata driven and will present your semantic model:
 
-<figure style="font-size:0.6vw; color:DodgerBlue;"><img style="border:2px solid black;" src="/assets/images/SAI_Model_in_UI.png" width="200" /><figcaption>Figure - Result of the UI pulling the model (Table, Dimension, Metrics, Joins)</figcaption> </figure>
+<img alt="yavin's column selector" src="/assets/images/SAI_Model_in_UI.png" width="200" />
 
-#### Type Ahead Search
+### Type Ahead Search
 
-When constructing filters in the Yavin UI, the search bar can perform "Type Ahead" search.  Type ahead search is a feature where user search terms are matched to suggestions as the user types.   Type ahead search can be enabled for any dimension of type `TEXT` in one of two ways.   The first is to add a `values` attribute to the dimension with a list of all possible values.  This works well for small dimensions:
+When constructing filters in the Yavin UI, the search bar can be used to perform ***type ahead*** queries in order to suggest dimension values.  Type ahead search can be enabled for any dimension of type `TEXT` in one of two ways.   The first is to add a `values` attribute to the dimension with a list of all possible values.  This works well when your dataset does not have a dedicated dimension table and when the set of dimension values is small:
 
 ```
 {
@@ -233,7 +230,7 @@ When constructing filters in the Yavin UI, the search bar can perform "Type Ahea
 }
 ```
 
-For larger dimensions, you can specify an alternate semantic table (typically a dimension table) that can be searched for values by adding the `tableSource` attribute:
+When your dataset does have a dedicated dimension table, you can specify an alternate semantic model that can be searched for values by adding the `tableSource` attribute.
 
 ```
 { 
@@ -244,9 +241,9 @@ For larger dimensions, you can specify an alternate semantic table (typically a 
 }
 ```
 
-The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
+The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
 
-When neither `values` or `tableSource` is specified, Yavin disables type ahead search.
+When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow. 
 
 Yavin Example Key Elements
 -----------------------------------------------
@@ -261,7 +258,7 @@ The Yavin example project consists of the following key elements :
 
 Yavin Detailed Installation Guide
 -----------------------------------------------
-Here are the complete steps for installing and setting up **Yavin** with **your data-source** and your **semantic models**:
+Here are the complete steps for installing and setting up **Yavin** with your **dataset** and your **semantic models**:
 
 ### Step 1.  Install Yavin Source.
 
@@ -292,7 +289,7 @@ Add one or more semantic model definition files.  More information about adding 
 
 Yavin allows you to limit access to tables, measures, and dimensions by user role.  There are three steps involved:
 
-1.  Create a security roles file which enumerates the roles your application will have.  More information can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#security-configuration)
+1.  Create a security roles file which enumerates the roles your application will have.  More information can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#security-configuration).
 2.  Update your semantic model, by adding `readAccess` rules for tables, measures, and dimensions you want to restrict.  These rules can include a single role or a complex security expression with multiple roles joined by logical AND (conjunction), OR (disjunction), and parenthetic groupings.
 3.  Yavin stores users and roles in two separate database tables (`user` and `roles`).  The roles table must be updated to include all the roles defined in step 1.  When a user is added to the database, it must be assigned 1 or more roles.
 
@@ -317,18 +314,25 @@ The application configuration supports profiles for enabling different settings 
 
 ### Step 8.  Build Your Application
 
-To build, run the following command: ```cd packages/webservice && ./gradlew bootJar```
+To build Yavin as a jar, run the following command: 
+```
+cd packages/webservice && ./gradlew bootJar
+```
 
 ### Step 9.  Validate Semantic Model
 
 The build creates a fat jar with all dependencies including a tool that can be leveraged to validate your semantic model before deploying or running your service.
 More details about validating the semantic model can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#configuration-validation).
 
-### Step 10.  Run your Application
+### Step 10.  Run Your Application
 
-To run Yavin locally, simple execute: ```cd packages/webservice && ./gradlew```
+To run Yavin locally, simple execute: 
+```
+cd packages/webservice && ./gradlew
+```
 
-⏱Within minutes, you will be able to launch Yavin on your browser by loading [localhost:8080](http://localhost:8080).
+### Step 11.  Launch the Application
+Launch Yavin on your browser by loading [http://localhost:8080](http://localhost:8080).
 
 [demo-connection]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson
 [demo-table]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson
