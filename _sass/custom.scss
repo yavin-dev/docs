@@ -2,8 +2,12 @@ h1 {
   margin-bottom: 1em;
 }
 
-h2 h3, h4, table, ol, ul {
+h2 h3, h4, table, ol, ul, figure {
   margin: 1em 0;
+}
+
+figcaption {
+  @extend .is-grey-600;
 }
 
 /* Helpers that need to be added */
