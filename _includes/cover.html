@@ -3,19 +3,24 @@
   <div class="container">
     <div class="row">
       <div class="xs-col-1-1 sm-col-1-1 md-col-5-12 lg-col-5-12 xl-col-5-12 flex-column align-self-center m-y-40">
-        <img class="nav-brand" src="{{ include.cover.logourl }}" alt="logo"/>
+        <img class="nav-brand" src="{{ include.cover.logo-url }}" alt="logo"/>
         <h1 class="is-grey-100">
           {{ include.cover.title }}
         </h1>
         <div class="flex tablet-down-flex-column m-t-35">
           <a
             class="button is-solid is-inverse is-large m-y-5"
-            href="{{ include.cover.gettingstartedurl }}"
+            href="{{ include.cover.getting-started-url }}"
             >Get Started</a
           >
+          <a
+            class="button is-text is-inverse is-large m-y-5"
+            href="https://www.youtube.com/watch?v={{ include.cover.youtube-id }}">
+              <i class="d-icon d-play-circle is-small"></i>Watch Video
+          </a>
         </div>
       </div>
-      <iframe class="m-auto" width="560" height="315" src="{{ include.cover.embeddedvideourl }}?rel=0;modestbranding=1" frameborder="0"
+      <iframe class="m-auto" width="560" height="315" src="https://www.youtube.com/embed/{{ include.cover.youtube-id }}?rel=0;modestbranding=1" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
         allowfullscreen></iframe>
     </div>

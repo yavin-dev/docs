@@ -76,6 +76,10 @@ h1 {
 .section-cover {
   background-color: black;
 
+  a + a {
+    margin-left: 1em;
+  }
+
   .row {
     height: 530px;
   }
