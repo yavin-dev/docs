@@ -4,8 +4,6 @@ group: guide
 title: Product Overview
 ---
 
-## Yavin Overview
-
 Yavin is a framework for rapidly **building custom data applications** that offers both a UI and an API. In addition, Yavin can be deployed as a **standalone Business Intelligence tool** allowing users to explore and drill into data through an intuitive interface.  Yavin provides a set of modular **user experience blocks** that can be customized and assembled into a complete data application.  The most common blocks are **reports** and **dashboards**.  Reports allow users to craft, execute, and visualize adhoc queries.  Reports can be assembled into dashboards that collate related visualizations together.  Yavin includes a powerful **semantic layer** that let's you model and deploy the tables, measures, and dimensions users will see and select throughout the user experience.
 
 <video controls> <source src="/assets/images/Yavin_in_action.mov"></video>
