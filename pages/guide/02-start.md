@@ -19,11 +19,15 @@ Once your machine has all met the prerequisites, run the following steps to boot
 git clone https://github.com/yahoo/navi.git 
 ```
 
-### 2. Boot the web service
+### 2.1 Boot the web service
 
 ```shell
 cd navi/packages/webserivce                 
 ./gradlew bootRun                           
+```
+### 2.2 Docker container launch with demo
+```
+docker run docker.io/verizonmedia/yavin:demo_local
 ```
 
 (To stop the server at any time, type Ctrl-C in your terminal.)
