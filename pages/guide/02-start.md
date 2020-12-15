@@ -19,7 +19,7 @@ Once your machine has all met the prerequisites, run the following steps to boot
 git clone https://github.com/yahoo/yavin.git
 ```
 
-### 2.1 (Option 1): Run Jar Oocally
+### 2.1 (Option 1): Run Jar Locally
 
 ```shell
 cd yavin/packages/webserivce                 
