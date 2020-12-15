@@ -63,7 +63,7 @@ You can rename, add to favorite, add to dashboard, copy API query, clone, export
 |      Operation                  |  Availability                       |
 |---------------------------------|-------------------------------------|
 | Rename <img src="/assets/images/GS_edit.png" width="35"/> | Now         |
-| Add too Favorite <img src="/assets/images/GS_star.png" width="35"/>      |     Now          |
+| Add to Favorite <img src="/assets/images/GS_star.png" width="35"/>      |     Now          |
 | <img src="/assets/images/GS_add_to_dashboard_withText.png" width="150"/>| Now          |
 | <img src="/assets/images/GS_copy_api_query_withText.png" width="150"/>| Now        |
 | <img src="/assets/images/GS_clone_with_text.png" width="100"/>| Now         |
@@ -115,7 +115,7 @@ From within a Dashboard, you can do all of the following. The on-screen icon is 
 |      Operation                      |  Availability                       |
 |---------------------------------|---------------------------------------|
 | Rename <img src="/assets/images/GS_edit.png" width="35"/> | Now         |
-| Add too Favorite <img src="/assets/images/GS_star.png" width="35"/>|     Now          |
+| Add to Favorite <img src="/assets/images/GS_star.png" width="35"/>|     Now          |
 | <img src="/assets/images/GS_clone_with_text.png" width="100"/> | Now         |
 | <img src="/assets/images/GS_share_withText.png" width="100"/>   |  Now    |
 | <img src="/assets/images/GS_delete.png" width="100"/>   |  Now    |
