@@ -10,7 +10,7 @@ Yavin provides much more than static charts. Yavin provides a wide array of inte
 
 <figure>
   <img src="/assets/images/UG_viz_sample.png" width="800"/>
-  <figcaption>Visualizations</figcaption> 
+  <figcaption>Visualizations</figcaption>
 </figure>
 
 When you change the dimensions for a report, Yavin displays the available visualizations for the combination of selected dimensions. You can select the visualization you prefer by clicking among the different visualization icons  ![](assets/images/UG_all_viz.png), which are located at the top of the report.
@@ -32,7 +32,7 @@ When you change the dimensions for a report, Yavin displays the available visual
 
  <figure>
    <img src="/assets/images/UG_metric_viz.png" width="800"/>
-   <figcaption>Editing Label</figcaption> 
+   <figcaption>Editing Label</figcaption>
  </figure>
 
 ###  Gauge Chart
@@ -56,7 +56,7 @@ The Gauge visualization is a chart that displays the major contributors or key i
 
  <figure>
    <img src="/assets/images/UG_table_viz.png" width="800"/>
-   <figcaption>Table Visualization</figcaption> 
+   <figcaption>Table Visualization</figcaption>
  </figure>
 
 The table visualization can show multiple dimensions measures and dimensions together:
@@ -86,7 +86,12 @@ The table visualization can show multiple dimensions measures and dimensions tog
  </figure>
 
 ###  Line chart
- The line chart can visualize temporal (trend over time) dimensions. <figure><img src="/assets/images/UG_line_chart_sample2.png" width="800"/><figcaption>Figure - Line charts are interactive visualizations </figcaption></figure>
+ The line chart can visualize temporal (trend over time) dimensions.
+
+ <figure>
+    <img src="/assets/images/UG_line_chart_sample2.png" width="800"/>
+    <figcaption>Line charts are interactive visualizations</figcaption>
+ </figure>
 
 The chart lets you visualize multiple trends together in a single graph. Note the different colored lines in the chart below. They each chart an individual dimension.
 
@@ -288,7 +293,7 @@ Creates an exact copy of a Report with the name “Copy of ….”.
 ###  Copy API Query
 Allows you to copy the API query of your Report, or run it in a new Tab.
 
- <figure> 
+ <figure>
    <img src="/assets/images/UG_api.png" width="300"/>
    <figcaption>Copy API Query Dialog</figcaption></figure>
  </figure>
