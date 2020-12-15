@@ -155,6 +155,31 @@ ol, ul {
   @extend .list;
 }
 
+.truncate {
+  width: 80em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#search {
+  .modal-header {
+    background-color: $color-grey-800;
+
+    .container {
+      max-width:860px;
+      width: 100%;
+
+      #search-input {
+        text-indent: 2em;
+      }
+    }
+  }
+  .modal-content {
+    padding: 0;
+  }
+}
+
 /*********************
 Resets for Prism
 *********************/
