@@ -214,7 +214,10 @@ Note: The Netflix demo data only sourced from a single physical table.  More com
 
 The Yavin UI is metadata driven and will present your semantic model:
 
-<img alt="yavin's column selector" src="/assets/images/SAI_Model_in_UI.png" width="200" />
+<figure> 
+  <img src="/assets/images/SAI_Model_in_UI.png" width="200" />
+  <figcaption>Column Selector</figcaption>
+</figure>
 
 ### Type Ahead Search
 
