@@ -5,17 +5,17 @@
         {% for column in include.footer %}
         <div class="flex-column">
           <h4 class="upper">
-            {{column.header}}
-          </h4>{% for link in column.links %} <a href="{{link.link}}">{{link.title}}</a><br>
+            {{ column.header }}
+          </h4>
+          {% for link in column.links %}
+            <a href="{{ link.link }}">{{ link.title }}</a><br>
           {% endfor %}
         </div>{% endfor %}
       </div>
       <div class="xs-col-1-1 sm-col-1-1 md-col-1-2 lg-col-1-2 xl-col-1-2 flex flex-column align-self-center align-items-flex-end">
-        <div>
-          <img class="h-35 w-auto" src="/assets/images/verizon-media-logo.png" alt="Verizon Media Logo">
-        </div>
+        <img class="h-35 w-auto" src="/assets/images/verizon-media-logo.png" alt="Verizon Media Logo">
         <h6>
-          Copyright Verizon Media 2020
+          Copyright Verizon Media {{ 'now' | date: "%Y" }}
         </h6>
       </div>
     </div>
