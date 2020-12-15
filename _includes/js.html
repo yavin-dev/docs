@@ -1,6 +1,7 @@
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KX2VKX7X6W"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.16.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.13/dest/simple-jekyll-search.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -11,4 +12,28 @@
   function toggleMenu() {
     document.getElementById('navMenu').classList.toggle('is-active');
   }
+</script>
+<script>
+  var searchInputNode = document.getElementById('search-input');
+  SimpleJekyllSearch({
+    searchInput: searchInputNode,
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/search.json',
+    searchResultTemplate: '<h4 class="m-b-0 m-t-10"><a href="{{ site.url }}{url}">{title}</a></h4><div class="truncate">{content}</div>'
+  });
+
+  searchInputNode.addEventListener('keydown', function() {
+    setTimeout(function() {
+      var searchCount = document.getElementById('results-container').childElementCount;
+      document.getElementById('search-results-count').innerHTML = searchCount;
+
+      var searchValue = searchInputNode.value;
+
+      if (searchCount > 0) {
+        document.getElementById('search-message').innerHTML = 'Results for "' + searchValue + '"'
+      } else if (searchValue === "") {
+        document.getElementById('search-message').innerHTML = "Start typing and we'll show you the results"
+      }
+    }, 200);
+  });
 </script>

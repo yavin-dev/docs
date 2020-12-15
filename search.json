@@ -1,0 +1,12 @@
+---
+---
+{% assign filtered_pages = site.pages | where: "group", "guide" %}[
+  {% for filtered_page in filtered_pages %}
+  {
+    "title": "{{ filtered_page.title | escape }}",
+    "url": "{{ site.baseurl }}{{ filtered_page.url }}",
+    "content": "{{ filtered_page.content | markdownify | strip_html | strip_newlines | escape }}"
+  }
+  {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
