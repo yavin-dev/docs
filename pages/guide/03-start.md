@@ -11,7 +11,7 @@ By default, the Yavin UI supports the most recent versions of the following brow
 - Safari
 - IE 11  
 
-This may be customized via the app's `config/targets.js` file. More information on this file can be found [here](https://guides.emberjs.com/release/configuring-ember/build-targets/)
+This may be customized via the app's `config/targets.js` file. More information on this file can be found [here](https://guides.emberjs.com/release/configuring-ember/build-targets/).
 
 ## Database Support
 
