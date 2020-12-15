@@ -115,7 +115,7 @@ $button-sizes-lg-min-width: null;
 $button-solid-default-bg-color: $color-grey-800;
 $button-solid-default-text-color: $color-grey-100;
 $button-solid-default-inverse-bg-color: $color-grey-100;
-$button-solid-default-inverse-text-color: $color-grey-800;
+$button-solid-default-inverse-text-color: $color-brand-300;
 $button-solid-focus-bg-color: $color-brand-300;
 $button-solid-focus-text-color: $color-grey-100;
 $button-solid-focus-inverse-bg-color: $color-brand-300;
@@ -226,7 +226,7 @@ $links-disabled-text-color: rgba($color-grey-100, 0.2);
 $links-secondary-text-color: rgba($color-grey-100, .7);
 $links-secondary-hover-text-color: $color-grey-100;
 $links-inverse-text-color: $color-grey-100;
-$links-inverse-hover-text-color: rgba($color-grey-100, .4);
+$links-inverse-hover-text-color: $color-brand-200;
 $links-small-text-size: 1.2rem;
 
 // Loader
@@ -255,13 +255,13 @@ $modal-modal-container-border-width: 2px;
 $modal-modal-container-border-style: solid;
 
 // Navbar
-$navbar-bg-color: #000;
+$navbar-bg-color: $color-grey-800;
 $navbar-responsive-bg-color: #1E242A;
 $navbar-responsive-menu-bg-color: #2A3035;
 // Unused
 $navbar-height: 60px;
 $navbar-item-text-color: $color-grey-100;
-$navbar-item-hover-text-color: rgba($color-grey-100, 0.4);
+$navbar-item-hover-text-color: $color-brand-200;
 $navbar-item-active-text-color: $color-grey-100;
 $navbar-item-active-border-color: $color-brand-200;
 
