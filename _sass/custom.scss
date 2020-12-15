@@ -125,6 +125,14 @@ figcaption {
 
   > div {
     max-width: 860px;
+
+    h2::before {
+      border-top: .3rem solid $color-grey-600;
+      content: "";
+      display: inline-block;
+      transform: translateY(-1rem);
+      width: 100%;
+    }
   }
 }
 
