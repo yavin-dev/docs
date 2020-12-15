@@ -119,6 +119,15 @@ figcaption {
   }
 }
 
+#guide {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  > div {
+    max-width: 860px;
+  }
+}
+
 #markdown-toc {
   @extend .list;
   > li {
@@ -134,7 +143,7 @@ figcaption {
   margin: 1em 0;
 }
 
-ol,ul {
+ol, ul {
   @extend .list;
 }
 
