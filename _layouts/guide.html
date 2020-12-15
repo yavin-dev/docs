@@ -5,15 +5,12 @@ layout: default
   <div id="toggle-tabs-left" class="tabs is-primary is-vertical tablet-down-hide-left">
     {% include pagelist-sidebar.html %}
   </div>
-  <div id="container" style="overflow-x:hidden; -webkit-overflow-scrolling: touch;" class="overflow-y-auto flex-auto">
-    <div style="max-width: 1140px;">
-      <div class="markdown-docs container-full p-t-30" style="max-width: 860px; margin: 0px auto 400px auto;">
-        {% if pages.title != blank %}
+  <div id="guide" class="overflow-y-auto flex-auto">
+    <div class="markdown-docs container-full p-t-30 m-b-100">
+      {% if pages.title != blank %}
         <h1>{{ page.title }}</h1>
-        {% endif %}
-
-        {{ content }}
-      </div>
+      {% endif %}
+      {{ content }}
     </div>
   </div>
 </div>
