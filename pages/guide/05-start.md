@@ -86,18 +86,18 @@ The table visualization can show multiple dimensions measures and dimensions tog
  </figure>
 
 ###  Line chart
- The line chart can visualize temporal (trend over time) dimensions.
+ The line chart can visualize temporal (trend over time) dimensions. 
 
  <figure>
-    <img src="/assets/images/UG_line_chart_sample2.png" width="800"/>
-    <figcaption>Line charts are interactive visualizations</figcaption>
+   <img src="/assets/images/UG_line_chart_sample2.png" width="800"/>
+   <figcaption>Line Chart</figcaption>
  </figure>
 
 The chart lets you visualize multiple trends together in a single graph. Note the different colored lines in the chart below. They each chart an individual dimension.
 
  <figure>
    <img src="/assets/images/UG_time_series.png" width="800"/>
-   <figcaption>Line Charts</figcaption>
+   <figcaption>Line Chart</figcaption>
  </figure>
 
 The line chart line style can be changed to an area spline. The stacked area chart is similar to the regular line chart, and can be used in similar situations.
@@ -295,7 +295,7 @@ Allows you to copy the API query of your Report, or run it in a new Tab.
 
  <figure>
    <img src="/assets/images/UG_api.png" width="300"/>
-   <figcaption>Copy API Query Dialog</figcaption></figure>
+   <figcaption>Copy API Query Dialog</figcaption>
  </figure>
 
 ### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
