@@ -2,12 +2,12 @@
 <nav class="nav sticky-top">
   <div class="nav-left">
     <span class="nav-item hide-small-desktop-up" onclick="toggleMenu()"><i class="d-icon d-menu-hamburger"></i></span>
-    <a href="{{ site.baseurl }}/"><img class="nav-brand" src="{{ include.navbar.logourl }}" alt="logo"/></a>
+    <a href="{{ site.baseurl }}/"><img class="nav-brand" src="{{ include.navbar.logo-url }}" alt="logo"/></a>
     <div class="float-right hide-small-desktop-up">
       <a class="nav-item" href="{{ site.baseurl }}/#search"><i class="d-icon d-search"></i></a>
     </div>
   </div>
-  <div id="navMenu" class="nav-responsive">
+  <div id="nav-menu" class="nav-responsive">
     <div class="nav-center">
       {% for navitem in include.navbar.navitems %}
         <a class="nav-item" href="{{ navitem.url }}">{{ navitem.title }}</a>
@@ -21,7 +21,7 @@
       <a class="nav-item" href="{{ include.navbar.githuburl }}">
         <i class="d-icon d-github"></i><span class="icon-name">Github</span>
       </a>
-      <a class="nav-item" href="{{ include.navbar.helpurl }}">
+      <a class="nav-item" href="{{ include.navbar.help-url }}">
         <i class="d-icon d-help-circle"></i><span class="icon-name">Help</span>
       </a>
     </div>
