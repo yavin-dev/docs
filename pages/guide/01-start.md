@@ -32,7 +32,7 @@ For more information on Denali, visit [denali.design](https://denali.design).
 
 For more information on Elide, visit [elide.io](https://elide.io).
 
-### Navi: User Interface Building Blocks
+### Yavin: User Interface Building Blocks
 
 **Yavin contains the User Interface layer**.  Yavin uses Ember - a JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.
 

@@ -23,7 +23,7 @@ Elide analytic APIs **generate SQL queries** against your target database(s). El
 * MySQL
 * Postgres
 
-More information on dialects and how to use them can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#dialects). 
+More information on dialects and how to use them can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#dialects).
 
 Semantic Models
 ------------------------------------------
@@ -210,11 +210,11 @@ Yavin's demo data includes a single table in its [semantic model][demo-table] Ne
 
 Note: The Netflix demo data only sourced from a single physical table.  More complex data models may source from multiple physical tables and require joins at query time.  More information about joins can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#joins).
 
-### User Interface Metadata 
+### User Interface Metadata
 
 The Yavin UI is metadata driven and will present your semantic model:
 
-<figure> 
+<figure>
   <img src="/assets/images/SAI_Model_in_UI.png" width="200" />
   <figcaption>Column Selector</figcaption>
 </figure>
@@ -236,7 +236,7 @@ When constructing filters in the Yavin UI, the search bar can be used to perform
 When your dataset does have a dedicated dimension table, you can specify an alternate semantic model that can be searched for values by adding the `tableSource` attribute.
 
 ```
-{ 
+{
   name: countryName
   type: TEXT
   definition: '{{playerCountry.name}}'
@@ -246,7 +246,7 @@ When your dataset does have a dedicated dimension table, you can specify an alte
 
 The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
 
-When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow. 
+When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow.
 
 Yavin Example Key Elements
 -----------------------------------------------
@@ -269,11 +269,11 @@ This step was covered in [quick start guide](/pages/guide/03-start.html).  Upon 
 
 |      Path                      |  Purpose                       |
 |---------------------------------|---------------------------------------|
-| ```navi/packages/webservice/app/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
-| ```navi/packages/webservice/app/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
-| ```navi/packages/webservice/app/src/main/resources/application.yaml``` | The spring boot configuration file for your application |
-| ```navi/packages/webservice/app/src/main/kotlin/com/yahoo/navi/ws/filters``` | Directory for web request filters including authentication |
-| ```navi/packages/webservice/app/src/main/resources/db/changelog/changelog.xml``` | Database changelog for setting up the database |
+| ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
+| ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
+| ```yavin/packages/webservice/app/src/main/resources/application.yaml``` | The spring boot configuration file for your application |
+| ```yavin/packages/webservice/app/src/main/kotlin/com/yahoo/yavin/ws/filters``` | Directory for web request filters including authentication |
+| ```yavin/packages/webservice/app/src/main/resources/db/changelog/changelog.xml``` | Database changelog for setting up the database |
 {:.table}
 
 ### Step 2.  Setup Your Database.
@@ -317,7 +317,7 @@ The application configuration supports profiles for enabling different settings 
 
 ### Step 8.  Build Your Application
 
-To build Yavin as a jar, run the following command: 
+To build Yavin as a jar, run the following command:
 ```
 cd packages/webservice && ./gradlew bootJar
 ```
@@ -329,7 +329,7 @@ More details about validating the semantic model can be found [here](https://eli
 
 ### Step 10.  Run Your Application
 
-To run Yavin locally, simple execute: 
+To run Yavin locally, simple execute:
 ```
 cd packages/webservice && ./gradlew
 ```
@@ -337,10 +337,10 @@ cd packages/webservice && ./gradlew
 ### Step 11.  Launch the Application
 Launch Yavin on your browser by loading [http://localhost:8080](http://localhost:8080).
 
-[demo-connection]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson
-[demo-table]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson
-[liquibase-script]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/db/changelog/changelog.xml
-[test-data]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/netflix_titles.csv
-[integration-test]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/test/kotlin/com/yahoo/navi/ws/test/integration/DemoDataSourceTest.kt
-[spring-boot-config]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/resources/application.yaml
-[auth-filter]: https://github.com/yahoo/navi/blob/master/packages/webservice/app/src/main/kotlin/com/yahoo/navi/ws/filters/AuthFilter.kt
+[demo-connection]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson
+[demo-table]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson
+[liquibase-script]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/db/changelog/changelog.xml
+[test-data]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/netflix_titles.csv
+[integration-test]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/test/kotlin/com/yahoo/yavin/ws/test/integration/DemoDataSourceTest.kt
+[spring-boot-config]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/application.yaml
+[auth-filter]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/kotlin/com/yahoo/yavin/ws/filters/AuthFilter.kt
