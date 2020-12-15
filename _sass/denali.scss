@@ -5,11 +5,12 @@
 
 // GLOBALS
 // Brand
-$color-brand-100: #CF2F15;
-$color-brand-200: #CF2F15;
-$color-brand-300: #CF2F15;
-$color-brand-400: #CF2F15;
-$color-brand-500: null;
+$base-color: #CF2F15;
+$color-brand-100: lighten($base-color, 40%);
+$color-brand-200: lighten($base-color, 20%);
+$color-brand-300: $base-color;
+$color-brand-400: darken($base-color, 20%);
+$color-brand-500: darken($base-color, 40%);
 
 // Grey
 $color-grey-100: #ffffff;
@@ -111,13 +112,13 @@ $button-sizes-lg-height: 44px;
 $button-sizes-lg-font-size: 16px;
 $button-sizes-lg-min-width: null;
 
-$button-solid-default-bg-color: $color-brand-300;
+$button-solid-default-bg-color: $color-grey-800;
 $button-solid-default-text-color: $color-grey-100;
-$button-solid-default-inverse-bg-color: $color-brand-300;
-$button-solid-default-inverse-text-color: $color-grey-100;
-$button-solid-focus-bg-color: $color-brand-400;
+$button-solid-default-inverse-bg-color: $color-grey-100;
+$button-solid-default-inverse-text-color: $color-grey-800;
+$button-solid-focus-bg-color: $color-brand-300;
 $button-solid-focus-text-color: $color-grey-100;
-$button-solid-focus-inverse-bg-color: $color-brand-400;
+$button-solid-focus-inverse-bg-color: $color-brand-300;
 $button-solid-focus-inverse-text-color: $color-grey-100;
 $button-solid-disabled-bg-color: rgba($color-grey-100, .12);
 $button-solid-disabled-text-color: rgba($color-grey-100, .5);
@@ -143,12 +144,12 @@ $button-outline-default-border: solid 1px $color-brand-300;
 $button-outline-default-inverse-bg-color: transparent;
 $button-outline-default-inverse-text-color: $color-grey-100;
 $button-outline-default-inverse-border: solid 1px $color-brand-300;
-$button-outline-focus-bg-color: rgba($color-brand-400, .26);
+$button-outline-focus-bg-color: rgba($color-brand-300, .26);
 $button-outline-focus-text-color: $color-grey-100;
-$button-outline-focus-border: solid 1px $color-brand-400;
-$button-outline-focus-inverse-bg-color: rgba($color-brand-400, .26);
+$button-outline-focus-border: solid 1px $color-brand-300;
+$button-outline-focus-inverse-bg-color: rgba($color-brand-300, .26);
 $button-outline-focus-inverse-text-color: $color-grey-100;
-$button-outline-focus-inverse-border: solid 1px $color-brand-400;
+$button-outline-focus-inverse-border: solid 1px $color-brand-300;
 $button-outline-disabled-bg-color: rgba($color-grey-100, .12);
 $button-outline-disabled-text-color: rgba($color-grey-100, .5);
 $button-outline-disabled-border: solid 1px rgba($color-grey-100, .5);
@@ -219,12 +220,11 @@ $icon-size-md: 3.6rem;
 $icon-size-lg: 4.8rem;
 
 // Links
-$links-text-color: $color-brand-200;
-$links-hover-text-color: $color-brand-300;
+$links-text-color: $color-brand-300;
+$links-hover-text-color: $color-brand-200;
 $links-disabled-text-color: rgba($color-grey-100, 0.2);
 $links-secondary-text-color: rgba($color-grey-100, .7);
 $links-secondary-hover-text-color: $color-grey-100;
-// Unused
 $links-inverse-text-color: $color-grey-100;
 $links-inverse-hover-text-color: rgba($color-grey-100, .4);
 $links-small-text-size: 1.2rem;
