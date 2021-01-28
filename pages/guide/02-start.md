@@ -22,7 +22,7 @@ git clone https://github.com/yahoo/yavin.git
 ### 2.1 (Option 1): Run Jar Locally
 
 ```shell
-cd yavin/packages/webserivce                 
+cd yavin/packages/webservice                 
 ./gradlew bootRun                           
 ```
 ### 2.2 (Option 2): Launch Demo App in Docker Container
