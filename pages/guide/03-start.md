@@ -20,6 +20,7 @@ Elide analytic APIs **generate SQL queries** against your target database(s). El
 * H2
 * Hive
 * Presto
+* Druid
 * MySQL
 * Postgres
 
