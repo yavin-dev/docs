@@ -30,7 +30,7 @@ cd yavin/packages/webservice
 If local port is different then change the argument in below command. Format is ```-p <host port>:<container port>```
 
 ```shell
-docker run -p 8080:8080 docker.io/verizonmedia/yavin:demo_local
+docker run -p 8080:8080 docker.io/verizonmedia/yavin_demo:latest
 ```
 
 (To stop the server at any time, type Ctrl-C in your terminal.)
