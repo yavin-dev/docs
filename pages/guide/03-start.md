@@ -266,7 +266,7 @@ Here are the complete steps for installing and setting up **Yavin** with your **
 
 ### Step 1.  Install Yavin Source.
 
-This step was covered in [quick start guide](/pages/guide/03-start.html).  Upon installation, you will have the **Yavin** repo on your local machine.  Your repo will include the following key subdirectories:
+This step was covered in [quick start guide](/pages/guide/02-start.html).  Upon installation, you will have the **Yavin** repo on your local machine.  Your repo will include the following key subdirectories:
 
 |      Path                      |  Purpose                       |
 |---------------------------------|---------------------------------------|
@@ -332,7 +332,7 @@ More details about validating the semantic model can be found [here](https://eli
 
 To run Yavin locally, simple execute:
 ```
-cd packages/webservice && ./gradlew
+cd packages/webservice && ./gradlew bootRun
 ```
 
 ### Step 11.  Launch the Application
