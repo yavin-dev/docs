@@ -194,7 +194,7 @@ Or an area step
    <figcaption>Managing Filters</figcaption>
  </figure>
 
-To remove a dimension or measure from the filter, click the filter icon for the corresponding Dimension or Measure. Or select the (x) icon on the filter section.
+To remove a dimension or measure from the filter, click the filter icon for the corresponding Dimension or Measure. Or select the (-) icon on the filter section.
 
 <figure>
   <img src="/assets/images/UG_remove_filter.png" width="300"/>
@@ -303,7 +303,7 @@ Allows you export your Report as CSV, PDF or PNG.
 <img src="/assets/images/UG_export_report.png" width="150"/>
 
 ###  Share
-Allows you to share the link of your Report.
+Allows you to share the link of your Report. This operation will copy the report link to the clipboard.
 
  <figure>
    <img src="/assets/images/UG_share.png" width="400"/>
@@ -342,7 +342,7 @@ Allows you export your Dashboard as PDF or PNG.
 <img src="/assets/images/UG_export.png" width="150"/>
 
 ###  Share
-Allows you to share the link for your Dashboard.
+Allows you to share the link for your Dashboard. This operation will copy the dashboard link to the clipboard
 
  <figure>
    <img src="/assets/images/UG_share_dashboard.png" width="400"/>
@@ -361,6 +361,6 @@ Allows you to schedule your Dashboard by specifying the rules of scheduling incl
 Allows you to delete your Dashboard.
 
  <figure>
-  <img src="/assets/images/UG_delete_widget.png" width="400"/>
+  <img src="/assets/images/UG_delete_dashboard_widget.png" width="400"/>
   <figcaption>Dashboard Delete Dialog</figcaption>
  </figure>
