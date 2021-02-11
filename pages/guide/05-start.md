@@ -300,7 +300,6 @@ Allows you to copy the API query of your Report, or run it in a new Tab.
 
 ### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
 Allows you export your Report as CSV, PDF or PNG.
-<img src="/assets/images/UG_export_report.png" width="150"/>
 
 ###  Share
 Allows you to share the link of your Report. This operation will copy the report link to the clipboard.
@@ -312,11 +311,6 @@ Allows you to share the link of your Report. This operation will copy the report
 
 ### Schedule <img src="/assets/images/UG_coming_soon.png" width="100"/>
 Allows you to schedule your Report by specifying the rules of scheduling including format (CSV, PDF or PNG), the email recipients and the frequency:
-
- <figure>
-   <img src="/assets/images/UG_schedule_report.png" width="400"/>
-   <figcaption>Report Schedule Dialog</figcaption>
- </figure>
 
 ### Delete
  Allows you to delete your Report.
@@ -339,7 +333,6 @@ Creates an exact copy of a dashboard with the name “Copy of ….”.
 
 ### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
 Allows you export your Dashboard as PDF or PNG.
-<img src="/assets/images/UG_export.png" width="150"/>
 
 ###  Share
 Allows you to share the link for your Dashboard. This operation will copy the dashboard link to the clipboard
@@ -351,11 +344,6 @@ Allows you to share the link for your Dashboard. This operation will copy the da
 
 ### Schedule <img src="/assets/images/UG_coming_soon.png" width="100"/>
 Allows you to schedule your Dashboard by specifying the rules of scheduling including format (PDF or PNG), the email recipients and the frequency:
-
- <figure>
-   <img src="/assets/images/UG_schedule_dashboard.png" width="400"/>
-   <figcaption>Dashboard Schedule Dialog</figcaption>
- </figure>
 
 ### Delete
 Allows you to delete your Dashboard.
