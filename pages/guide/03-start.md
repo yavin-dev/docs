@@ -37,8 +37,8 @@ Before using a dialect, ensure that you have the appropriate drivers
 | Postgres | [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)  |
 {:.table}
 
-We already have an entry for H2 [https://github.com/yahoo/yavin/blob/3e503c67a05e561c2318fb160a30931d9aece9c8/packages/webservice/app/build.gradle.kts#L35](https://github.com/yahoo/yavin/blob/3e503c67a05e561c2318fb160a30931d9aece9c8/packages/webservice/app/build.gradle.kts#L35)
-To link to a new Driver, you will have to update this file and add another entry for another database. Note: H2 is still used for Yavin/Navi metadata tables so you should not have to remove H2.
+Out of the box we will have an entry for H2 dialect [https://github.com/yahoo/yavin/blob/master/packages/webservice/app/build.gradle.kts#L35](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/build.gradle.kts#L35)
+To link to a new dialect, you will have to update this file and add another entry for another database. Note: H2 is still used for Yavin/Navi metadata tables so you should not have to remove H2.
 
 Semantic Models
 ------------------------------------------
