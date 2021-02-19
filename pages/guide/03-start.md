@@ -26,6 +26,17 @@ Elide analytic APIs **generate SQL queries** against your target database(s). El
 
 More information on dialects and how to use them can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#dialects).
 
+Before using a dialect, ensure that you have the appropriate drivers
+|      Dialect                      |  Driver                      |
+|---------------------------------|---------------------------------------|
+| H2 | [https://mvnrepository.com/artifact/com.h2database/h2](https://mvnrepository.com/artifact/com.h2database/h2) |
+| Hive | [https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc](https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc)  |
+| Presto | [https://prestodb.io/docs/current/installation/jdbc.html](https://prestodb.io/docs/current/installation/jdbc.html)  |
+| Druid | [https://calcite.apache.org/avatica/downloads/avatica.html](https://calcite.apache.org/avatica/downloads/avatica.html)  |
+| MySQL | [https://mvnrepository.com/artifact/mysql/mysql-connector-java](https://mvnrepository.com/artifact/mysql/mysql-connector-java)  |
+| Postgres | [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)  |
+{:.table}
+
 Semantic Models
 ------------------------------------------
 A ***semantic model*** is the view of the data you want your users to understand.  It is typically non-relational (for simplicity) and consists of concepts like tables, measures, and dimensions.  End users refer to these concepts by name only (they are not expected to derive formulas or know about the physical storage or serialization of data).
