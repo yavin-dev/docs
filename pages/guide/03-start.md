@@ -31,11 +31,14 @@ Before using a dialect, ensure that you have the appropriate drivers
 |---------------------------------|---------------------------------------|
 | H2 | [https://mvnrepository.com/artifact/com.h2database/h2](https://mvnrepository.com/artifact/com.h2database/h2) |
 | Hive | [https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc](https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc)  |
-| Presto | [https://prestodb.io/docs/current/installation/jdbc.html](https://prestodb.io/docs/current/installation/jdbc.html)  |
+| PrestoDB | [https://prestodb.io/docs/current/installation/jdbc.html](https://prestodb.io/docs/current/installation/jdbc.html)  |
 | Druid | [https://calcite.apache.org/avatica/downloads/avatica.html](https://calcite.apache.org/avatica/downloads/avatica.html)  |
 | MySQL | [https://mvnrepository.com/artifact/mysql/mysql-connector-java](https://mvnrepository.com/artifact/mysql/mysql-connector-java)  |
 | Postgres | [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)  |
 {:.table}
+
+We already have an entry for H2 [https://github.com/yahoo/yavin/blob/3e503c67a05e561c2318fb160a30931d9aece9c8/packages/webservice/app/build.gradle.kts#L35](https://github.com/yahoo/yavin/blob/3e503c67a05e561c2318fb160a30931d9aece9c8/packages/webservice/app/build.gradle.kts#L35)
+To link to a new Driver, you will have to update this file and add another entry for another database. Note: H2 is still used for Yavin/Navi metadata tables so you should not have to remove H2.
 
 Semantic Models
 ------------------------------------------
