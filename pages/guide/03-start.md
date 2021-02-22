@@ -26,16 +26,16 @@ Elide analytic APIs **generate SQL queries** against your target database(s). El
 
 More information on dialects and how to use them can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#dialects).
 
-Before using a dialect, ensure that you have the appropriate drivers
+Before using a dialect, ensure that you have the appropriate drivers:
 
-|      Dialect                    |  Driver                      |
-|---------------------------------|------------------------------|
-| H2 | [https://mvnrepository.com/artifact/com.h2database/h2](https://mvnrepository.com/artifact/com.h2database/h2) |
-| Hive | [https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc](https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc)  |
-| PrestoDB | [https://prestodb.io/docs/current/installation/jdbc.html](https://prestodb.io/docs/current/installation/jdbc.html)  |
-| Druid | [https://calcite.apache.org/avatica/downloads/avatica.html](https://calcite.apache.org/avatica/downloads/avatica.html)  |
-| MySQL | [https://mvnrepository.com/artifact/mysql/mysql-connector-java](https://mvnrepository.com/artifact/mysql/mysql-connector-java)  |
-| Postgres | [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)  |
+|      Dialect                       |  Driver                        |
+|---------------------------------|---------------------------------------|
+| H2 | [https://mvnrepository.com/artifact/com.h2database/h2](https://mvnrepository.com/artifact/com.h2database/h2)        |
+| Hive  | [https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc](https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc)       |
+| PrestoDB | [https://prestodb.io/docs/current/installation/jdbc.html](https://prestodb.io/docs/current/installation/jdbc.html) |
+| Druid | [https://calcite.apache.org/avatica/downloads/avatica.html](https://calcite.apache.org/avatica/downloads/avatica.html) |
+| MySQL | [https://mvnrepository.com/artifact/mysql/mysql-connector-java](https://mvnrepository.com/artifact/mysql/mysql-connector-java) |
+| Postgres | [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql) |
 {:.table}
 
 Out of the box we will have an entry for H2 dialect [https://github.com/yahoo/yavin/blob/master/packages/webservice/app/build.gradle.kts#L35](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/build.gradle.kts#L35)
