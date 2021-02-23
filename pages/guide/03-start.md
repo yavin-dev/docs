@@ -151,18 +151,22 @@ Yavin's demo data includes a single table in its [semantic model][demo-table] Ne
           category: Date
           type: TIME
           definition: '{{date_added}}'
-          grain: {
-            type: DAY
-          }
+          grains: [
+            {          
+              type: DAY
+            }
+          ]
         }
         {
           name: release_year
           category: Date
           type: TIME
           definition: '{{release_year}}'
-          grain: {
-            type: YEAR
-          }
+          grains: [
+            {
+              type: YEAR
+            }
+          ]  
         }
         {
           name: film_rating
