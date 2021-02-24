@@ -52,7 +52,7 @@ More information can be obtained at : [https://elide.io/pages/guide/v5/04-analyt
 
 ### how do I create a single/multiple tables using a data connection/Database?
 
-In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```
+By defining a model configuration as described in path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```
 
 Create an Hjson file, example: ```DemoTables.hjson```
 
@@ -77,11 +77,13 @@ Sample Hjson for 2 tables :
 
 ```
 
+For more information on model configuration, check [https://elide.io/pages/guide/v5/04-analytics.html#model-configuration](https://elide.io/pages/guide/v5/04-analytics.html#model-configuration)
+
 ### how do I add measures in my semantic config
 
 In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file as tables, define your measures.
 
-Within the same block as the table that was defined, example: ```DemoTables.hjson```, define your measures
+Within the same block and file as the table that was defined, example: ```DemoTables.hjson```, define your measures
 
 Sample Hjson for 2 measures :
 
@@ -112,7 +114,7 @@ Sample Hjson for 2 measures :
 
 In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file as tables, define your dimensions.
 
-Within the same block as the table that was defined, example: ```DemoTables.hjson```, define your dimensions
+Within the same block and file as the table that was defined, example: ```DemoTables.hjson```, define your dimensions
 
 Sample Hjson for 2 dimensions:
 
@@ -150,6 +152,40 @@ Sample Hjson for 2 dimensions:
 
 ### how do I join tables together in my semantic config?
 
+In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file as tables, define your joins.
+
+Within the same block as the table that was defined, example: ```DemoTables.hjson```, define your dimensions
+
+Sample Hjson for a left, right and full joins:
+
+```
+joins: [
+    {
+       name: playerCountry
+       to: country
+       kind: toOne
+       type: left
+       definition: '{{country_id}} = {{playerCountry.id}}'
+    },
+    {
+       name: coachState
+       to: country
+       kind: toOne
+       type: right
+       definition: '{{state_id}} = {{coachState.id}}'
+    },
+    {
+       name: playerTeam
+       to: team
+       kind: toMany
+       type: full
+       definition: '{{team_id}} = {{playerTeam.id}}'
+    }
+]
+
+```
+
+For more information on joins, please check out: [https://elide.io/pages/guide/v5/04-analytics.html#joins](https://elide.io/pages/guide/v5/04-analytics.html#joins)
 
 ### how do I union tables together in my semantic config?
 
@@ -162,6 +198,24 @@ Sample Hjson for 2 dimensions:
 
 ### how do I filter on multiple fields like i would with SQL in my semantic config?
 
+To filter in a field in the semantic model, you will need to use the Elide filterring operators [https://elide.io/pages/guide/v5/11-graphql.html#filtering](https://elide.io/pages/guide/v5/11-graphql.html#filtering)
+
+Sample Hjson for filtering on multiple fields:
+
+```
+measures: [
+  {
+    # filtering on fields
+    name: measure2
+    friendlyName: Measure 2
+    category: Stats
+    type: INTEGER
+    definition: "sum(cast (case when {{duration}} like '% Seasons' then REPLACE({{duration}}, ' Seasons', '') else '0' end AS INT))"
+  }
+  ...
+]
+
+```
 
 ### How often do i need to create a new table?
 
