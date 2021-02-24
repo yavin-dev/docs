@@ -6,6 +6,7 @@ title: How to Guide
 
 ### How do i get the demo app running on my machine?
 
+Check the [Quick Start Guide](https://yavin.dev/pages/guide/02-start.html)
 
 ### How do i connect to a new database?
 
@@ -48,9 +49,6 @@ More information can be obtained at : [https://elide.io/pages/guide/v5/04-analyt
 
 
 ### How do i add a CSV file to Yavin?
-
-
-### How do i connect to a Verizon Media database that requires authentication?
 
 
 ### How do i connect to a new table within a dataset?
