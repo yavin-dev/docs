@@ -35,7 +35,7 @@ Sample demo of a Presto connection :
   dbconfigs: [
     {
       name: DemoPrestoDBConnection
-      url: presto://PrestoDemo:8080/hive/demo; 
+      url: presto://PrestoDemo:8080/hive/demo;
       driver: com.facebook.presto.jdbc.PrestoDriver
       user: MrUser
       dialect: PrestoDB
@@ -50,13 +50,102 @@ More information can be obtained at : [https://elide.io/pages/guide/v5/04-analyt
 ### how do I add a CSV file to Yavin?
 
 
-### how do I connect to a new table within a dataset?
+### how do I create a single/multiple tables using a data connection/Database?
 
+In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```
+
+Create an Hjson file, example: ```DemoTables.hjson```
+
+Sample Hjson for 2 tables :
+
+```
+{
+  tables: [
+    {
+      name:  Table1
+      friendlyName: My Table 1
+      table: My_Table_1
+      dbConnectionName: DemoH2Connection
+    }
+    {
+      name:  Table2
+      friendlyName: My Table 2
+      table: My_Table_2
+      dbConnectionName: DemoPrestoDBConnection
+    }      
+}
+
+```
 
 ### how do I add measures in my semantic config
 
+In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file as tables, define your measures.
+
+Within the same block as the table that was defined, example: ```DemoTables.hjson```, define your measures
+
+Sample Hjson for 2 measures :
+
+```
+      measures: [
+        {
+          # A count measure
+          name: measure1
+          friendlyName: Measure 1
+          category: MeasureCategory1
+          type: INTEGER
+          definition: 'count({{title_id}})'
+        }
+        {
+          # A measure using a sum and a condition
+          name: measure2
+          friendlyName: Measure 2
+          category: Stats
+          type: INTEGER
+          definition: "sum(cast (case when {{duration}} like '% Seasons' then REPLACE({{duration}}, ' Seasons', '') else '0' end AS INT))"
+        }
+        ...
+      ]
+
+```
 
 ### how do I add dimensions in my semantic config?
+
+In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file as tables, define your dimensions.
+
+Within the same block as the table that was defined, example: ```DemoTables.hjson```, define your dimensions
+
+Sample Hjson for 2 dimensions:
+
+```
+    Dimensions: [
+      {
+        # A simple straight forward dimension. Mapping to a field in the schema
+        name: dimension1
+        friendlyName: Dimension 1
+        category: DimCategory1
+        type: TEXT
+        definition: '{{title_id}}'
+      }
+      {
+        # A Date Dimension using multiple time grains (year and day)
+        name: dimension2
+        friendlyName: Dimension 2
+        category: DimCategory2
+        type: TIME
+        definition: '{{release_year}}'
+        grains: [
+          {
+             type: YEAR
+          }
+          {
+             type: DAY
+          }
+        ]
+      }
+        ...
+    ]
+
+```
 
 
 ### how do I join tables together in my semantic config?
