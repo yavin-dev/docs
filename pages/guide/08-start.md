@@ -243,7 +243,7 @@ joins: [
 
 ```
 
-The name of the join should be used to reference data from that table, including in the join definition and dimension definitions. However, **The insert description of whatever the to: field is called in the join should be used in tableSource.**
+The `name` of the join should be used to reference data from that table, including in the join definition and dimension definitions. However, ***The insert description of whatever the `to:` field is called in the join should be used in `tableSource`.***
 
 For more information on joins, please check out: [https://elide.io/pages/guide/v5/04-analytics.html#joins](https://elide.io/pages/guide/v5/04-analytics.html#joins)
 
