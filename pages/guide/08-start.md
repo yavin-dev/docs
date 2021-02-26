@@ -1,7 +1,7 @@
 ---
 layout: guide
 group: guide
-title: How to Semantic Model Guide
+title: Connect to & Model Your Data
 ---
 
 {:toc}
