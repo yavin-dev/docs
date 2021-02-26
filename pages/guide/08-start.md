@@ -82,7 +82,7 @@ Direct upload of CSV to Yavin is not supported for Analytic Queries. ***You can 
 
 [Sample default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
 
-**If the CSV file is not used alone** then it has to be joined with fact data then it has to reside in the same database.
+**If the CSV file has to be joined with other tables** then it has to be loaded in the same database as those tables.
 
 More information can be obtained at : [https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration](https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration)
 
