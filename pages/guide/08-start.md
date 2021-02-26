@@ -18,9 +18,9 @@ For sample demos that comes with Yavin (we are using the [Netflix Movie and TV S
 
 ### How do I connect to a new database?
 
-Create/reuse the Hjson file for defining your data connection, example: ```DemoConnection.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/``` ***(Note: Multiple data connection can exist in one Hjson file)***.
+Create/reuse the Hjson file for defining your data connection, example: ```DemoConnection.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/``` ***(Note: Multiple data connection can exist in a single Hjson file)***.
 
-Sample H2 Connection config:
+**Sample H2 Connection config:**
 
 ```
 {
@@ -36,7 +36,9 @@ Sample H2 Connection config:
 }
 
 ```
-Sample demo of a Presto connection :  
+
+**Sample Presto Connection Config :**  
+
 ```
 {
   dbconfigs: [
@@ -56,17 +58,17 @@ More information can be obtained at : [https://elide.io/pages/guide/v5/04-analyt
 
 ### How do I add a CSV file to Yavin?
 
-Direct upload of CSV to Yavin is not supported for Analytic Queries. You can upload the CSV to a database as a table and then create a Hjson config and access it via Yavin.
+Direct upload of CSV to Yavin is not supported for Analytic Queries. **You can upload the CSV to a database as a table and then create a Hjson config and access it via Yavin.**
 
-After uploading the CSV file to HDFS and creating an HDFS table on it. In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```. Create/reuse the Hjson file to point to the CSV file using Hive, example: ```CSV_Data_connection.hjson```
+After uploading the CSV file to HDFS and creating a Hive table on it. In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```. Create/reuse the Hjson file to point to the CSV file using Hive, example: ```CSV_Data_connection.hjson```
 
-Sample H2 Connection config:
+**Sample H2 Connection config:**
 ```
 {
   dbconfigs: [
     {
       name: CSV_Data_connection
-      url: jdbc:hive:mem:DemoDB;  DB_CLOSE_DELAY=-1;
+      url: jdbc:hive:mem:DemoDB;DB_CLOSE_DELAY=-1;
       driver: org.hive.Driver
       user: guest
       dialect: Hive
@@ -76,13 +78,21 @@ Sample H2 Connection config:
 
 ```
 
+**If the CSV file you have is intended to be use alone**, then a similar approach to the demo CSV data provided by Yavin can be followed. Put a CSV file in path ```yavin/packages/webservice/app/src/main/resources/```. And in path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```. Create/reuse the Hjson file to point to the CSV file using H2. And in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/``` Create/reuse the Hjson file for your model configuration.
+
+[Sample DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
+
+[Sample default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
+
+**If the CSV file is not used alone** then it has to be joined with fact data then it has to reside in the same database.
+
 More information can be obtained at : [https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration](https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration)
 
 ### How do I create a single/multiple tables using a data connection/Database?
 
-Create/reuse the Hjson file for your model configuration, example: ```DemoTables.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/``` ***(Note: Multiple model configuration can exist in one Hjson file)***.
+Create/reuse the Hjson file for your model configuration, example: ```DemoTables.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/``` ***(Note: Multiple model configuration can exist in a single Hjson file)***.
 
-Sample Hjson for 2 tables :
+**Sample Hjson for two different tables :**
 
 ```
 {
@@ -109,7 +119,7 @@ For more information on model configuration, check [https://elide.io/pages/guide
 
 In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file and block as tables, define your measures.
 
-Sample Hjson for 2 measures :
+**Sample Hjson for two different measures :**
 
 ```
       measures: [
@@ -140,8 +150,7 @@ For more information on measures configuration, check [https://elide.io/pages/gu
 
 In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file and block as tables, define your dimensions
 
-
-Sample Hjson for two dimensions:
+**Sample Hjson for two different dimensions:**
 
 ```
     Dimensions: [
@@ -209,8 +218,7 @@ When neither `values` or `tableSource` is specified, Yavin will search against t
 
 In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file and block as tables, define your joins.
 
-
-Sample Hjson for a left, right and full joins:
+**Sample Hjson for a left, right and full joins:**
 
 ```
 joins: [
@@ -340,7 +348,7 @@ For more information on case statements please check out: [https://elide.io/page
 
 If you want to filter the data available from the table to the users, you can provide a SQL subquery in the Hjson config.
 
-Sample Hjson for filtering on multiple fields:
+**Sample Hjson for filtering on multiple fields:**
 
 ```
 {
