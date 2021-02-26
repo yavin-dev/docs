@@ -58,11 +58,9 @@ More information can be obtained at : [https://elide.io/pages/guide/v5/04-analyt
 
 ### How do I add a CSV file to Yavin?
 
-Direct upload of CSV to Yavin is not supported for Analytic Queries. **You can upload the CSV to a database as a table and then create a Hjson config and access it via Yavin.**
+Direct upload of CSV to Yavin is not supported for Analytic Queries. ***You can upload the CSV to a database as a table and then create a Hjson config and access it via Yavin.*** After uploading the CSV file to HDFS and creating a Hive table on it. In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```. Create/reuse the Hjson file to point to the CSV file using Hive, example: ```CSV_Data_connection.hjson```
 
-After uploading the CSV file to HDFS and creating a Hive table on it. In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```. Create/reuse the Hjson file to point to the CSV file using Hive, example: ```CSV_Data_connection.hjson```
-
-**Sample H2 Connection config:**
+**Sample Hive Connection config:**
 ```
 {
   dbconfigs: [
@@ -210,9 +208,7 @@ When your dataset does have a dedicated dimension table, you can specify an alte
 }
 ```
 
-The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
-
-When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow.
+The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined. When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow.
 
 ### How do I join tables together in my semantic config?
 
@@ -251,7 +247,7 @@ For more information on joins, please check out: [https://elide.io/pages/guide/v
 
 ### How do I union tables together in my semantic config?
 
-If you want to UNION the data from 2 or more tables and present as a single unified table to the user, you can provide a SQL subquery in the Hjson config.
+If you want to UNION the data from two or more tables and present as a single unified table to the user, you can provide a SQL subquery in the Hjson config.
 
 In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file and block as tables, define your union
 
