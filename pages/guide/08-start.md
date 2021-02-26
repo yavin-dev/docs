@@ -6,7 +6,7 @@ title: Connect to & Model Your Data
 
 {:toc}
 
-### How do I get the demo app running on my machine using the default semantic model provided?
+## How do I get the demo app running on my machine using the default semantic model provided?
 
 Check the [Quick Start Guide](https://yavin.dev/pages/guide/02-start.html)
 
@@ -16,7 +16,7 @@ For sample demos that comes with Yavin (we are using the [Netflix Movie and TV S
 
 [Sample default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
 
-### How do I connect to a new database?
+## How do I connect to a new database?
 
 Create/reuse the Hjson file for defining your data connection, example: ```DemoConnection.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/``` ***(Note: Multiple data connection can exist in a single Hjson file)***.
 
@@ -336,7 +336,7 @@ If you want to convert data from one type to another, you can provide a SQL defi
 
 For more information on SQL definition please check out: [https://elide.io/pages/guide/v5/04-analytics.html#column-properties](https://elide.io/pages/guide/v5/04-analytics.html#column-properties)
 
-### how do I create fields like i would with a case statement in SQL in my semantic config?
+### How do I create fields like i would with a case statement in SQL in my semantic config?
 
 You can use CASE statement in the SQL definition for a column.    
 
