@@ -18,7 +18,7 @@ title: Connect to & Model Your Data
 * [How do I filter on multiple fields like i would with SQL in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-filter-on-multiple-fields-like-i-would-with-SQL-in-my-semantic-config?)
 * [How often do i need to create a new table?](https://yavin.dev/pages/guide/08-start.html#How-often-do-i-need-to-create-a-new-table?)
 * [How do I add another Time Grain in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-add-another-Time-Grain-in-my-semantic-config?)
-* [How can i share my semantic config with others?](https://yavin.dev/pages/guide/08-start.html#How-can-i-share-my-semantic-config-with-others?)
+* <a href="#share">How can i share my semantic config with others?</a>
 
 ## How do I get the demo app running on my machine using the default semantic model provided?
 
@@ -464,7 +464,7 @@ To add another time grain in a date dimension, we can simply do the following:
 
 For more information on time grains please check out: [https://elide.io/pages/guide/v5/04-analytics.html#time-dimensions--time-grains](https://elide.io/pages/guide/v5/04-analytics.html#time-dimensions--time-grains)
 
-## How can i share my semantic config with others?
+## <a id="share"> How can i share my semantic config with others?</a>
 
 You can upload your application code to any source code management software like Github, etc. and share with others.
 
