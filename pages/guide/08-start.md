@@ -10,24 +10,24 @@ title: How to Semantic Model Guide
 
 Check the [Quick Start Guide](https://yavin.dev/pages/guide/02-start.html)
 
-For the sample demos that comes with Yavin (we are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) dataset that is sourced from [Kaggle](https://www.kaggle.com/) :
+For sample demos that comes with Yavin (we are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) dataset that is sourced from [Kaggle](https://www.kaggle.com/) :
 
-[The DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
-[The default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
+[Sample DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
+
+[Sample default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
 
 ### How do I connect to a new database?
 
-In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```
+Create/reuse the Hjson file for defining your data connection, example: ```DemoConnection.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/``` ***(Note: Multiple data connection can exist in one Hjson file)***.
 
-Create an Hjson file for each data connection, example: ```DemoConnection.hjson```. You will need 1 file per connection.
+Sample H2 Connection config:
 
-Sample demo of an H2 connection :
 ```
 {
   dbconfigs: [
     {
       name: DemoH2Connection
-      url: jdbc:h2:mem:DemoDB;  DB_CLOSE_DELAY=-1;
+      url: jdbc:h2:mem:DemoDB;DB_CLOSE_DELAY=-1;
       driver: org.h2.Driver
       user: guest
       dialect: H2
@@ -58,11 +58,9 @@ More information can be obtained at : [https://elide.io/pages/guide/v5/04-analyt
 
 Direct upload of CSV to Yavin is not supported for Analytic Queries. You can upload the CSV to a database as a table and then create a Hjson config and access it via Yavin.
 
-After uploading the CSV file to HDFS and creating a table on it. In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```
+After uploading the CSV file to HDFS and creating an HDFS table on it. In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```. Create/reuse the Hjson file to point to the CSV file using Hive, example: ```CSV_Data_connection.hjson```
 
-Create an Hjson file to point to the CSV file using Hive, example: ```CSV_Data_connection.hjson```
-
-Sample demo of an H2 connection :
+Sample H2 Connection config:
 ```
 {
   dbconfigs: [
@@ -82,9 +80,7 @@ More information can be obtained at : [https://elide.io/pages/guide/v5/04-analyt
 
 ### How do I create a single/multiple tables using a data connection/Database?
 
-By defining a model configuration as described in path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```
-
-Create an Hjson file, example: ```DemoTables.hjson```
+Create/reuse the Hjson file for your model configuration, example: ```DemoTables.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/``` ***(Note: Multiple model configuration can exist in one Hjson file)***.
 
 Sample Hjson for 2 tables :
 
@@ -111,9 +107,7 @@ For more information on model configuration, check [https://elide.io/pages/guide
 
 ### How do I add measures in my semantic config
 
-In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file as tables, define your measures.
-
-Within the same block and file as the table that was defined, example: ```DemoTables.hjson```, define your measures
+In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file and block as tables, define your measures.
 
 Sample Hjson for 2 measures :
 
@@ -144,11 +138,10 @@ For more information on measures configuration, check [https://elide.io/pages/gu
 
 ### How do I add dimensions in my semantic config?
 
-In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file as tables, define your dimensions.
+In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file and block as tables, define your dimensions
 
-Within the same block and file as the table that was defined, example: ```DemoTables.hjson```, define your dimensions
 
-Sample Hjson for 2 dimensions:
+Sample Hjson for two dimensions:
 
 ```
     Dimensions: [
@@ -183,11 +176,39 @@ Sample Hjson for 2 dimensions:
 
 For more information on dimensions configuration, check [https://elide.io/pages/guide/v5/04-analytics.html#columns](https://elide.io/pages/guide/v5/04-analytics.html#columns)
 
+### How do I define Type Ahead Search?
+
+When constructing filters in the Yavin UI, the search bar can be used to perform ***type ahead*** queries in order to suggest dimension values.  Type ahead search can be enabled for any dimension of type `TEXT` in one of two ways.   The first is to add a `values` attribute to the dimension with a list of all possible values.  This works well when your dataset does not have a dedicated dimension table and when the set of dimension values is small:
+
+```
+{
+  name : countryCode
+  friendlyName : Country ISO Code
+  type : TEXT
+  definition : '{{playerCountry.isoCode}}'
+  values : ['US', 'HK']
+}
+```
+
+When your dataset does have a dedicated dimension table, you can specify an alternate semantic model that can be searched for values by adding the `tableSource` attribute.
+
+```
+{
+  name: countryName
+  type: TEXT
+  definition: '{{playerCountry.name}}'
+  tableSource: country.name
+}
+```
+
+The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
+
+When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow.
+
 ### How do I join tables together in my semantic config?
 
-In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file as tables, define your joins.
+In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file and block as tables, define your joins.
 
-Within the same block as the table that was defined, example: ```DemoTables.hjson```, define your dimensions
 
 Sample Hjson for a left, right and full joins:
 
@@ -223,6 +244,8 @@ For more information on joins, please check out: [https://elide.io/pages/guide/v
 ### How do I union tables together in my semantic config?
 
 If you want to UNION the data from 2 or more tables and present as a single unified table to the user, you can provide a SQL subquery in the Hjson config.
+
+In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/```, sharing the same file and block as tables, define your union
 
 ```
 {
@@ -294,7 +317,7 @@ If you want to convert data from one type to another, you can provide a SQL defi
 }
 ```
 
-For more information on SQL definition please check out: [https://elide.io/pages/guide/v5/04-analytics.html#analytic-queries](https://elide.io/pages/guide/v5/04-analytics.html#analytic-queries)
+For more information on SQL definition please check out: [https://elide.io/pages/guide/v5/04-analytics.html#column-properties](https://elide.io/pages/guide/v5/04-analytics.html#column-properties)
 
 ### how do I create fields like i would with a case statement in SQL in my semantic config?
 
@@ -314,8 +337,6 @@ You can use CASE statement in the SQL definition for a column.
 For more information on case statements please check out: [https://elide.io/pages/guide/v5/04-analytics.html#column-properties](https://elide.io/pages/guide/v5/04-analytics.html#column-properties)
 
 ### How do I filter on multiple fields like i would with SQL in my semantic config?
-
-To filter in a field in the semantic model, you will need to use the Elide filtering operators [https://elide.io/pages/guide/v5/11-graphql.html#filtering](https://elide.io/pages/guide/v5/11-graphql.html#filtering)
 
 If you want to filter the data available from the table to the users, you can provide a SQL subquery in the Hjson config.
 
@@ -410,7 +431,7 @@ To add another time grain in a date dimension, we can simply do the following:
 
 ```
 
-For more information on subqueries please check out: [https://elide.io/pages/guide/v5/04-analytics.html#time-dimensions--time-grains](https://elide.io/pages/guide/v5/04-analytics.html#time-dimensions--time-grains)
+For more information on time grains please check out: [https://elide.io/pages/guide/v5/04-analytics.html#time-dimensions--time-grains](https://elide.io/pages/guide/v5/04-analytics.html#time-dimensions--time-grains)
 
 ### How can i share my semantic config with others?
 
@@ -418,5 +439,6 @@ You can upload your application code to any source code management software like
 
 Similar to the one we have for the demo app and data set:
 
-[The DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
-[The default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
+[Sample DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
+
+[Sample default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
