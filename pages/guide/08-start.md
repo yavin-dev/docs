@@ -4,7 +4,21 @@ group: guide
 title: Connect to & Model Your Data
 ---
 
-{:toc}
+* [How do I get the demo app running on my machine using the default semantic model provided?](https://yavin.dev/pages/guide/08-start.html#How-do-I-get-the-demo-app-running-on-my-machine-using-the-default-semantic-model-provided?)
+* [How do I connect to a new database?](https://yavin.dev/pages/guide/08-start.html#How-do-I-connect-to-a-new-database?)
+* [How do I add a CSV file to Yavin?](https://yavin.dev/pages/guide/08-start.html#How-do-I-add-a-CSV-file-to-Yavin?)
+* [How do I create a single/multiple tables using a data connection/Database?](https://yavin.dev/pages/guide/08-start.html#How-do-I-create-a-single-multiple-tables-using-a-data-connection-Database?)
+* [How do I add measures in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-add-measures-in-my-semantic-config?)
+* [How do I add dimensions in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-add-dimensions-in-my-semantic-config?)
+* [How do I define Type Ahead Search?](https://yavin.dev/pages/guide/08-start.html#How-do-I-define-Type-Ahead-Search?)
+* [How do I join tables together in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-join-tables-together-in-my-semantic-config?)
+* [How do I union tables together in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-union-tables-together-in-my-semantic-config?)
+* [How to i convert data of one type into another type in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-to-i-convert-data-of-one-type-into-another-type-in-my-semantic-config?)
+* [How do I create fields like i would with a case statement in SQL in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-create-fields-like-i-would-with-a-case-statement-in-SQL-in-my-semantic-config?)
+* [How do I filter on multiple fields like i would with SQL in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-filter-on-multiple-fields-like-i-would-with-SQL-in-my-semantic-config?)
+* [How often do i need to create a new table?](https://yavin.dev/pages/guide/08-start.html#How-often-do-i-need-to-create-a-new-table?)
+* [How do I add another Time Grain in my semantic config?](https://yavin.dev/pages/guide/08-start.html#How-do-I-add-another-Time-Grain-in-my-semantic-config?)
+* [How can i share my semantic config with others?](https://yavin.dev/pages/guide/08-start.html#How-can-i-share-my-semantic-config-with-others?)
 
 ## How do I get the demo app running on my machine using the default semantic model provided?
 
@@ -86,7 +100,7 @@ Direct upload of CSV to Yavin is not supported for Analytic Queries. ***You can 
 
 More information can be obtained at : [https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration](https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration)
 
-## How do I create a single/multiple tables using a data connection/Database?
+## How do I create a single multiple tables using a data connection Database?
 
 Create/reuse the Hjson file for your model configuration, example: ```DemoTables.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/``` ***(Note: Multiple model configuration can exist in a single Hjson file)***.
 
