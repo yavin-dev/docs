@@ -24,7 +24,7 @@ title: Connect to & Model Your Data
 
 Check the [Quick Start Guide](https://yavin.dev/pages/guide/02-start.html)
 
-For sample demos that comes with Yavin (we are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) dataset that is sourced from [Kaggle](https://www.kaggle.com/) :
+For sample demos that comes with Yavin (Note: We are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) dataset that is sourced from [Kaggle](https://www.kaggle.com/)) :
 
 [Sample DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
 
@@ -100,7 +100,7 @@ Direct upload of CSV to Yavin is not supported for Analytic Queries. ***You can 
 
 More information can be obtained at : [https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration](https://elide.io/pages/guide/v5/04-analytics.html#data-source-configuration)
 
-## <a id="create>How do I create a single multiple tables using a data connection Database?</a>
+## <a id="create">How do I create a single multiple tables using a data connection Database?</a>
 
 Create/reuse the Hjson file for your model configuration, example: ```DemoTables.hjson``` in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/``` ***(Note: Multiple model configuration can exist in a single Hjson file)***.
 
