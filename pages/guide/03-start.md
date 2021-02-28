@@ -155,6 +155,9 @@ Yavin's demo data includes a single table in its [semantic model][demo-table] Ne
             {          
               type: DAY
             }
+            {
+              type: YEAR
+            }
           ]
         }
         {
