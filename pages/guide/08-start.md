@@ -10,15 +10,15 @@ title: Connect to & Model Your Data
 * <a href="#create">How do I create a single/multiple tables using a data connection/Database?</a>
 * <a href="#measure">How do I add measures in my semantic config?</a>
 * <a href="#dim">How do I add dimensions in my semantic config?</a>
-* <a href="#search">How do I define Type Ahead Search?</a>
+* <a href="#typeahead">How do I define Type Ahead Search?</a>
 * <a href="#join">How do I join tables together in my semantic config?</a>
 * <a href="#union">How do I union tables together in my semantic config?</a>
-* <a href="#convert">How to i convert data of one type into another type in my semantic config?</a>
-* <a href="#case">How do I create fields like i would with a case statement in SQL in my semantic config?</a>
-* <a href="#filter">How do I filter on multiple fields like i would with SQL in my semantic config?</a>
-* <a href="#new">How often do i need to create a new table?</a>
+* <a href="#convert">How do I convert data of one type into another type in my semantic config?</a>
+* <a href="#case">How do I create fields like I would with a case statement in SQL in my semantic config?</a>
+* <a href="#filter">How do I filter on multiple fields like I would with SQL in my semantic config?</a>
+* <a href="#new">How often do I need to create a new table?</a>
 * <a href="#time-grain">How do I add another Time Grain in my semantic config?</a>
-* <a href="#share">How can i share my semantic config with others?</a>
+* <a href="#share">How can I share my semantic config with others?</a>
 
 ## <a id="demo">How do I get the demo app running on my machine using the default semantic model provided?</a>
 
@@ -197,7 +197,7 @@ In path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/model
 
 For more information on dimensions configuration, check [https://elide.io/pages/guide/v5/04-analytics.html#columns](https://elide.io/pages/guide/v5/04-analytics.html#columns)
 
-## <a id="search">How do I define Type Ahead Search?</a>
+## <a id="typeahead">How do I define Type Ahead Search?</a>
 
 When constructing filters in the Yavin UI, the search bar can be used to perform ***type ahead*** queries in order to suggest dimension values.  Type ahead search can be enabled for any dimension of type `TEXT` in one of two ways.   The first is to add a `values` attribute to the dimension with a list of all possible values.  This works well when your dataset does not have a dedicated dimension table and when the set of dimension values is small:
 
@@ -211,7 +211,7 @@ When constructing filters in the Yavin UI, the search bar can be used to perform
 }
 ```
 
-When your dataset does have a dedicated dimension table, you can specify an alternate semantic model that can be searched for values by adding the `tableSource` attribute.
+When your dataset does have a dedicated dimension table, you can specify an alternate semantic model that can be searched for values by adding the `tableSource` attribute (a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table). The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
 
 ```
 {
@@ -222,7 +222,21 @@ When your dataset does have a dedicated dimension table, you can specify an alte
 }
 ```
 
-The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined. When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow.
+When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow.
+
+#### Automatically showing filter values
+
+The Yavin UI will automatically show possible values if the dimension has a `cardinality` attribute of `tiny` or `small`
+
+```
+{
+  name: countryName
+  type: TEXT
+  definition: '{{playerCountry.name}}'
+  tableSource: country.name
+  cardinality: small
+}
+```
 
 ## <a id="join">How do I join tables together in my semantic config?</a>
 

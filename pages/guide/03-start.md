@@ -255,7 +255,7 @@ When constructing filters in the Yavin UI, the search bar can be used to perform
 }
 ```
 
-When your dataset does have a dedicated dimension table, you can specify an alternate semantic model that can be searched for values by adding the `tableSource` attribute.
+When your dataset does have a dedicated dimension table, you can specify an alternate semantic model that can be searched for values by adding the `tableSource` attribute (a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table). The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
 
 ```
 {
@@ -266,9 +266,21 @@ When your dataset does have a dedicated dimension table, you can specify an alte
 }
 ```
 
-The attribute `tableSource` is a '.' separated expression consisting of two components: the table to search, followed by the column name to search in that table.  The Yavin UI will issue separate search queries against this table when the user types in the search bar.  The `tableSource` attribute can be configured to point to a different table or the same table where the dimension is defined.
-
 When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow.
+
+#### Automatically showing filter values
+
+The Yavin UI will automatically show possible values if the dimension has a `cardinality` attribute of `tiny` or `small`
+
+```
+{
+  name: countryName
+  type: TEXT
+  definition: '{{playerCountry.name}}'
+  tableSource: country.name
+  cardinality: small
+}
+```
 
 Yavin Example Key Elements
 -----------------------------------------------
