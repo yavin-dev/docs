@@ -53,7 +53,7 @@ Check again: ```git --version```
 
 Once your machine has all met the prerequisites, run the following steps (On ***Terminal*** for MAC, and on ***Bash*** for Windows)to boot the example Yavin app:
 
-### 1. Clone the project
+### 1.1 (Option 1) Run Jar Locally
 
 Yavin is consistent of 3 separate repository that can all be accessed from [https://github.com/yavin-dev/](https://github.com/yavin-dev/):
 1. ***app*** : Containing only the simplified app used as a standalone BI tool or to build your custom data applications.
@@ -71,7 +71,8 @@ git clone https://github.com/yavin-dev/app.git
 ```shell
 ./gradlew bootRun                           
 ```
-### 2.2 (Option 2): Launch Demo App in Docker Container
+
+### 1.2 (Option 2) Launch Demo App in Docker Container
 
 If local port is different then change the argument in below command. Format is ```-p <host port>:<container port>```
 
@@ -81,7 +82,7 @@ docker run -p 8080:8080 docker.io/verizonmedia/yavin_demo:latest
 
 (To stop the server at any time, type Ctrl-C in your terminal.)
 
-### 3. Open The App In Your Browser
+### 2. Open The App In Your Browser
 
 Congratulations! You can now open **[http://localhost:8080](http://localhost:8080)**. This will launch the **Yavin** application into your browser with the built in data set for [Netflix and TV shows](https://www.kaggle.com/shivamb/netflix-shows) that is sourced from [Kaggle](https://www.kaggle.com/) data.
 
