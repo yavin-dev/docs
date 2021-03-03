@@ -32,7 +32,7 @@ Check again: ```git --version```
 
 ## Boot Example Yavin App Locally
 
-Once your machine has all met the prerequisites, run the following steps (On ***Terminal*** for, and on ***Bash*** for for)to boot the example Yavin app:
+Once your machine has all met the prerequisites, run the following steps (On ***Terminal*** for MAC, and on ***Bash*** for Windows)to boot the example Yavin app:
 
 ### 1. Clone the project
 
