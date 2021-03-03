@@ -12,9 +12,9 @@ Before getting started with Yavin, make sure your system has **Java 8 or greater
 
 ### ![](/assets/images/windows_icon.png) For Window
 
-1. Install Bash on Windows 10: https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
+1. Install Bash on Windows 10: [https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
 2. Next, launch the Ubuntu distribution:
-3. See if java is installed by executing: ```java -version```. If not then install it using: (Do not try to use java installation for windows)
+3. See if java is installed by executing: ```java -version```. If not then install it using: (***Do not try to use java installation for windows***)
 ```shell
     sudo apt-get update
     sudo apt-get install default-jdk
@@ -32,7 +32,7 @@ Check again: ```git --version```
 
 ## Boot Example Yavin App Locally
 
-Once your machine has all met the prerequisites, run the following steps (on terminal for ![](/assets/images/mac_icon.png), and on Bash for for ![](/assets/images/windows_icon.png))to boot the example Yavin app:
+Once your machine has all met the prerequisites, run the following steps (On ***Terminal*** for, and on ***Bash*** for for)to boot the example Yavin app:
 
 ### 1. Clone the project
 
