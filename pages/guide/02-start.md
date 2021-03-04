@@ -6,22 +6,41 @@ title: Quick Start Guide
 
 ## Prerequisites
 
+Before getting started with Yavin, make sure :
+
 ### ![](/assets/images/mac_icon.png) For MAC
 
-Before getting started with Yavin, make sure your system has **Java 8 or greater**. You can find free prebuilt OpenJDK binaries at **[https://adoptopenjdk.net](https://adoptopenjdk.net)**.
+1. Check if your system has **Java 8 or greater**, you can check so with . You can find free prebuilt OpenJDK binaries at **[https://adoptopenjdk.net](https://adoptopenjdk.net)**.
 
-### ![](/assets/images/windows_icon.png) For Window
-
-1. Install Bash on Windows 10: [https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
-2. Next, launch the Ubuntu distribution:
-3. See if java is installed by executing: ```java -version```. If not then install it using: (***Do not try to use java installation for windows***)
+Or on the terminal, install it using:
 ```shell
     sudo apt-get update
     sudo apt-get install default-jdk
 ```
 Check again: ```java -version```
 
-b) See if Git is installed by executing: ```git --version```
+2. See if Git is installed by executing: ```git --version```
+If not then install it using:
+
+```shell
+    sudo apt-get update
+    sudo apt-get install git
+```
+Check again: ```git --version```
+
+
+### ![](/assets/images/windows_icon.png) For Window
+
+1. Install Bash on Windows 10: [https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
+2. Next, launch the [Ubuntu distribution](https://en.wikipedia.org/wiki/Ubuntu):
+3. Via the Bash environment, see if java is installed by executing: ```java -version```. If not then install it using: (***Do not try to use java installation for windows***)
+```shell
+    sudo apt-get update
+    sudo apt-get install default-jdk
+```
+Check again: ```java -version```
+
+4. Via the Bash environment, see if Git is installed by executing: ```git --version```
 If not then install it using:
 
 ```shell
