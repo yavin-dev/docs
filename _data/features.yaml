@@ -11,6 +11,6 @@
   link: https://denali.design/
   link-text: Denali Docs
 - title: Open Source
-  description: How can you <b>contribute</b> to Yavin's UI and/or API (Elide) <b>Open Source Community</b>?
-  link: https://github.com/yavin-dev/framework
+  description: How can you <b>contribute</b> to Yavin's framework <b>Open Source Community</b>?
+  link: https://github.com/yavin-dev/framework/blob/master/CONTRIBUTING.md
   link-text: Github
