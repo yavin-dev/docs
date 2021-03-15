@@ -26,9 +26,9 @@ Check the [Quick Start Guide](https://yavin.dev/pages/guide/02-start.html)
 
 For sample demos that comes with Yavin (Note: We are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) dataset that is sourced from [Kaggle](https://www.kaggle.com/)) :
 
-[Sample DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
+[Sample DB connection config](https://github.com/yavin-dev/app/blob/master/ws/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
 
-[Sample default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
+[Sample default semantic model config](https://github.com/yavin-dev/app/blob/master/ws/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
 
 ## <a id="database">How do I connect to a new database?</a>
 
@@ -92,9 +92,9 @@ Direct upload of CSV to Yavin is not supported for Analytic Queries. ***You can 
 
 **If the CSV file you have is intended to be use alone**, then a similar approach to the demo CSV data provided by Yavin can be followed. Put a CSV file in path ```yavin/packages/webservice/app/src/main/resources/```. And in path : ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql/```. Create/reuse the Hjson file to point to the CSV file using H2. And in path ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables/``` Create/reuse the Hjson file for your model configuration.
 
-[Sample DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
+[Sample DB connection config](https://github.com/yavin-dev/app/blob/master/ws/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
 
-[Sample default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
+[Sample default semantic model config](https://github.com/yavin-dev/app/blob/master/ws/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
 
 **If the CSV file has to be joined with other tables** then it has to be loaded in the same database as those tables.
 
@@ -470,6 +470,6 @@ You can upload your application code to any source code management software like
 
 Similar to the one we have for the demo app and data set:
 
-[Sample DB connection config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
+[Sample DB connection config](https://github.com/yavin-dev/app/blob/master/ws/src/main/resources/demo-configs/db/sql/DemoConnection.hjson)
 
-[Sample default semantic model config](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
+[Sample default semantic model config](https://github.com/yavin-dev/app/blob/master/ws/src/main/resources/demo-configs/models/tables/DemoTables.hjson)
