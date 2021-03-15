@@ -53,16 +53,29 @@ Check again: ```git --version```
 
 Once your machine has all met the prerequisites, run the following steps (On ***Terminal*** for MAC, and on ***Bash*** for Windows)to boot the example Yavin app:
 
-### 1. Clone the project
+### 1. Clone the project app
+
+Yavin is consistent of 3 separate repository:
+1- app : Containing only the app for building custom data applications.
+2- framework : The entire UI framework, with the demo data. Including dependencies.
+3- docs : This repository serves as documentation repo for Yavin
+
+To kick of your custom data application building, you will only need the app repo.
 
 ```shell
-git clone https://github.com/yahoo/yavin.git
+git clone https://github.com/yavin-dev/app.git
+```
+
+To clone the framwork repo:
+
+```shell
+git clone https://github.com/yavin-dev/framework.git
 ```
 
 ### 2.1 (Option 1): Run Jar Locally
 
 ```shell
-cd yavin/packages/webservice                 
+cd app
 ./gradlew bootRun                           
 ```
 ### 2.2 (Option 2): Launch Demo App in Docker Container
@@ -90,10 +103,12 @@ The video above is a recording of the steps required to boot the Yavin example a
 
 ## Helpful Links
 
+For a more extended list of commands that can be done once you clone the repo, please check: (https://github.com/yavin-dev/app#getting-started)[https://github.com/yavin-dev/app#getting-started]
+
 | Info                     |  Link  |
 |---------------------------------|--------|
 | **Git Setup**  | [https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) |
 | **AdoptOpenJDK**  | [https://adoptopenjdk.net/index.html](https://adoptopenjdk.net/index.html) |
-| **Yavin Repo**  |  [https://github.com/yahoo/yavin.git](https://github.com/yahoo/yavin.git) |
+| **Yavin App Repo**  |  [https://github.com/yavin-dev/app.git](https://github.com/yavin-dev/app.git) |
 | **Demo Data** | [https://www.kaggle.com/shivamb/netflix-shows](https://www.kaggle.com/shivamb/netflix-shows) |
 {:.table}

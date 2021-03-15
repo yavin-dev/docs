@@ -1,6 +1,6 @@
 logo-url: /assets/images/Yavin-Logo-Light-Text.svg
-githuburl: https://github.com/yahoo/yavin
-help-url: https://github.com/yahoo/yavin/discussions
+githuburl: https://github.com/yavin-dev
+help-url: https://github.com/yavin-dev/framework/discussions
 navitems:
   - title: Getting Started
     url: /pages/guide/02-start.html
