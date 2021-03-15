@@ -55,10 +55,10 @@ Once your machine has all met the prerequisites, run the following steps (On ***
 
 ### 1. Clone the project
 
-Yavin is consistent of 3 separate repository that can all be accessed from (https://github.com/yavin-dev/)[https://github.com/yavin-dev/]:
-1- app : Containing only the app for using and building custom data applications.
-2- framework : The entire UI framework, with the demo data. Including dependencies. This should only be used if you would like to contribute to Yavin.
-3- docs : This repository serves as documentation repo for Yavin
+Yavin is consistent of 3 separate repository that can all be accessed from [https://github.com/yavin-dev/](https://github.com/yavin-dev/):
+1. app : Containing only the app for using and building custom data applications.
+2. framework : The entire UI framework, with the demo data. Including dependencies. This should only be used if you would like to contribute to Yavin.
+3. docs : This repository serves as documentation repo for Yavin
 
 To kick of your custom data application building, you will only need the app repo.
 
@@ -97,7 +97,7 @@ The video above is a recording of the steps required to boot the Yavin example a
 
 ## Helpful Links
 
-For a more extended list of commands that can be done once you clone the repo, please check: (https://github.com/yavin-dev/app#getting-started)[https://github.com/yavin-dev/app#getting-started]
+For a more extended list of commands that can be done once you clone the repo, please check: [https://github.com/yavin-dev/app#getting-started](https://github.com/yavin-dev/app#getting-started)
 
 | Info                     |  Link  |
 |---------------------------------|--------|
