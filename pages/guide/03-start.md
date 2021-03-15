@@ -38,7 +38,7 @@ As part of cloning the repo, all the appropriate and latest drivers will be pull
 | Postgres | [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql) |
 {:.table}
 
-Out of the box you will have an entry for the H2 dialect [https://github.com/yahoo/yavin/blob/master/packages/webservice/app/build.gradle.kts#L35](https://github.com/yahoo/yavin/blob/master/packages/webservice/app/build.gradle.kts#L35). To link to a new dialect, you will have to update this file and add another entry for another database. Note: H2 is still used for Yavin/Navi metadata tables so you should not have to remove H2.
+Out of the box you will have an entry for the H2 dialect [https://github.com/yavin-dev/framework/blob/master/packages/webservice/app/build.gradle.kts#L35](https://github.com/yavin-dev/framework/blob/master/packages/webservice/app/build.gradle.kts#L35). To link to a new dialect, you will have to update this file and add another entry for another database. Note: H2 is still used for Yavin/Navi metadata tables so you should not have to remove H2.
 
 Semantic Models
 ------------------------------------------
@@ -287,15 +287,15 @@ Here are the complete steps for installing and setting up **Yavin** with your **
 
 ### Step 1.  Install Yavin Source.
 
-This step was covered in [quick start guide](/pages/guide/02-start.html).  Upon installation, you will have the **Yavin** repo on your local machine.  Your repo will include the following key subdirectories:
+This step was covered in [quick start guide](/pages/guide/02-start.html). Upon installation, you will have the **Yavin** repo on your local machine.  Your repo will include the following key subdirectories:
 
 |      Path                      |  Purpose                       |
 |---------------------------------|---------------------------------------|
-| ```yavin/packages/webservice/app/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
-| ```yavin/packages/webservice/app/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
-| ```yavin/packages/webservice/app/src/main/resources/application.yaml``` | The spring boot configuration file for your application |
-| ```yavin/packages/webservice/app/src/main/kotlin/com/yahoo/yavin/ws/filters``` | Directory for web request filters including authentication |
-| ```yavin/packages/webservice/app/src/main/resources/db/changelog/changelog.xml``` | Database changelog for setting up the database |
+| ```app/tree/master/ws/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
+| ```app/tree/master/ws/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
+| ```app/tree/master/ws/src/main/resources/application.yaml``` | The spring boot configuration file for your application |
+| ```app/tree/master/ws/src/main/kotlin/com/yahoo/yavin/ws/filters``` | Directory for web request filters including authentication |
+| ```app/tree/master/ws/src/main/resources/db/changelog/changelog.xml``` | Database changelog for setting up the database |
 {:.table}
 
 ### Step 2.  Setup Your Database.
@@ -359,10 +359,9 @@ cd packages/webservice && ./gradlew bootRun
 ### Step 11.  Launch the Application
 Launch Yavin on your browser by loading [http://localhost:8080](http://localhost:8080).
 
-[demo-connection]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/db/sql/DemoConnection.hjson
-[demo-table]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/demo-configs/models/tables/DemoTables.hjson
-[liquibase-script]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/db/changelog/changelog.xml
-[test-data]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/netflix_titles.csv
-[integration-test]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/test/kotlin/com/yahoo/yavin/ws/test/integration/DemoDataSourceTest.kt
-[spring-boot-config]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/resources/application.yaml
-[auth-filter]: https://github.com/yahoo/yavin/blob/master/packages/webservice/app/src/main/kotlin/com/yahoo/yavin/ws/filters/AuthFilter.kt
+[demo-connection]: https://github.com/yavin-dev/app/tree/master/ws/src/main/resources/demo-configs/db/sql/DemoConnection.hjson
+[demo-table]: https://github.com/yavin-dev/app/tree/master/ws/src/main/resources/demo-configs/models/tables/DemoTables.hjson
+[liquibase-script]: https://github.com/yavin-dev/app/tree/master/ws/src/main/resources/db/changelog/changelog.xml
+[test-data]: https://github.com/yavin-dev/app/tree/master/ws/src/main/resources/netflix_titles.csv
+[spring-boot-config]: https://github.com/yavin-dev/app/tree/master/ws/src/main/resources/application.yaml
+[auth-filter]: https://github.com/yavin-dev/app/tree/master/ws/src/main/kotlin/com/yahoo/yavin/ws/filters/AuthFilter.kt

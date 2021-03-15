@@ -1,13 +1,13 @@
 - header: Community
   links:
     - title: Contact Us
-      link: https://github.com/yahoo/yavin/discussions
+      link: https://github.com/yavin-dev/framework/discussions
 - header: Contribute
   links:
     - title: GitHub
-      link: https://github.com/yahoo/navi
+      link: https://github.com/yavin-dev
     - title: Suggest
-      link: https://github.com/yahoo/navi/issues/new/choose
+      link: https://github.com/yavin-dev/framework/issues/new/choose
 - header: Resources
   links:
     - title: Getting Started
