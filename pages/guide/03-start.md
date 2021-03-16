@@ -2,6 +2,7 @@
 layout: guide
 group: guide
 title: Setup and Installation Guide
+date: 2021-03-16
 ---
 
 ## Browser Support
@@ -38,7 +39,10 @@ As part of cloning the repo, all the appropriate and latest drivers will be pull
 | Postgres | [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql) |
 {:.table}
 
-Out of the box you will have an entry for the H2 dialect [https://github.com/yavin-dev/framework/blob/master/packages/webservice/app/build.gradle.kts#L35](https://github.com/yavin-dev/framework/blob/master/packages/webservice/app/build.gradle.kts#L35). To link to a new dialect, you will have to update this file and add another entry for another database. Note: H2 is still used for Yavin/Navi metadata tables so you should not have to remove H2.
+Out of the box you will have [an entry for the H2 dialect](https://github.com/yavin-dev/app/blob/9ec68a050c8907210bc03820dbfde2faf47944ab/ws/build.gradle.kts#L29). To link to a new dialect, you will have to update this file and add another entry for another database.
+
+> H2 is still used for Yavin/Navi metadata tables so you should not remove H2.
+{: .danger}
 
 Semantic Models
 ------------------------------------------
@@ -230,7 +234,8 @@ Yavin's demo data includes a single table in its [semantic model][demo-table] Ne
 }
 ```
 
-Note: The Netflix demo data only sourced from a single physical table.  More complex data models may source from multiple physical tables and require joins at query time.  More information about joins can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#joins).
+> The Netflix demo data only sourced from a single physical table.  More complex data models may source from multiple physical tables and require joins at query time.  More information about joins can be found [here](https://elide.io/pages/guide/v5/04-analytics.html#joins).
+{: .info}
 
 ### User Interface Metadata
 
@@ -266,7 +271,9 @@ When your dataset does have a dedicated dimension table, you can specify an alte
 }
 ```
 
-When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model. **Note:** If your **fact** table is very large, the type ahead queries may be slow.
+When neither `values` or `tableSource` is specified, Yavin will search against the selected **fact** semantic model.
+> If your **fact** table is very large, the type ahead queries may be slow.
+{: .warning}
 
 #### Automatically showing filter values
 
@@ -303,11 +310,11 @@ This step was covered in [quick start guide](/pages/guide/02-start.html). Upon i
 
 |      Path                      |  Purpose                       |
 |---------------------------------|---------------------------------------|
-| ```app/tree/master/ws/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
-| ```app/tree/master/ws/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
-| ```app/tree/master/ws/src/main/resources/application.yaml``` | The spring boot configuration file for your application |
-| ```app/tree/master/ws/src/main/kotlin/com/yahoo/yavin/ws/filters``` | Directory for web request filters including authentication |
-| ```app/tree/master/ws/src/main/resources/db/changelog/changelog.xml``` | Database changelog for setting up the database |
+| ```app/ws/src/main/resources/demo-configs/db/sql``` | Your dialect connection can reside here        |
+| ```app/ws/src/main/resources/demo-configs/models/tables```  | Your semantic models can reside here       |
+| ```app/ws/src/main/resources/application.yaml``` | The spring boot configuration file for your application |
+| ```app/ws/src/main/kotlin/com/yahoo/yavin/ws/filters``` | Directory for web request filters including authentication |
+| ```app/ws/src/main/resources/db/changelog/changelog.xml``` | Database changelog for setting up the database |
 {:.table}
 
 ### Step 2.  Setup Your Database.
@@ -353,7 +360,7 @@ The application configuration supports profiles for enabling different settings 
 
 To build Yavin as a jar, run the following command:
 ```
-cd packages/webservice && ./gradlew bootJar
+./gradlew bootJar
 ```
 
 ### Step 9.  Validate Semantic Model
@@ -365,7 +372,7 @@ More details about validating the semantic model can be found [here](https://eli
 
 To run Yavin locally, simple execute:
 ```
-cd packages/webservice && ./gradlew bootRun
+./gradlew bootRun
 ```
 
 ### Step 11.  Launch the Application

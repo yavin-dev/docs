@@ -2,73 +2,46 @@
 layout: guide
 group: guide
 title: Quick Start Guide
+date: 2021-03-16
 ---
 
 ## Prerequisites
 
-Before getting started with Yavin, make sure :
+Before getting started with Yavin, make sure to have:
 
-### ![](/assets/images/mac_icon.png) For MAC
+### <img src="/assets/images/mac_icon.png" alt="mac logo" style="height: 40px; margin-bottom: -8px"> For macOS
 
-1. Check if your system has **Java 8 or greater**, you can check so with . You can find free prebuilt OpenJDK binaries at **[https://adoptopenjdk.net](https://adoptopenjdk.net)**.
+1. **Java 8 or greater** - You can check by running ```java -version```.
+    > Free prebuilt OpenJDK binaries are available on **[https://adoptopenjdk.net](https://adoptopenjdk.net)**.
+    {:.info}
 
-Or on the terminal, install it using:
-```shell
-    sudo apt-get update
-    sudo apt-get install default-jdk
-```
-Check again: ```java -version```
+2. **Git** - You can check by running ```git --version```
 
-2. See if Git is installed by executing: ```git --version```
-If not then install it using:
+### <img src="/assets/images/windows_icon.png" alt="windows logo" style="height: 40px; margin-bottom: -10px"> For Windows
 
-```shell
-    sudo apt-get update
-    sudo apt-get install git
-```
-Check again: ```git --version```
+1. **Windows Subsystem for Linux** - You can follow [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to enable it
+2. An [**Ubuntu distribution**](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q) 
+3. **Java 8 or greater** - You can install it by running
+    > ```shell
+    > sudo apt-get update
+    > sudo apt-get install default-jdk
+    > ```
+    >
+    > Make sure it is working by running ```java -version```
+    {:.info}
 
-
-### ![](/assets/images/windows_icon.png) For Window
-
-1. Install Bash on Windows 10: [https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
-2. Next, launch the [Ubuntu distribution](https://en.wikipedia.org/wiki/Ubuntu):
-3. Via the Bash environment, see if java is installed by executing: ```java -version```. If not then install it using: (***Do not try to use java installation for windows***)
-```shell
-    sudo apt-get update
-    sudo apt-get install default-jdk
-```
-Check again: ```java -version```
-
-4. Via the Bash environment, see if Git is installed by executing: ```git --version```
-If not then install it using:
-
-```shell
-    sudo apt-get update
-    sudo apt-get install git
-```
-Check again: ```git --version```
+4. **Git** - You can check by running ```git --version``` but it should come installed
 
 ## Boot Example Yavin App Locally
 
-Once your machine has all met the prerequisites, run the following steps (On ***Terminal*** for MAC, and on ***Bash*** for Windows)to boot the example Yavin app:
+Once you are all set up, run the following steps (On ***Terminal*** for macOS, and on ***Bash*** for Windows) to boot the example Yavin app:
 
 ### 1.1 (Option 1) Run Jar Locally
-
-Yavin is consistent of 3 separate repository that can all be accessed from [https://github.com/yavin-dev/](https://github.com/yavin-dev/):
-1. ***app*** : Containing only the simplified app used as a standalone BI tool or to build your custom data applications.
-2. ***framework*** : The entire UI framework. Including dependencies. This should only be used if you would like to contribute to Yavin as a framework.
-3. ***docs*** : This repository serves as documentation repo for Yavin
 
 To kick of your custom data application building, you will only need the app repo.
 
 ```shell
 git clone https://github.com/yavin-dev/app.git
-```
-
-### 2.1 (Option 1): Run Jar Locally
-
-```shell
 ./gradlew bootRun                           
 ```
 

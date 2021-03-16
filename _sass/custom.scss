@@ -8,6 +8,7 @@ h2 h3, h4, table, ol, ul, figure {
 
 figcaption {
   @extend .is-grey-600;
+  margin-bottom: 50px;
 }
 
 /* Helpers that need to be added */
@@ -128,15 +129,52 @@ table.table img {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 
+  .page-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 !important;
+  }
+
   > div {
     max-width: 860px;
+    padding-bottom: 50rem;
 
-    h2::before {
-      border-top: .3rem solid $color-grey-600;
-      content: "";
-      display: inline-block;
-      transform: translateY(-1rem);
-      width: 100%;
+    h1 {
+      margin-bottom: 0;
+    }
+
+    h1 + .page-metadata + h2:first-of-type {
+      margin-top: 3rem;
+    }
+
+    h2 {
+      margin-top: 6rem;
+    }
+
+    h3 {
+      margin-top: 3rem;
+    }
+
+    h4 {
+      margin-top: 2rem;
+    }
+    
+    .header-anchor {
+      color: $color-grey-700;
+      text-decoration: none;
+      border-bottom: 1px solid $color-brand-100;
+    }
+
+    // slight shadow on all images
+    img {
+      box-shadow: 0px 0px 20px 1px #e8e8e8;
+    }
+    // reset shadow if inside header or table
+    h1, h2, h3, h4, h5, h6, table {
+      img {
+        box-shadow: unset;
+      }
     }
   }
 }
@@ -168,8 +206,10 @@ ol, ul {
 }
 
 #search {
+  transition: opacity 200ms ease-in;
   .modal-header {
     background-color: $color-grey-800;
+    height: $navbar-height;
 
     .container {
       max-width:860px;
@@ -211,4 +251,55 @@ code[class*=language-] {
   height: auto;
   font-size: 14px;
   font-family: monospace;
+}
+
+blockquote {
+  @extend .alert;
+  @extend .is-block;
+  display: flex;
+  flex-flow: column;
+  padding-right: 14px;
+  padding-left: 14px;
+  margin: 10px 0;
+
+  &.info {
+    @extend .is-info;
+  }
+
+  &.success {
+    @extend .is-success;
+  }
+
+  &.warning {
+    @extend .is-warning;
+  }
+
+  &.danger {
+    @extend .is-danger;
+  }
+
+  .highlight {
+    margin: 1em 0 0 0;
+
+    .highlight {
+      margin: 0;
+    }
+  }
+
+  div, ol, ul, p {
+    margin: unset;
+  }
+}
+
+.coming-soon::after {
+  position: relative;
+  bottom: 3px;
+  content: "Coming Soon";
+  background: #d7e2fd;
+  color: #3570f4;
+  border-radius: 4px;
+  margin-left: 8px;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
 }
