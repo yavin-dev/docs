@@ -8,6 +8,11 @@ Yavin is a framework for rapidly **building custom data applications** that offe
 
 <video controls> <source src="/assets/images/Yavin_in_action.mov"></video>
 
+Yavin is consistent of three separate repository that can all be accessed from [https://github.com/yavin-dev/](https://github.com/yavin-dev/):
+1. ***app*** : Containing only the simplified app used as a standalone BI tool or to build your custom data applications.
+2. ***framework*** : The entire UI framework. Including dependencies. This should only be used if you would like to contribute to Yavin as a framework.
+3. ***docs*** : This repository serves as documentation repo for Yavin
+
 ***Disclaimer*** : For the sample demos that come with Yavin, we are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) dataset that is sourced from [Kaggle](https://www.kaggle.com) (Timestamped 11/2020). The use of this dataset is only in demonstrating the ease of onboarding any dataset to Yavin. It has no correlation with the Yavin project.
 
 ## Customizable Building Blocks
