@@ -2,6 +2,7 @@
 layout: guide
 group: guide
 title: User Guide
+date: 2021-03-16
 ---
 
 ## Supported Visualizations
@@ -298,7 +299,9 @@ Allows you to copy the API query of your Report, or run it in a new Tab.
    <figcaption>Copy API Query Dialog</figcaption>
  </figure>
 
-### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
+### Export
+{:.coming-soon}
+
 Allows you export your Report as CSV, PDF or PNG.
 
 ###  Share
@@ -309,7 +312,9 @@ Allows you to share the link of your Report. This operation will copy the report
    <figcaption>Share Dialog</figcaption>
  </figure>
 
-### Schedule <img src="/assets/images/UG_coming_soon.png" width="100"/>
+### Schedule
+{:.coming-soon}
+
 Allows you to schedule your Report by specifying the rules of scheduling including format (CSV, PDF or PNG), the email recipients and the frequency:
 
 ### Delete
@@ -331,7 +336,9 @@ Allows you to add a widget to the dashboard.
 ###  Clone
 Creates an exact copy of a dashboard with the name “Copy of ….”.
 
-### Export <img src="/assets/images/UG_coming_soon.png" width="100"/>
+### Export
+{:.coming-soon}
+
 Allows you export your Dashboard as PDF or PNG.
 
 ###  Share
@@ -342,7 +349,9 @@ Allows you to share the link for your Dashboard. This operation will copy the da
    <figcaption>Dashboard Share Dialog</figcaption>
  </figure>
 
-### Schedule <img src="/assets/images/UG_coming_soon.png" width="100"/>
+### Schedule
+{:.coming-soon}
+
 Allows you to schedule your Dashboard by specifying the rules of scheduling including format (PDF or PNG), the email recipients and the frequency:
 
 ### Delete
