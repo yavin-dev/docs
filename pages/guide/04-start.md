@@ -2,6 +2,7 @@
 layout: guide
 group: guide
 title: Getting Started with the UI
+date: 2021-03-16
 ---
 
 ## Yavin Directory

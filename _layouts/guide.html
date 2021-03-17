@@ -5,12 +5,21 @@ layout: default
   <div id="toggle-tabs-left" class="tabs is-primary is-vertical tablet-down-hide-left">
     {% include pagelist-sidebar.html %}
   </div>
-  <div id="guide" class="overflow-y-auto flex-auto">
+  <div id="guide" class="overflow-y-auto flex-auto row">
     <div class="markdown-docs container-full p-t-30 m-b-100">
-      {% if pages.title != blank %}
-        <h1>{{ page.title }}</h1>
+      {% if page.title %}
+      <h1>{{ page.title }}</h1>
+        {% if page.date %}
+        <ul class="page-metadata is-grey-600">
+          <li>{{ page.date | date: "%B %-d, %Y"}}</li>
+        </ul>
+        {% endif %}
       {% endif %}
-      {{ content }}
+
+      {% if page.toc == true %}
+        {% include toc.html html=content h_max=2 %}
+      {% endif %}
+      {% include anchor_headings.html html=content anchorBody="#" anchorClass="header-anchor link" %}
     </div>
   </div>
 </div>

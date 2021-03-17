@@ -4,4 +4,11 @@ group: guide
 title: Customization
 ---
 
-![Coming Soon](/assets/images/UG_coming_soon.png){:class="img-responsive"}
+> Heads up!
+>
+> These guides are under construction
+> 
+{:.warning}
+
+## Customizing the UI
+{:.coming-soon}

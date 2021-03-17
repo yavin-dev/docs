@@ -2,6 +2,7 @@
 layout: guide
 group: guide
 title: Product Overview
+date: 2021-03-16
 ---
 
 Yavin is a framework for rapidly **building custom data applications** that offers both a UI and an API. In addition, Yavin can be deployed as a **standalone Business Intelligence tool** allowing users to explore and drill into data through an intuitive interface.  Yavin provides a set of modular **user experience blocks** that can be customized and assembled into a complete data application.  The most common blocks are **reports** and **dashboards**.  Reports allow users to craft, execute, and visualize adhoc queries.  Reports can be assembled into dashboards that collate related visualizations together.  Yavin includes a powerful **semantic layer** that lets you model and deploy the tables, measures, and dimensions users will see and select throughout the user experience.
@@ -33,6 +34,10 @@ For more information on Denali, visit [denali.design](https://denali.design).
 For more information on Elide, visit [elide.io](https://elide.io).
 
 ### Yavin: User Interface Building Blocks
+> Yavin has two [main repositories](https://github.com/yavin-dev/):
+> 1. [**yavin-dev/app**](https://github.com/yavin-dev/app): A prebuilt standalone BI tool to get you started building your own custom data application. 
+> 2. [**yavin-dev/framework**](https://github.com/yavin-dev/framework): The core libraries for building reports, dashboards, and more. For those who would like to contribute to Yavin's UI.
+{:.warning}
 
 **Yavin contains the User Interface layer**.  Yavin uses Ember - a JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.
 
