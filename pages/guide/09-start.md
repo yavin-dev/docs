@@ -36,7 +36,7 @@ toc: true
 
 ### <img src="/assets/images/Release_api_icon.png" alt="API Changes logo" style="height: 40px; margin-bottom: -8px"> API Changes
 
- - [yahoo/elide#1897](https://github.com/yahoo/elide/pull/1897) The Aggregation Store now supports filters on metrics that have not been requested/projected in the client request. (***Note***: This is not yet available in Yavin UI)
+ - [yahoo/elide#1897](https://github.com/yahoo/elide/pull/1897) The Aggregation Store now supports filters on metrics that have not been requested/projected in the client request. (***Note***: This is not yet available in the Yavin UI)
 
 > For a complete list of API changes, check out the latest [Elide Changelog](https://github.com/yahoo/elide/blob/7a11ee300605ed0130d89a036ed221d49f1b1d9c/changelog.md#500-pr32)
 {:.info}
