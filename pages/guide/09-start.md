@@ -5,7 +5,7 @@ title: Release Notes
 toc: true
 ---
 
-# Release 1.0.0-beta.1
+# Release [1.0.0-beta.1](https://github.com/yavin-dev/app/releases)
 {:.beta}
 
 ### <img src="/assets/images/Release_new_feature_icon.png" alt="New feature logo" style="height: 40px; margin-bottom: -8px"> New Features
@@ -19,6 +19,11 @@ toc: true
 
 - [yavin-dev/framework#1268](https://github.com/yavin-dev/framework/pull/1268) Support for static theming via [Denali](http://denali.design).
 
+> You can try out the theme below by updating
+> - `ui/app/styles/app.scss` to import `'yavin-dark-theme'` instead of `'yavin-light-theme'`
+> - `ui/app/index.html` to have `<body class="denali-dark-theme">`
+{:.info}
+
 <img src="/assets/images/Release_denali_theme1.png" width="783px">
 
 <img src="/assets/images/Release_denali_theme2.png" width="390px"> <img src="/assets/images/Release_denali_theme3.png" width="390px">
@@ -31,10 +36,10 @@ toc: true
 
 ### <img src="/assets/images/Release_api_icon.png" alt="API Changes logo" style="height: 40px; margin-bottom: -8px"> API Changes
 
-[yahoo/elide#1897](https://github.com/yahoo/elide/pull/1897) The Aggregation Store now supports filters on metrics that have not been requested/projected in the client request.
+[yahoo/elide#1897](https://github.com/yahoo/elide/pull/1897) The Aggregation Store now supports filters on metrics that have not been requested/projected in the client request. (Note: This is not yet available in Yavin UI)
 
-  > For a complete list of API changes, check out the latest [Elide Change LOG](https://github.com/yahoo/elide/blob/master/changelog.md)
-  {:.info}
+> For a complete list of API changes, check out the latest [Elide Changelog](https://github.com/yahoo/elide/blob/7a11ee300605ed0130d89a036ed221d49f1b1d9c/changelog.md#500-pr32)
+{:.info}
 
 ### <img src="/assets/images/Release_updates_icon.png" alt="updates logo" style="height: 40px; margin-bottom: -8px"> Updates & Additions
 
@@ -52,10 +57,10 @@ For a complete list of API changes, check out the latest [Elide Change LOG](http
 # How to upgrade to a new release
 
 - You can upgrade your Yavin app version with the following commands :
-    > ```shell
-    > cd app
-    > git pull origin
-    > ```
-    >
-    > Make sure you on the right version by running  ```yavin -version```
-    {:.info}
+  > ```shell
+  > cd app
+  > git pull origin
+  > ```
+  >
+  > Make sure you on the right version by running  ```yavin -version```
+  {:.info}
