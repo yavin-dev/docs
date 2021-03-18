@@ -31,10 +31,10 @@ toc: true
 
 ### <img src="/assets/images/Release_api_icon.png" alt="API Changes logo" style="height: 40px; margin-bottom: -8px"> API Changes
 
-- [yahoo/elide#1897](https://github.com/yahoo/elide/pull/1897) The Aggregation Store now supports filters on metrics that have not been requested/projected in the client request.
-- [yavin-dev/app#7](https://github.com/yavin-dev/app/pull/7) Yavin now bundles in all supported drivers for the different dialects. This includes **Hive**, **PrestoDB**, **Druid**, **MySQL**, **Postgres**.
+[yahoo/elide#1897](https://github.com/yahoo/elide/pull/1897) The Aggregation Store now supports filters on metrics that have not been requested/projected in the client request.
 
-For a complete list of API changes, check out the latest [Elide Change LOG](https://github.com/yahoo/elide/blob/master/changelog.md)
+  > For a complete list of API changes, check out the latest [Elide Change LOG](https://github.com/yahoo/elide/blob/master/changelog.md)
+  {:.info}
 
 ### <img src="/assets/images/Release_updates_icon.png" alt="updates logo" style="height: 40px; margin-bottom: -8px"> Updates & Additions
 
@@ -47,3 +47,15 @@ For a complete list of API changes, check out the latest [Elide Change LOG](http
 ### <img src="/assets/images/Release_bug_icon.png" alt="bug fixes logo" style="height: 40px; margin-bottom: -8px"> Bug Fixes
 
 - [yavin-dev/framework#1285](https://github.com/yavin-dev/framework/pull/1285) Fixed a bug where searching for elide enums returned undefined.
+
+
+# How to upgrade to a new release
+
+- You can upgrade your Yavin app version with the following commands :
+    > ```shell
+    > cd app
+    > git pull origin
+    > ```
+    >
+    > Make sure you on the right version by running  ```yavin -version```
+    {:.info}
