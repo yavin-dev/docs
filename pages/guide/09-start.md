@@ -5,7 +5,7 @@ title: Release Notes
 toc: true
 ---
 
-# Release 1.0
+# Release 1.0.0-beta.1
 {:.beta}
 
 ### New Features
