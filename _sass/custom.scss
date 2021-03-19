@@ -137,6 +137,7 @@ table.table img {
   }
 
   > div {
+    width: 100%;
     max-width: 860px;
     padding-bottom: 50rem;
 
@@ -159,7 +160,7 @@ table.table img {
     h4 {
       margin-top: 2rem;
     }
-    
+
     .header-anchor {
       color: $color-grey-700;
       text-decoration: none;
@@ -291,10 +292,9 @@ blockquote {
   }
 }
 
-.coming-soon::after {
+%inline-chip {
   position: relative;
   bottom: 3px;
-  content: "Coming Soon";
   background: #d7e2fd;
   color: #3570f4;
   border-radius: 4px;
@@ -302,4 +302,14 @@ blockquote {
   padding: 6px;
   font-size: 12px;
   font-weight: bold;
+}
+
+.coming-soon::after {
+  @extend %inline-chip;
+  content: "Coming Soon";
+}
+
+.beta::after {
+  @extend %inline-chip;
+  content: "Beta";
 }
