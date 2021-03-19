@@ -11,7 +11,7 @@ toc: true
 ### <i class="d-icon d-new-star"></i> New Features
 #### Column Config Reordering & Sorting
 
-- [yavin-dev/framework#1280](https://github.com/yavin-dev/framework/pull/1280) Reordering and sorting columns directly in the column config.
+- [yavin-dev/framework#1280](https://github.com/yavin-dev/framework/pull/1280) Support for reordering and sorting columns directly in the column config. You no longer need to run a request to apply sorts and can reorder columns outside of the table visualization.
 
 <img src="/assets/images/Release_demo_reordering_sorting.gif">
 
@@ -41,14 +41,12 @@ toc: true
 > For a complete list of API changes, check out the latest [Elide Changelog](https://github.com/yahoo/elide/blob/7a11ee300605ed0130d89a036ed221d49f1b1d9c/changelog.md#500-pr32)
 {:.info}
 
-### <i class="d-icon d-refresh"></i> Updates & Additions
+### <i class="d-icon d-activity"></i> Updates & Additions
 
-- [yavin-dev/app#7](https://github.com/yavin-dev/app/pull/7) Yavin now bundles in jdbc drivers for the all supported dialects. This includes **Hive**, **PrestoDB**, **Druid**, **MySQL**, **Postgres**.
+- [yavin-dev/app#7](https://github.com/yavin-dev/app/pull/7) Jdbc drivers for supported dialects (**Hive**, **PrestoDB**, **Druid**, **MySQL**, **Postgres**) are now included by default.
 - [yavin-dev/framework#1291](https://github.com/yavin-dev/framework/pull/1291) The dimension selector for filter values is now sorted.
 - [yavin-dev/framework#1276](https://github.com/yavin-dev/framework/pull/1276) Refactor visualization toggle to denali.
 - [yavin-dev/framework#1266](https://github.com/yavin-dev/framework/pull/1266) Dashboard Header style changes.
-
-For a complete list of API changes, check out the latest [Elide Change LOG](https://github.com/yahoo/elide/blob/master/changelog.md)
 
 ### <i class="d-icon d-bug"></i> Bug Fixes
 
