@@ -57,5 +57,6 @@ toc: true
 You can upgrade your Yavin app version to `1.0.0-beta.1` with the following commands:
   ```shell
   cd app
+  rm -rf ui/node_modules
   git pull origin
   ```
