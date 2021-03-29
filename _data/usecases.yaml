@@ -1,7 +1,7 @@
 - title: Deploy In Minutes
   description: Yavin is a framework for <b>rapidly building custom data applications</b> that offers both a UI and an API. Yavin can also be deployed as a <b>standalone business intelligence tool</b> in a few simple steps. <i>Build reports</i>, <i>assemble dashboards</i>, and <i>explore data</i> with ad-hoc queries.
   image: /assets/images/funnel.png
-  link: https://yavin.dev/pages/guide/02-start.html
+  link: https://yavin.dev/pages/guide/02-Quick-Start-Guide.html
   icon: d-timer
 - title: Tailor the Experience
   description: Yavin is designed to build custom applications around <b>common patterns</b> that every data application needs. These patterns are codified as a set of modular user <b>experiences</b> that can be fully <b>customized</b>.
@@ -11,5 +11,5 @@
     - Theme the application
     - Replace individual components in any of the yavin building blocks
   image: /assets/images/levels.png
-  link: https://yavin.dev/pages/guide/06-start.html
+  link: https://yavin.dev/pages/guide/06-Customization.html
   icon: d-computer-code

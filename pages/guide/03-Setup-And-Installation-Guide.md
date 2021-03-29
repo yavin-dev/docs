@@ -58,7 +58,7 @@ More information on Elide's analytic query support and virtual semantic layer ca
 
 ### Writing your first semantic model
 
-Elide provides its own [guide](https://elide.io/pages/guide/v5/01-start.html) for getting started that includes setting up a simle semantic model.  The following sections will illustrate how Yavin is configured to explore [Netflix movie and TV show titles](https://www.kaggle.com/shivamb/netflix-shows).
+Elide provides its own [guide](https://elide.io/pages/guide/v5/01-Product-Overview.html) for getting started that includes setting up a simle semantic model.  The following sections will illustrate how Yavin is configured to explore [Netflix movie and TV show titles](https://www.kaggle.com/shivamb/netflix-shows).
 
 ### Connections, Tables, Dimensions, Measures and Joins
 When running locally, Yavin will leverage the H2 in-memory database.  The [connection configuration][demo-connection] looks like:
@@ -306,7 +306,7 @@ Here are the complete steps for installing and setting up **Yavin** with your **
 
 ### Step 1.  Install Yavin Source.
 
-This step was covered in [quick start guide](/pages/guide/02-start.html). Upon installation, you will have the **Yavin** repo on your local machine.  Your repo will include the following key subdirectories:
+This step was covered in [quick start guide](/pages/guide/02-Quick-Start-Guide.html). Upon installation, you will have the **Yavin** repo on your local machine.  Your repo will include the following key subdirectories:
 
 |      Path                      |  Purpose                       |
 |---------------------------------|---------------------------------------|

@@ -9,7 +9,7 @@ toc: true
 ## How do I get the demo app running on my machine using the default semantic model provided?
 {: #demo}
 
-Check the [Quick Start Guide](https://yavin.dev/pages/guide/02-start.html)
+Check the [Quick Start Guide](https://yavin.dev/pages/guide/02-Quick-Start-Guide.html)
 
 For sample demos that comes with Yavin (Note: We are using the [Netflix Movie and TV Shows](https://www.kaggle.com/shivamb/netflix-shows) dataset that is sourced from [Kaggle](https://www.kaggle.com/)) :
 

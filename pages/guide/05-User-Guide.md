@@ -87,7 +87,7 @@ The table visualization can show multiple dimensions measures and dimensions tog
  </figure>
 
 ###  Line chart
- The line chart can visualize temporal (trend over time) dimensions. 
+ The line chart can visualize temporal (trend over time) dimensions.
 
  <figure>
    <img src="/assets/images/UG_line_chart_sample2.png" width="800"/>
@@ -208,7 +208,7 @@ To remove a dimension or measure from the filter, click the filter icon for the 
  </figure>
 
 ###  Editing filters
-Users can edit filters in the filter section of the report. Some dimension filters support “Type Ahead” search.  Type ahead search is a feature of the search bar where user search terms are matched to suggestions as the user types.  Type ahead search is only supported for dimensions with text values and must be [specifically enabled in the semantic layer](/pages/guide/03-start.html#type-ahead-search).  
+Users can edit filters in the filter section of the report. Some dimension filters support “Type Ahead” search.  Type ahead search is a feature of the search bar where user search terms are matched to suggestions as the user types.  Type ahead search is only supported for dimensions with text values and must be [specifically enabled in the semantic layer](/pages/guide/03-Setup-And-Installation-Guide.html#type-ahead-search).  
 
 The example below demonstrates editing different types of dimension filters:
 

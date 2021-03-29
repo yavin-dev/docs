@@ -3,6 +3,6 @@ githuburl: https://github.com/yavin-dev
 help-url: https://github.com/yavin-dev/framework/discussions
 navitems:
   - title: Getting Started
-    url: /pages/guide/02-start.html
+    url: /pages/guide/02-Quick-Start-Guide.html
   - title: Documentation
-    url: /pages/guide/01-start.html
+    url: /pages/guide/01-Product-Overview.html
