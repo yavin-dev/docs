@@ -1,6 +1,6 @@
 - title: Model Driven
   description: Yavin includes a powerful <b>semantic layer</b> that lets you <b>model</b> and <b>deploy</b> tables, measures, and dimensions users will see and select throughout the <b>user experience</b>.  
-  link: https://yavin.dev/pages/guide/03-Setup-And_Installation-Guide#semantic-models
+  link: https://yavin.dev/pages/guide/03-Setup-And-Installation-Guide#semantic-models
   link-text: Semantic Layer Docs
 - title: Programmatic Access
   description: Yavin exposes <i>GraphQL and JSON-API APIs</i> (powered by Elide) that are <i>secured</i> with an expressive authorization DSL. Run analytic queries, <b>explore</b> the semantic models, <b>execute</b> CRUD operations, and <b>extend</b> your application with custom domain models that your clients can access.
