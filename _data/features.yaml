@@ -4,7 +4,7 @@
   link-text: Semantic Layer Docs
 - title: Programmatic Access
   description: Yavin exposes <i>GraphQL and JSON-API APIs</i> (powered by Elide) that are <i>secured</i> with an expressive authorization DSL. Run analytic queries, <b>explore</b> the semantic models, <b>execute</b> CRUD operations, and <b>extend</b> your application with custom domain models that your clients can access.
-  link: https://yavin.dev/pages/guide/07-Programmatic-API.html
+  link: https://yavin.dev/pages/guide/07-Programatic-API.html
   link-text: API Docs
 - title: Intuitive UI Design
   description: Yavin’s <b>intuitive</b>, non-cluttered design makes exploring data accessible to all data stakeholders. Powered by the Denali design system, Yavin provides <b>strong design fundamentals and UX best practices</b>.
