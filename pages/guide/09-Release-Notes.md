@@ -5,12 +5,22 @@ title: Release Notes
 toc: true
 ---
 
-# Release [2.0.0-beta.1](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.1)
+# Release [2.0.0-beta.2](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.2)
 {:.beta}
 
 ### <i class="d-icon d-activity"></i> Updates & Additions
 
-- [yavin-dev/framework#1333](https://github.com/yavin-dev/framework/pull/1333) Use Ember concurrency for data interfaces/adapters.
+- [yavin-dev/framework#1333](https://github.com/yavin-dev/framework/pull/1333) Use Ember concurrency for data interfaces/adapters. (Enables cancelling typeahead queries)
+  > This introduced a bug in the dimension selector where it expects the elide `pageSize` in your `application.yaml` to be
+  > larger that the size of `<= SMALL` cardinality dimensions.
+  > ```
+  > elide:
+  >   pageSize: 1234
+  > ```
+  >
+  > If this is not set, some dimensions may appear to be missing from the dropdown.
+  {:.warning}
+
 - [yavin-dev/framework#1334](https://github.com/yavin-dev/framework/pull/1334) Add week, isoweek, month grains for elide.
 - [yavin-dev/framework#1335](https://github.com/yavin-dev/framework/pull/1335) Refactor column-selector.
 
@@ -20,21 +30,19 @@ toc: true
 
 <img src="/assets/images/Release_2_1296.png">
 
-- [yavin-dev/framework#1295](https://github.com/yavin-dev/framework/pull/1295) Use chips for parameters in filter builder display.
+- [yavin-dev/framework#1295](https://github.com/yavin-dev/framework/pull/1295) Allow parameters in elide filters (e.g. filtering on Year grain, but requesting Day grain)
 
 
 ### Upgrade Steps
 
-You can upgrade your Yavin app version to `2.0.0-beta.1` with the following commands:
+You can upgrade your Yavin app version to `2.0.0-beta.2` with the following commands:
   ```shell
   cd app
-  rm -rf ui/node_modules
   git pull origin
+  ./gradlew clean
   ```
 
-
 <hr>
-
 
 # Release [1.0.0-beta.1](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.1)
 {:.beta}
