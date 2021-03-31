@@ -5,6 +5,37 @@ title: Release Notes
 toc: true
 ---
 
+# Release [2.0.0-beta.1](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.1)
+{:.beta}
+
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1333](https://github.com/yavin-dev/framework/pull/1333) Use Ember concurrency for data interfaces/adapters.
+- [yavin-dev/framework#1334](https://github.com/yavin-dev/framework/pull/1334) Add week, isoweek, month grains for elide.
+- [yavin-dev/framework#1335](https://github.com/yavin-dev/framework/pull/1335) Refactor column-selector.
+
+<img src="/assets/images/Release_2_1335.png" width="200px">
+
+- [yavin-dev/framework#1296](https://github.com/yavin-dev/framework/pull/1296) Use chips for parameters in filter builder display.
+
+<img src="/assets/images/Release_2_1296.png">
+
+- [yavin-dev/framework#1295](https://github.com/yavin-dev/framework/pull/1295) Use chips for parameters in filter builder display.
+
+
+### Upgrade Steps
+
+You can upgrade your Yavin app version to `2.0.0-beta.1` with the following commands:
+  ```shell
+  cd app
+  rm -rf ui/node_modules
+  git pull origin
+  ```
+
+
+<hr>
+
+
 # Release [1.0.0-beta.1](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.1)
 {:.beta}
 
