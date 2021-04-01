@@ -5,7 +5,7 @@ title: Release Notes
 toc: true
 ---
 
-# Release [2.0.0-beta.2](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.2)
+# Release [1.0.0-beta.2](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.2)
 {:.beta}
 
 ### <i class="d-icon d-activity"></i> Updates & Additions
