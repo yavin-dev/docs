@@ -35,7 +35,7 @@ toc: true
 
 ### Upgrade Steps
 
-You can upgrade your Yavin app version to `2.0.0-beta.2` with the following commands:
+You can upgrade your Yavin app version to `1.0.0-beta.2` with the following commands:
   ```shell
   cd app
   git pull origin
