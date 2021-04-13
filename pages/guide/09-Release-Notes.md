@@ -5,6 +5,33 @@ title: Release Notes
 toc: true
 ---
 
+# Release [1.0.0-beta.3](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.3)
+{:.beta}
+
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1354](https://github.com/yavin-dev/framework/pull/1354) Use vertical-collection in dimension-select.
+
+> The dimension select component used ember-collection and assumed the height of each entry was the same causing issues when strings needed to wrap.
+> With this change we will use vertical-collection instead of ember-collection.
+{:.info}
+
+<img src="/assets/images/Release_3_1354.png" width="200px">
+
+- [yavin-dev/framework#1362](https://github.com/yavin-dev/framework/pull/1362) Ember sortable will only use the drag handle.
+
+
+### Upgrade Steps
+
+You can upgrade your Yavin app version to `1.0.0-beta.2` with the following commands:
+  ```shell
+  cd app
+  git pull origin
+  ./gradlew clean
+  ```
+
+<hr>
+
 # Release [1.0.0-beta.2](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.2)
 {:.beta}
 
