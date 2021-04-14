@@ -8,22 +8,19 @@ toc: true
 # Release [1.0.0-beta.3](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.3)
 {:.beta}
 
-### <i class="d-icon d-activity"></i> Updates & Additions
+### <i class="d-icon d-bug"></i> Bug Fixes
 
-- [yavin-dev/framework#1354](https://github.com/yavin-dev/framework/pull/1354) Use vertical-collection in dimension-select.
+- [yavin-dev/framework#1354](https://github.com/yavin-dev/framework/pull/1354) Fix dimension select text wrapping. The dimension select assumed the height of each entry was the same which caused issues with wrapping long text.
 
-> The dimension select component used ember-collection and assumed the height of each entry was the same causing issues when strings needed to wrap.
-> With this change we will use vertical-collection instead of ember-collection.
-{:.info}
+<img src="/assets/images/Release_3_1354_before.png" width="400px"> <img src="/assets/images/Release_3_1354_after.png" width="325px">
 
-<img src="/assets/images/Release_3_1354.png" width="200px">
-
-- [yavin-dev/framework#1362](https://github.com/yavin-dev/framework/pull/1362) Ember sortable will only use the drag handle.
+- [yavin-dev/framework#1362](https://github.com/yavin-dev/framework/pull/1362) Columns are now only draggable by the handle. Fixes an issue where column config features such as renaming were difficult to use.
+- [yavin-dev/framework#1349](https://github.com/yavin-dev/framework/pull/1349) Fixes the bug introduced by [yavin-dev/framework#1333](https://github.com/yavin-dev/framework/pull/1333) where the dimension select might not get all dimension values.
 
 
 ### Upgrade Steps
 
-You can upgrade your Yavin app version to `1.0.0-beta.2` with the following commands:
+You can upgrade your Yavin app version to `1.0.0-beta.3` with the following commands:
   ```shell
   cd app
   git pull origin
