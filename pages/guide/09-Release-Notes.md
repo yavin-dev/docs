@@ -5,6 +5,36 @@ title: Release Notes
 toc: true
 ---
 
+# Release [1.0.0-beta.3](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.3)
+{:.beta}
+
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1329](https://github.com/yavin-dev/framework/pull/1329) Update report and dashboard actions to denali.
+
+<img src="/assets/images/Release_3_1329.png" width="725px">
+
+### <i class="d-icon d-bug"></i> Bug Fixes
+
+- [yavin-dev/framework#1354](https://github.com/yavin-dev/framework/pull/1354) Fix dimension select text wrapping. The dimension select assumed the height of each entry was the same which caused issues with wrapping long text.
+
+<img src="/assets/images/Release_3_1354_before.png" width="400px"> <img src="/assets/images/Release_3_1354_after.png" width="325px">
+
+- [yavin-dev/framework#1362](https://github.com/yavin-dev/framework/pull/1362) Columns are now only draggable by the handle. Fixes an issue where column config features such as renaming were difficult to use.
+- [yavin-dev/framework#1349](https://github.com/yavin-dev/framework/pull/1349) Fixes the bug introduced by [yavin-dev/framework#1333](https://github.com/yavin-dev/framework/pull/1333) where the dimension select might not get all dimension values.
+
+
+### Upgrade Steps
+
+You can upgrade your Yavin app version to `1.0.0-beta.3` with the following commands:
+  ```shell
+  cd app
+  git pull origin
+  ./gradlew clean
+  ```
+
+<hr>
+
 # Release [1.0.0-beta.2](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.2)
 {:.beta}
 
