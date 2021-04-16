@@ -8,6 +8,12 @@ toc: true
 # Release [1.0.0-beta.3](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.3)
 {:.beta}
 
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1329](https://github.com/yavin-dev/framework/pull/1329) Update report and dashboard actions to denali.
+
+<img src="/assets/images/Release_3_1329.png" width="725px">
+
 ### <i class="d-icon d-bug"></i> Bug Fixes
 
 - [yavin-dev/framework#1354](https://github.com/yavin-dev/framework/pull/1354) Fix dimension select text wrapping. The dimension select assumed the height of each entry was the same which caused issues with wrapping long text.
