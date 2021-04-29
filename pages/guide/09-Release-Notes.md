@@ -14,7 +14,7 @@ toc: true
 
 - [yavin-dev/framework#1363](https://github.com/yavin-dev/framework/pull/1363) Export to CSV is now supported for reports.
 
-<img src="/assets/images/Release_4_1.gif">
+<img src="/assets/images/Release_4_2.gif">
 
 
 ### <i class="d-icon d-activity"></i> Updates & Additions
