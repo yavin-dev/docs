@@ -5,6 +5,38 @@ title: Release Notes
 toc: true
 ---
 
+# Release [1.0.0-beta.4](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.4)
+{:.beta}
+
+### <i class="d-icon d-new-star"></i> New Features
+
+#### Data Export : Ability to export the data to CSV
+
+- [yavin-dev/framework#1363](https://github.com/yavin-dev/framework/pull/1363) Export to CSV is now supported for reports.
+
+<img src="/assets/images/Release_4_1.gif">
+
+
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1366](https://github.com/yavin-dev/framework/pull/1366) Added dropdown functionality to click on parameter chips and be able to change filter parameters in the filter builder.
+
+<img src="/assets/images/Release_4_2.png" width="200px">
+
+- [yavin-dev/app#22](https://github.com/yavin-dev/app/pull/22) With the new independent demo jar published in maven central you now have the ability to disable demo using jar dependency.
+
+
+### Upgrade Steps
+
+You can upgrade your Yavin app version to `1.0.0-beta.2` with the following commands:
+  ```shell
+  cd app
+  git pull origin
+  ./gradlew clean
+  ```
+
+<hr>
+
 # Release [1.0.0-beta.3](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.3)
 {:.beta}
 
