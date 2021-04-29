@@ -21,14 +21,19 @@ toc: true
 
 - [yavin-dev/framework#1366](https://github.com/yavin-dev/framework/pull/1366) Added dropdown functionality to click on parameter chips and be able to change filter parameters in the filter builder.
 
-<img src="/assets/images/Release_4_2.png" width="200px">
+<img src="/assets/images/Release_4_2.png" width="400px">
 
 - [yavin-dev/app#22](https://github.com/yavin-dev/app/pull/22) With the new independent demo jar published in maven central you now have the ability to disable demo using jar dependency.
 
+> Comment out [this line](https://github.com/yavin-dev/app/blob/a1aeef1ac1375d32ebf1c3b7c3301dad7214e91f/ws/build.gradle.kts#L23-L24) in `build.gradle.kts` to disable the demo data
+> ```
+> // implementation("dev.yavin","demo-config","0.9")
+> ```
+{:.info}
 
 ### Upgrade Steps
 
-You can upgrade your Yavin app version to `1.0.0-beta.2` with the following commands:
+You can upgrade your Yavin app version to `1.0.0-beta.4` with the following commands:
   ```shell
   cd app
   git pull origin
