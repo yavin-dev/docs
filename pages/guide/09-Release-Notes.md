@@ -5,6 +5,60 @@ title: Release Notes
 toc: true
 ---
 
+# Release [1.0.0-beta.5](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.5)
+{:.beta}
+
+### <i class="d-icon d-new-star"></i> New Features
+
+####  Yavin App jar that can be used directly
+
+- [yavin-dev/framework#1273](https://github.com/yavin-dev/framework/pull/1273) Docker image supporting user side hjson configs.
+The present docker image we maintain comes pre configured to run our example netflix dataset. Based upon user request we found that having such a docker image accept hjson files provided by users would allow a more practical "trial" of <b>Yavin</b>.
+
+Add custom hjson to docker container for exploring additional data sources:
+  ```shell
+  docker run -v <your path>:/etc/yavin -p 9999:8080 verizonmedia/yavin:latest
+  ```
+
+- [yavin-dev/app#29](https://github.com/yavin-dev/app/pull/29) New Docker image with all what is needed for using <b>Yavin</b>.
+Pusblish a separate <b>Yavin</b> app jar to the maven central. This jar can then be directly used to launch <b>Yavin</b> without having to build it locally.
+
+Launch demo app using latest yavin-app jar:
+  ```shell
+  `curl https://raw.githubusercontent.com/yavin-dev/app/master/yavin-run.sh | bash`
+  ```
+
+#### Report Builder Revamped
+
+- [yavin-dev/framework#1385](https://github.com/yavin-dev/framework/pull/1385) Revamped the Report Builder Sidebar toggle. The visualization changes completed includes (But is not limited to):
+  - Toggling the sidebar
+  - Animating between sidebar tabs
+
+<video controls> <source src="/assets/images/release_1_4_1385.mov"></video>
+
+### <i class="d-icon d-dashboard"></i> Performance Changes
+
+- [yavin-dev/framework#1382](https://github.com/yavin-dev/framework/pull/1382) Loads metadata in background until needed. This will allow for a better performance.
+
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1393](https://github.com/yavin-dev/framework/pull/1393) Adds support for suggestion columns for dimensions.
+<img src="/assets/images/release_1_4_1393.png">
+
+- [yavin-dev/framework#1389](https://github.com/yavin-dev/framework/pull/1389) Table config updates.
+<img src="/assets/images/release_1_4_1389.png">
+
+### Upgrade Steps
+
+You can upgrade your Yavin app version to `1.0.0-beta.5` with the following commands:
+  ```shell
+  cd app
+  git pull origin
+  ./gradlew clean
+  ```
+
+<hr>
+
 # Release [1.0.0-beta.4](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.4)
 {:.beta}
 
