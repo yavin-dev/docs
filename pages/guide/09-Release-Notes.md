@@ -12,16 +12,12 @@ toc: true
 
 ####  Yavin App Published Builds
 
-- [yavin-dev/framework#1273](https://github.com/yavin-dev/framework/pull/1273) Docker image supporting user side hjson configs.
-The present docker image we maintain comes pre configured to run our example netflix dataset. Based upon user request we found that having such a docker image accept hjson files provided by users would allow a more practical "trial" of <b>Yavin</b>.
+- [yavin-dev/app#29](https://github.com/yavin-dev/app/pull/29) Docker image support
 
 Add custom hjson to docker container for exploring additional data sources:
   ```shell
   docker run -v <your path>:/etc/yavin -p 9999:8080 verizonmedia/yavin:latest
   ```
-
-- [yavin-dev/app#29](https://github.com/yavin-dev/app/pull/29) New Docker image with all what is needed for using <b>Yavin</b>.
-Pusblish a separate <b>Yavin</b> app jar to maven central which can be directly used to launch <b>Yavin</b> without having to build it locally.
 
 Launch demo app using latest yavin-app jar:
   ```shell
