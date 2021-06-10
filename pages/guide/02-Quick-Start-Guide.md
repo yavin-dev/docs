@@ -36,6 +36,11 @@ Before getting started with Yavin, make sure to have:
 
 Once you are all set up, run the following steps (On ***Terminal*** for macOS, and on ***Bash*** for Windows) to boot the example Yavin app:
 
+> There is currently a bug that requires your locale to be set otherwise your app may crash.
+>
+> If you see an error like `Error parsing "September 9, 2019"`, run `export LANG=en_US.UTF-8`
+{:.warning}
+
 ### 1.1 (Option 1) Run Jar Locally
 
 To kick of your custom data application building, you will only need the app repo.

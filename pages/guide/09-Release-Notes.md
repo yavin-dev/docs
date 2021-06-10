@@ -5,6 +5,56 @@ title: Release Notes
 toc: true
 ---
 
+# Release [1.0.0-beta.5](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.5)
+{:.beta}
+
+### <i class="d-icon d-new-star"></i> New Features
+
+####  Yavin App Published Builds
+
+- [yavin-dev/app#29](https://github.com/yavin-dev/app/pull/29) Docker image support
+
+Add custom hjson to docker container for exploring additional data sources:
+  ```shell
+  docker run -v <your path>:/etc/yavin -p 9999:8080 verizonmedia/yavin:latest
+  ```
+
+Launch demo app using latest yavin-app jar:
+  ```shell
+  curl https://raw.githubusercontent.com/yavin-dev/app/master/yavin-run.sh | bash
+  ```
+
+#### Report Builder Sidebar
+
+- [yavin-dev/framework#1385](https://github.com/yavin-dev/framework/pull/1385) The Report Builder view now has a collapsible sidebar for selecting datasources, tables, and metrics/dimensions.
+
+<img src="/assets/images/release_1_5_1385.gif" width="800px">
+
+### <i class="d-icon d-dashboard"></i> Performance Changes
+
+- [yavin-dev/framework#1382](https://github.com/yavin-dev/framework/pull/1382) Loads metadata in background and only waits if needed.
+
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1393](https://github.com/yavin-dev/framework/pull/1393) Adds support for suggestion columns for dimensions.
+
+<img src="/assets/images/release_1_5_1393.png" width="400px">
+
+- [yavin-dev/framework#1389](https://github.com/yavin-dev/framework/pull/1389) Denali Styling for table config.
+
+<img src="/assets/images/release_1_5_1389.png" width="600px">
+
+### Upgrade Steps
+
+You can upgrade your Yavin app version to `1.0.0-beta.5` with the following commands:
+  ```shell
+  cd app
+  git pull origin
+  ./gradlew clean
+  ```
+
+<hr>
+
 # Release [1.0.0-beta.4](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.4)
 {:.beta}
 
