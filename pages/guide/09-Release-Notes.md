@@ -5,6 +5,55 @@ title: Release Notes
 toc: true
 ---
 
+
+# Release [1.0.0-beta.6](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.6)
+{:.beta}
+
+Yavin has been upgraded to Elide 5.0. With this upgrade the following are the updates and additions that comes with it.
+
+[Elide 5.0.4 Changelog](https://github.com/yahoo/elide/blob/master/changelog.md)
+
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1397](https://github.com/yavin-dev/framework/pull/1397) Refactored the info messages on Yavin to show up to date and relevant information.
+
+<img src="/assets/images/release_1_6_1397.gif" width="800px">
+
+- [yavin-dev/framework#1400](https://github.com/yavin-dev/framework/pull/1400) Update: Make print routes load metadata.
+
+- [yavin-dev/framework#1408](https://github.com/yavin-dev/framework/pull/1408) Update: Refactor dashboard filters UX.
+
+<video controls class="m-t-20">
+  <source src="/assets/images/release_1_6_1408.mov" type="video/mov">
+</video>
+
+- [yavin-dev/framework#1417](https://github.com/yavin-dev/framework/pull/1417) Update: Move formatting to meta models and services.
+
+<img src="/assets/images/release_1_6_1421.png" width="800px">
+
+
+### <i class="d-icon d-bug"></i> Bug Fixes
+
+- [yavin-dev/framework#1399](https://github.com/yavin-dev/framework/pull/1399) Fix: Metric cell text alignment.
+
+- [yavin-dev/framework#1405](https://github.com/yavin-dev/framework/pull/1405) Fix: Delete widget button didn't show modal.
+
+- [yavin-dev/framework#1408](https://github.com/yavin-dev/framework/pull/1408) Fix: Pass through headers in elide-fact calls
+
+- [yavin-dev/framework#1421](https://github.com/yavin-dev/framework/pull/1421) Fix Datasource bug.
+
+
+### Upgrade Steps
+
+You can upgrade your Yavin app version to `1.0.0-beta.5` with the following commands:
+  ```shell
+  cd app
+  git pull origin
+  ./gradlew clean
+  ```
+
+<hr>
+
 # Release [1.0.0-beta.5](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.5)
 {:.beta}
 
