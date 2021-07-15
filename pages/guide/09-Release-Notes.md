@@ -5,6 +5,50 @@ title: Release Notes
 toc: true
 ---
 
+
+# Release [1.0.0-beta.6](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.6)
+{:.beta}
+
+Yavin has been upgraded to Elide 5.0.2 which includes the following updates and additions:
+
+[Elide 5.0.2 Changelog](https://github.com/yahoo/elide/blob/master/changelog.md#502)
+
+### <i class="d-icon d-activity"></i> Updates & Additions
+
+- [yavin-dev/framework#1397](https://github.com/yavin-dev/framework/pull/1397) Refactored info messages in Yavin to be more consistent.
+
+<img src="/assets/images/release_1_6_1397.gif" width="800px">
+
+
+- [yavin-dev/framework#1408](https://github.com/yavin-dev/framework/pull/1408) Updated dashboard filters UX.
+
+<img src="/assets/images/release_1_6_1408.gif" width="800px">
+
+- [yavin-dev/framework#1417](https://github.com/yavin-dev/framework/pull/1417) Adds a global hook for metric value formatting.
+
+
+### <i class="d-icon d-bug"></i> Bug Fixes
+
+- [yavin-dev/framework#1400](https://github.com/yavin-dev/framework/pull/1400) Fix the table visualization to align metrics to the right.
+- [yavin-dev/framework#1399](https://github.com/yavin-dev/framework/pull/1399) Fixes an issue with loading print routes.
+- [yavin-dev/framework#1405](https://github.com/yavin-dev/framework/pull/1405) Fixes an issue with deleting widgets from dashboards.
+- [yavin-dev/framework#1421](https://github.com/yavin-dev/framework/pull/1421) Fixes an issue where loading a dashboard with a datasource that no longer exists would error the dashboard and not the individual widget.
+
+
+<img src="/assets/images/release_1_6_1421.png" width="800px">
+
+
+### Upgrade Steps
+
+You can upgrade your Yavin app version to `1.0.0-beta.6` with the following commands:
+  ```shell
+  cd app
+  git pull origin
+  ./gradlew clean
+  ```
+
+<hr>
+
 # Release [1.0.0-beta.5](https://github.com/yavin-dev/app/releases/tag/v1.0.0-beta.5)
 {:.beta}
 
